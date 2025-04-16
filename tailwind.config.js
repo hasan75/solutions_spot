@@ -8,6 +8,7 @@ module.exports = {
         extend: {
             colors: {
                 brand: '#3a86ff', // Custom color
+                solprimary: '#0e74b5'
             }
         },
     },
