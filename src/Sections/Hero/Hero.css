@@ -1,0 +1,20 @@
+
+.hero-section-container {
+    position: relative;
+    min-height: 70vh;
+    background:
+        /* Your custom blue overlay */
+            linear-gradient(
+                    rgba(32, 48, 102, 0.58),
+                    rgba(32, 48, 102, 0.58)
+            ),
+                /* Original image */
+            url("../../assets/images/banner.jpg") center/cover no-repeat;
+}
+
+/* Content styling */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    /* Add your content styles here */
+}
