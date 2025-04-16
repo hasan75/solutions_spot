@@ -129,7 +129,7 @@ export default function Navbar() {
         <div class="flex items-center font-medium justify-around">
           <div class="z-50 p-5 md:w-auto w-full flex justify-between">
             <a href="/" class="flex items-center">
-                <img src="/assets/images/logo.png" alt="logo" class="md:cursor-pointer h-10" id="logo">
+                <img src="../../assets/images/logo.png" alt="logo" class="md:cursor-pointer h-10" id="logo">
             </a>
             <div class="text-3xl md:hidden" id="mobile-menu-button">
               <ion-icon name="menu"></ion-icon>
