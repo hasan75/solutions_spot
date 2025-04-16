@@ -1,0 +1,58 @@
+/* Mobile menu transition */
+#mobile-nav {
+    transition: left 0.5s ease;
+}
+
+/* Chevron rotation animation */
+.rotate-chevron {
+    transition: transform 0.3s ease;
+}
+.group:hover .rotate-chevron {
+    transform: rotate(180deg);
+    margin-top: -0.5rem;
+}
+
+/* Dropdown arrow styling */
+.absolute .rotate-45 {
+    width: 1rem;
+    height: 1rem;
+    left: 0.75rem;
+    margin-top: 0.25rem;
+    background: white;
+    transform: rotate(45deg);
+}
+
+/* Mobile submenu styles */
+.mobile-submenu ul {
+    padding-left: 3.5rem;
+}
+.mobile-submenu li {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Desktop dropdown styles */
+.group-hover\:md\:block {
+    z-index: 50;
+}
+
+.navbar {
+    background: linear-gradient(90deg, #0e74b5, #2cc1b5);
+}
+
+/* Ensure links have consistent appearance */
+.navbar a {
+    transition: opacity 0.2s ease;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .navbar .text-left > a {
+        display: block;
+        width: 100%;
+    }
+}
