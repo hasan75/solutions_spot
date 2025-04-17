@@ -1,11 +1,14 @@
 import './Testimonials.css';
+import avatar1 from '../../assets/images/avatar-01.jpg'
+import avatar2 from '../../assets/images/avatar-02.jpg'
+import avatar3 from '../../assets/images/avatar-03.jpg'
 
 const testimonials = [
     {
         rating: 5,
         quote: "“The best service”",
         text: "Versatile and user-friendly platform for freelancers and businesses alike. Its interface is clean and intuitive...",
-        avatar: "../../assets/images/avatar-01.jpg",
+        avatar: avatar1,
         name: "Sophie Moore",
         position: "Head of Design at Google"
     },
@@ -13,7 +16,7 @@ const testimonials = [
         rating: 5,
         quote: "“Awesome Works”",
         text: "Excels in providing a quick and easy way to find help for everyday tasks and home repairs...",
-        avatar: "../../assets/images/avatar-02.jpg",
+        avatar: avatar2,
         name: "Mike Hussy",
         position: "Tech Lead"
     },
@@ -21,7 +24,7 @@ const testimonials = [
         rating: 5,
         quote: "“Brilliant Work”",
         text: "Offers a comprehensive marketplace for finding local service professionals across a wide range of categories...",
-        avatar: "../../assets/images/avatar-03.jpg",
+        avatar: avatar3,
         name: "Tom Beker",
         position: "Ads Chairman"
     }
