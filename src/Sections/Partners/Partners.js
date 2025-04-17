@@ -11,7 +11,8 @@ export default function Partners() {
     ];
 
     return `
-    <div class="container mx-auto px-4 py-12">
+<div class="bg-solPrimaryBg">
+    <div class="container mx-auto px-4 pt-20 pb-24">
       <div class="flex flex-col items-center">
         <!-- Header Section -->
         <div class="text-center mb-12 max-w-2xl" data-aos="fade-up">
@@ -31,5 +32,7 @@ export default function Partners() {
         </div>
       </div>
     </div>
+</div>
+
   `;
 }

@@ -142,8 +142,9 @@ export default function Navbar() {
             ${generateNavLinks()}
           </ul>
           <div class="md:block hidden">
-            
+            <a href="tel:+8801336985511" class="flex items-center">
             <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-blue-300">Contact Us</button>
+            </a>
           </div>
           
           <!-- Mobile nav -->
@@ -153,7 +154,10 @@ export default function Navbar() {
             </li>
             ${generateNavLinks(true)}
             <div class="py-5">
-              <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">Contact Us</button>
+                <a href="tel:+8801336985511" class="flex items-center">
+                        <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">Contact Us</button>
+                </a>
+          
             </div>
           </ul>
         </div>

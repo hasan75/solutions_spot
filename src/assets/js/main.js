@@ -28,6 +28,7 @@ import { initServices } from '../../Sections/Services/Services'
 import Offer from "../../Sections/Offer/Offer";
 import Partners from "../../Sections/Partners/Partners";
 import Footer from "../../Components/Footer/Footer";
+import Contact from "../../Sections/Contact/Contact";
 // Render components
 document.getElementById('navbar').innerHTML = Navbar();
 document.getElementById('hero').innerHTML = Hero();
@@ -39,6 +40,7 @@ document.getElementById('featuredCategories').innerHTML = FeaturedCategories();
 document.getElementById('offer').innerHTML = Offer();
 document.getElementById('partners').innerHTML = Partners();
 document.getElementById('footer').innerHTML = Footer();
+document.getElementById('contact').innerHTML = Contact();
 
 
 initNavbar();

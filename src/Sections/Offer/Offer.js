@@ -3,7 +3,7 @@ export default function Offer() {
     <section class="relative py-16 before:content-[''] before:bg-solsecondary before:w-full before:min-h-[300px] before:absolute before:top-1/2 before:-z-10">
       <div class="container mx-auto px-4">
         <div data-aos="fade-up">
-          <div class="bg-solprimary rounded-[30px] px-20 py-0 flex items-end">
+          <div class="bg-solprimary rounded-[30px] px-4 md:px-20 py-0 flex items-end overflow-hidden">
             <!-- Content Section -->
             <div class="py-[50px] max-w-[530px]">
               <div class="mb-6">
