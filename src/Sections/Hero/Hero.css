@@ -1,7 +1,6 @@
 
 .hero-section-container {
     position: relative;
-    min-height: 70vh;
     background:
         /* Your custom blue overlay */
             linear-gradient(
