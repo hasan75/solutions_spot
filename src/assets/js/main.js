@@ -16,11 +16,19 @@
 
 import Navbar from '../../Components/Navbar/Navbar.js';
 import Hero  from "../../Sections/Hero/Hero.js";
+import Services from "../../Sections/Services/Services.js";
+import HowItWorks from "../../Sections/HowItWorks/HowItWorks.js";
 // Render components
 document.getElementById('navbar').innerHTML = Navbar();
 document.getElementById('hero').innerHTML = Hero();
+document.getElementById('services').innerHTML = Services();
+document.getElementById('howItWorks').innerHTML = HowItWorks();
+
 // document.getElementById('features').innerHTML = Features();
 
 // Initialize navbar functionality
 import { initNavbar } from '../../Components/Navbar/Navbar';
+import { initServices } from '../../Sections/Services/Services'
+
 initNavbar();
+initServices();

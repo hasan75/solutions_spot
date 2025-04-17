@@ -1,6 +1,7 @@
 /* Mobile menu transition */
 #mobile-nav {
     transition: left 0.5s ease;
+    z-index: 1;
 }
 
 /* Chevron rotation animation */

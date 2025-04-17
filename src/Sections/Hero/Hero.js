@@ -5,7 +5,7 @@ export default function Hero() {
     <div class="hero-section-container flex items-center justify-center">
       <div class="container">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-          <h1 class="text-4xl font-bold text-white mb-4 text-center">
+          <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4 text-center">
             World's Largest <span class="">Marketplace</span>
           </h1>
           <p class="text-lg text-white text-center mb-8">Search From 150 Awesome Verified Ads!</p>

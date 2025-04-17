@@ -8,7 +8,7 @@ const links = [
     },
     {
         name: 'Services',
-        link: '#aboutUs',
+        link: '#services',
     },
     {
         name: 'Pricing',
@@ -126,10 +126,10 @@ export default function Navbar() {
     return `
     <nav class="bg-white flex items-center justify-center navbar">
       <div class="container">
-        <div class="flex items-center font-medium justify-around">
+        <div class="flex items-center font-medium justify-around md:justify-between">
           <div class="z-50 p-5 md:w-auto w-full flex justify-between">
             <a href="/" class="flex items-center">
-                <img src="../../assets/images/logo.png" alt="logo" class="md:cursor-pointer h-10" id="logo">
+                <img src="/assets/images/logo.png" alt="logo" class="md:cursor-pointer h-10" id="logo">
             </a>
             <div class="text-3xl md:hidden" id="mobile-menu-button">
               <ion-icon name="menu"></ion-icon>
@@ -142,7 +142,7 @@ export default function Navbar() {
             ${generateNavLinks()}
           </ul>
           <div class="md:block hidden">
-            <button class="bg-white text-solprimary px-6 py-2 rounded-lg">Contact Us</button>
+            <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-blue-300">Contact Us</button>
           </div>
           
           <!-- Mobile nav -->
@@ -152,7 +152,7 @@ export default function Navbar() {
             </li>
             ${generateNavLinks(true)}
             <div class="py-5">
-              <button class="bg-white text-solprimary px-6 py-2 rounded-lg">Contact Us</button>
+              <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">Contact Us</button>
             </div>
           </ul>
         </div>
@@ -168,6 +168,14 @@ export function initNavbar() {
     const mobileNav = document.getElementById('mobile-nav');
     let isMobileMenuOpen = false;
 
+    // Function to close mobile menu
+    const closeMobileMenu = () => {
+        mobileNav.classList.remove('left-0');
+        mobileNav.classList.add('-left-full');
+        mobileMenuIcon.setAttribute('name', 'menu');
+        isMobileMenuOpen = false;
+    };
+
     if (mobileMenuButton && mobileNav) {
         mobileMenuButton.addEventListener('click', () => {
             isMobileMenuOpen = !isMobileMenuOpen;
@@ -177,17 +185,24 @@ export function initNavbar() {
                 mobileNav.classList.add('left-0');
                 mobileMenuIcon.setAttribute('name', 'close');
             } else {
-                mobileNav.classList.remove('left-0');
-                mobileNav.classList.add('-left-full');
-                mobileMenuIcon.setAttribute('name', 'menu');
+                closeMobileMenu();
             }
         });
     }
 
+    // Close menu when clicking on any nav link
+    document.querySelectorAll('#mobile-nav a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
     // Submenu toggle for mobile
     document.querySelectorAll('.navlink-heading[data-mobile="true"]').forEach(heading => {
         if (heading.getAttribute('data-submenu') === 'true') {
-            heading.addEventListener('click', () => {
+            heading.addEventListener('click', (e) => {
+                // Only prevent default if it's a dropdown toggle
+                if (heading.querySelector('ion-icon')) {
+                    e.preventDefault();
+                }
                 const submenu = heading.parentElement.querySelector('.mobile-submenu');
                 const icon = heading.querySelector('ion-icon');
 
@@ -204,7 +219,8 @@ export function initNavbar() {
 
     // Submenu toggle for mobile sub-items
     document.querySelectorAll('.submenu-heading').forEach(subHeading => {
-        subHeading.addEventListener('click', () => {
+        subHeading.addEventListener('click', (e) => {
+            e.preventDefault();
             const subMenuContent = subHeading.nextElementSibling;
             const icon = subHeading.querySelector('ion-icon');
 

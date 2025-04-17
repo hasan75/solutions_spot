@@ -11,10 +11,3 @@
                 /* Original image */
             url("../../assets/images/banner.jpg") center/cover no-repeat;
 }
-
-/* Content styling */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    /* Add your content styles here */
-}

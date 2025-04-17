@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
 /* Custom styles */
 .btn-primary {
     @apply bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all;
