@@ -1,0 +1,8 @@
+/* Only for complex effects that Tailwind can't easily handle */
+.feature-widget {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-widget:hover {
+    transform: translateY(-5px);
+}

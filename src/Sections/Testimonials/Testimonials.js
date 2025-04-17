@@ -29,7 +29,8 @@ const testimonials = [
 
 export default function Testimonials() {
     return `
-    <div class="container mx-auto py-14">
+<div class="w-full bg-solPrimaryBg">
+    <div class="container mx-auto py-14 md:py-28"">
       <!-- Header -->
       <div class="text-center mb-12" data-aos="fade-up">
         <h2 class="text-3xl font-bold text-gray-800">Testimonials</h2>
@@ -67,5 +68,7 @@ export default function Testimonials() {
         `).join('')}
       </div>
     </div>
+</div>
+
   `;
 }

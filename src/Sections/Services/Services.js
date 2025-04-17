@@ -1,19 +1,19 @@
 export default function Services() {
     return `
-    <section id="services" aria-label="Featured Services" class="py-14">
+    <section id="services" aria-label="Featured Services" class="py-16 md:py-28 bg-solPrimaryBg">
       <div class="flex justify-center items-center">
         <div class="container px-2 md:px-2">
           <!-- Header Section -->
           <div class="flex flex-col md:flex-row items-center justify-between mb-8">
             <div class="mb-6 md:mb-0" data-aos="fade-up">
               <div class="text-center md:text-left">
-                <h2 class="text-3xl font-bold text-gray-800">Featured Services</h2>
+                <h2 class="text-3xl font-bold tsolPrimaryBgext-gray-800">Featured Services</h2>
                 <p class="text-lg text-gray-600 mt-2">Explore the greatest our services. You won't be disappointed</p>
               </div>
             </div>
             <div class="md:text-right" data-aos="fade-up">
-              <a href="categories.html" class="inline-block bg-solprimary hover:bg-sky-900 text-white font-medium py-2 px-6 rounded-full transition duration-200">
-                View All
+              <a href="categories.html" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
+                    View All
               </a>
             </div>
           </div>

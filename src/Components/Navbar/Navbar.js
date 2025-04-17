@@ -4,7 +4,7 @@ import './Navbar.css';
 const links = [
     {
       name: 'About Us',
-      link: '#aboutUs',
+      link: '#about',
     },
     {
         name: 'Services',
@@ -12,11 +12,11 @@ const links = [
     },
     {
         name: 'Pricing',
-        link: '#aboutUs',
+        link: '#about',
     },
     {
         name: 'Blogs',
-        link: '#aboutUs',
+        link: '#about',
     },
     // {
     //     name: "Services",
@@ -124,7 +124,7 @@ function generateSubmenu(link, isMobile) {
 
 export default function Navbar() {
     return `
-    <nav class="bg-white flex items-center justify-center navbar">
+    <nav class="bg-white flex items-center justify-center navbar fixed z-40 w-full">
       <div class="container">
         <div class="flex items-center font-medium justify-around md:justify-between">
           <div class="z-50 p-5 md:w-auto w-full flex justify-between">
@@ -142,6 +142,7 @@ export default function Navbar() {
             ${generateNavLinks()}
           </ul>
           <div class="md:block hidden">
+            
             <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-blue-300">Contact Us</button>
           </div>
           
