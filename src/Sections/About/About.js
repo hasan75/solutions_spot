@@ -1,5 +1,7 @@
 import './About.css';
 
+import provider23 from '../../assets/images/provider-23.jpg'
+
 export default function About() {
     return `
     <div class="container mx-auto px-4 py-14 md:py-24">
@@ -13,7 +15,7 @@ export default function About() {
               </span>
             </div>
             <div class="abt-img relative z-10 py-8 pl-16">
-              <img src="../../assets/images/provider-23.jpg" 
+              <img src="${provider23}" 
                    alt="About our company" 
                    class="rounded-lg max-w-full max-h-[450px] w-full">
             </div>

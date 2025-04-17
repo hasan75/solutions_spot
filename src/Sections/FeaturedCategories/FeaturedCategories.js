@@ -1,45 +1,59 @@
 import './FeaturedCategories.css';
 
+import categories1 from '../../assets/images/categories-01.jpg'
+import categories2 from '../../assets/images/categories-02.jpg'
+import categories3 from '../../assets/images/categories-03.jpg'
+import categories4 from '../../assets/images/categories-04.jpg'
+import categories5 from '../../assets/images/categories-05.jpg'
+import categories6 from '../../assets/images/categories-06.jpg'
+
+import featureIcon9 from '../../assets/images/feature-icon-09.svg'
+import featureIcon10 from '../../assets/images/feature-icon-10.svg'
+import featureIcon11 from '../../assets/images/feature-icon-11.svg'
+import featureIcon12 from '../../assets/images/feature-icon-12.svg'
+import featureIcon13 from '../../assets/images/feature-icon-13.svg'
+import featureIcon14 from '../../assets/images/feature-icon-14.svg'
+
 const categories = [
     {
         id: 1,
-        image: "assets/images/categories-01.jpg",
-        icon: "assets/images/feature-icon-09.svg",
+        image: categories1,
+        icon: featureIcon9,
         title: "Construction",
         count: "10 Services"
     },
     {
         id: 2,
-        image: "assets/images/categories-02.jpg",
-        icon: "assets/images/feature-icon-10.svg",
+        image: categories2,
+        icon: featureIcon10,
         title: "Interior",
         count: "08 Services"
     },
     {
         id: 3,
-        image: "assets/images/categories-03.jpg",
-        icon: "assets/images/feature-icon-11.svg",
+        image: categories3,
+        icon: featureIcon11,
         title: "Car Wash",
         count: "15 Services"
     },
     {
         id: 4,
-        image: "assets/images/categories-04.jpg",
-        icon: "assets/images/feature-icon-12.svg",
+        image: categories4,
+        icon: featureIcon12,
         title: "Cleaning",
         count: "20 Services"
     },
     {
         id: 5,
-        image: "assets/images/categories-05.jpg",
-        icon: "assets/images/feature-icon-13.svg",
+        image: categories5,
+        icon: featureIcon13,
         title: "Electrical",
         count: "17 Services"
     },
     {
         id: 6,
-        image: "assets/images/categories-06.jpg",
-        icon: "assets/images/feature-icon-14.svg",
+        image: categories6,
+        icon: featureIcon14,
         title: "Construction",
         count: "13 Services"
     }

@@ -1,3 +1,5 @@
+import logo from '../../assets/images/logo.png';
+
 export default function Footer() {
     return `
       <!-- Footer Top (previous implementation remains the same) -->
@@ -10,7 +12,7 @@ export default function Footer() {
               <div class="footer-widget mb-8">
                 <div class="mb-6">
                   <a href="index.html">
-                    <img src="../../assets/images/logo.png" alt="logo" class="h-8">
+                    <img src="${logo}" alt="logo" class="h-8">
                   </a>
                 </div>
                 <div class="footer-content max-w-[304px] mb-6">

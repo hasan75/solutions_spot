@@ -1,3 +1,11 @@
+import category8 from '../../assets/images/categories-08.jpg';
+import category9 from '../../assets/images/categories-09.jpg';
+import category5 from '../../assets/images/categories-05.jpg';
+
+import avatar1 from '../../assets/images/avatar-01.jpg'
+import avatar2 from '../../assets/images/avatar-02.jpg'
+import avatar3 from '../../assets/images/avatar-03.jpg'
+
 export default function Services() {
     return `
     <section id="services" aria-label="Featured Services" class="py-16 md:py-28 bg-solPrimaryBg">
@@ -31,11 +39,11 @@ export default function Services() {
 const services = [
     {
         id: 1,
-        image: "../../assets/images/categories-08.jpg",
+        image: category8,
         category: "Plumbing",
         provider: {
             name: "Jeny Doe",
-            avatar: "../../assets/images/avatar-01.jpg"
+            avatar: avatar1,
         },
         title: "House Plumbing Services",
         location: "Rajshahi, BD",
@@ -47,11 +55,11 @@ const services = [
     },
     {
         id: 2,
-        image: "../../assets/images/categories-09.jpg",
+        image: category9,
         category: "Cleaning",
         provider: {
             name: "Nick John",
-            avatar: "../../assets/images/avatar-02.jpg"
+            avatar: avatar2,
         },
         title: "Apartment, Property Cleaning Services",
         location: "Rajshahi, BD",
@@ -63,11 +71,11 @@ const services = [
     },
     {
         id: 3,
-        image: "../../assets/images/categories-05.jpg",
+        image: category5,
         category: "Electrical",
         provider: {
             name: "James",
-            avatar: "../../assets/images/avatar-03.jpg"
+            avatar: avatar3,
         },
         title: "Electric Panel Repairing Service",
         location: "Rajshahi, BD",

@@ -1,3 +1,4 @@
+import service76 from '../../assets/images/service-76.jpg';
 export default function Contact() {
     return `
     <div class="container mx-auto px-4 py-16">
@@ -49,7 +50,7 @@ export default function Contact() {
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Image Column -->
         <div class="flex items-center">
-          <img src="../../assets/images/service-76.jpg" alt="Contact us" class="w-full rounded-lg">
+          <img src="${service76}" alt="Contact us" class="w-full rounded-lg">
         </div>
 
         <!-- Form Column -->

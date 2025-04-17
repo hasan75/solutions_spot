@@ -1,3 +1,5 @@
+import offerImage from '../../assets/images/offer-img.png';
+
 export default function Offer() {
     return `
     <section class="relative py-16 before:content-[''] before:bg-solsecondary before:w-full before:min-h-[300px] before:absolute before:top-1/2 before:-z-10">
@@ -23,7 +25,7 @@ export default function Offer() {
             
             <!-- Image Section -->
             <div class="ml-auto">
-              <img src="../../assets/images/offer-img.png" alt="Free trial offer" class="max-w-full h-auto align-middle">
+              <img src="${offerImage}" alt="Free trial offer" class="max-w-full h-auto align-middle">
             </div>
           </div>
         </div>
