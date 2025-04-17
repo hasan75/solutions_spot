@@ -18,11 +18,13 @@ import Navbar from '../../Components/Navbar/Navbar.js';
 import Hero  from "../../Sections/Hero/Hero.js";
 import Services from "../../Sections/Services/Services.js";
 import HowItWorks from "../../Sections/HowItWorks/HowItWorks.js";
+import Testimonials from "../../Sections/Testimonials/Testimonials.js";
 // Render components
 document.getElementById('navbar').innerHTML = Navbar();
 document.getElementById('hero').innerHTML = Hero();
 document.getElementById('services').innerHTML = Services();
 document.getElementById('howItWorks').innerHTML = HowItWorks();
+document.getElementById('testimonials').innerHTML = Testimonials();
 
 // document.getElementById('features').innerHTML = Features();
 

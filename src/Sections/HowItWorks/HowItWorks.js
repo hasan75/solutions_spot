@@ -32,18 +32,18 @@ export default function HowItWorks() {
 const howItWorksSteps = [
     {
         first: true,
-        icon: "assets/images/work-icon-01.svg",
+        icon: "../../assets/images/work-icon-01.svg",
         title: "Search and Browse",
         description: "Customers can browse or search for specific products or services using categories, filters, or search bars."
     },
     {
         last: true,
-        icon: "assets/images/work-icon-02.svg",
+        icon: "../../assets/images/work-icon-02.svg",
         title: "Find What You Want",
         description: "Customers can add items to their cart. For services, they may select a service and proceed to book."
     },
     {
-        icon: "assets/images/work-icon-03.svg",
+        icon: "../../assets/images/work-icon-03.svg",
         title: "Order Fulfillment",
         description: "The Customer fulfills the order by either providing the service to the customer & Get Leads from locals"
     }

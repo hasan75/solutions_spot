@@ -31,11 +31,11 @@ export default function Services() {
 const services = [
     {
         id: 1,
-        image: "/assets/images/categories-08.jpg",
+        image: "../../assets/images/categories-08.jpg",
         category: "Plumbing",
         provider: {
             name: "Jeny Doe",
-            avatar: "/assets/images/avatar-01.jpg"
+            avatar: "../../assets/images/avatar-01.jpg"
         },
         title: "House Plumbing Services",
         location: "Rajshahi, BD",
@@ -47,11 +47,11 @@ const services = [
     },
     {
         id: 2,
-        image: "/assets/images/categories-09.jpg",
+        image: "../../assets/images/categories-09.jpg",
         category: "Cleaning",
         provider: {
             name: "Nick John",
-            avatar: "/assets/images/avatar-02.jpg"
+            avatar: "../../assets/images/avatar-02.jpg"
         },
         title: "Apartment, Property Cleaning Services",
         location: "Rajshahi, BD",
@@ -63,11 +63,11 @@ const services = [
     },
     {
         id: 3,
-        image: "/assets/images/categories-05.jpg",
+        image: "../../assets/images/categories-05.jpg",
         category: "Electrical",
         provider: {
             name: "James",
-            avatar: "/assets/images/avatar-03.jpg"
+            avatar: "../../assets/images/avatar-03.jpg"
         },
         title: "Electric Panel Repairing Service",
         location: "Rajshahi, BD",

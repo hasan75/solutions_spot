@@ -1,0 +1,8 @@
+/* Only include if you need custom styles beyond Tailwind */
+.client-box {
+    transition: transform 0.3s ease;
+}
+
+.client-box:hover {
+    transform: translateY(-5px);
+}
