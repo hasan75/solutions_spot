@@ -9,18 +9,16 @@ export default function Offer() {
             <!-- Content Section -->
             <div class="py-[50px] max-w-[530px]">
               <div class="mb-6">
-                <p class="text-white font-medium mb-2">14 Days Free Trial</p>
-                <h3 class="text-3xl md:text-4xl font-bold text-white mb-0">We Are Offering 14 Days Free Trial</h3>
+                <p class="text-white font-medium mb-2">Special Offers</p>
+                <h3 class="text-3xl md:text-4xl font-bold text-white mb-0">Exciting Deals You Don’t Want to Miss</h3>
               </div>
               <p class="text-white/80 mb-8">
-                Whether you're looking to our app brings everything you need right
-                to your fingertips. Enjoy a smooth and intuitive experience designed
-                with you in mind.
+                We regularly roll out special offers to bring you more value for your money. Whether it's a discounted service package or a seasonal deal, Solutions Spot ensures you always get the best service at the best price.
               </p>
-              <a href="free-trail.html" class="inline-flex items-center bg-white hover:bg-gray-100 text-solprimary font-medium py-3 px-6 rounded-full transition duration-200 w-fit">
-                Try 14 Days Free Trial
-                <i class="feather-arrow-right-circle ml-2"></i>
-              </a>
+              <p class="text-white/80 mb-8">Check out our current offers and enjoy premium services at unbeatable rates.</p>
+              <p href="free-trail.html" class="inline-flex items-center bg-white hover:bg-gray-100 text-solprimary font-medium py-3 px-6 rounded-full transition duration-200 w-fit">
+                Stay tuned for exclusive local deals!
+              </p>
             </div>
             
             <!-- Image Section -->

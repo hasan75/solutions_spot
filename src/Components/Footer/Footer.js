@@ -1,4 +1,4 @@
-import logo from '../../assets/images/logo.png';
+import logoTransparent from '../../assets/images/logo_transparent.png';
 
 export default function Footer() {
     return `
@@ -12,7 +12,7 @@ export default function Footer() {
               <div class="footer-widget mb-8">
                 <div class="mb-6">
                   <a href="index.html">
-                    <img src="${logo}" alt="logo" class="h-8">
+                    <img src="${logoTransparent}" alt="logo" class="h-16">
                   </a>
                 </div>
                 <div class="footer-content max-w-[304px] mb-6">

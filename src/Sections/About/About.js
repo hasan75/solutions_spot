@@ -4,7 +4,7 @@ import provider23 from '../../assets/images/provider-23.jpg'
 
 export default function About() {
     return `
-    <div class="container mx-auto px-4 py-14 md:py-24">
+    <div class="container mx-auto px-4 pt-14 pb-14  md:pt-40 md:pb-20">
       <div class="flex flex-col lg:flex-row items-center">
         <!-- Image Section -->
         <div class="w-full lg:w-1/2 hidden md:block">
@@ -26,18 +26,12 @@ export default function About() {
         <div class="w-full lg:w-1/2 lg:pl-12">
           <div class="about-content">
             <h6 class="font-semibold text-solprimary mb-2">ABOUT OUR COMPANY</h6>
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Best Solution For Cleaning Services</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Your Trusted Local Partner for Home Solutions</h2>
             <p class="text-gray-600 mb-4">
-              Welcome to Truelysell, your premier destination for connecting with top-rated service
-              providers and finding the perfect match for your needs. Our platform is designed to
-              simplify the process of discovering, evaluating, and hiring trusted professionals
-              across a wide range of services.
+             Welcome to Solutions Spot, your go-to destination in Rajshahi for dependable plumbing, electrical, and cleaning services. We connect you with skilled professionals committed to delivering high-quality, on-time solutions for your everyday needs.
             </p>
             <p class="text-gray-600 mb-6">
-              At Truelysell, our mission is to bridge the gap between service providers and
-              customers by offering a seamless and efficient marketplace experience. We aim to
-              empower both parties by providing a reliable platform where quality, transparency,
-              and customer satisfaction are our top priorities.
+              At Solutions Spot, we believe in making life easier for our customers by offering quick, reliable, and transparent service experiences. Our platform helps bridge the gap between local service experts and homeowners with just a few clicks.
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -48,7 +42,7 @@ export default function About() {
                 </li>
                 <li class="flex items-center text-gray-700 truncate pl-1">
                    <i class="fas fa-circle-check text-gray-800 mr-2"></i>
-                  Saving your time and effort
+                  Skilled professionals you can trust
                 </li>
               </ul>
               <ul class="space-y-3">
@@ -58,7 +52,7 @@ export default function About() {
                 </li>
                 <li class="flex items-center text-gray-700 truncate pl-1">
                    <i class="fas fa-circle-check text-gray-800 mr-2"></i>
-                  Smooth and satisfactory experience
+                  Hassle-free support and smooth experience
                 </li>
               </ul>
             </div>

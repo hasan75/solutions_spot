@@ -47,9 +47,9 @@ const services = [
         },
         title: "House Plumbing Services",
         location: "Rajshahi, BD",
-        phone: "301-591-8194",
-        price: "25.00",
-        oldPrice: "35.00",
+        phone: "+8801336985511",
+        price: "2500.00",
+        oldPrice: "3500.00",
         rating: 5,
         reviews: 10
     },
@@ -63,8 +63,8 @@ const services = [
         },
         title: "Apartment, Property Cleaning Services",
         location: "Rajshahi, BD",
-        phone: "615-325-1630",
-        price: "45.00",
+        phone: "+8801336985511",
+        price: "4500.00",
         oldPrice: "",
         rating: 5,
         reviews: 10
@@ -79,8 +79,8 @@ const services = [
         },
         title: "Electric Panel Repairing Service",
         location: "Rajshahi, BD",
-        phone: "901-489-4357",
-        price: "45.00",
+        phone: "+8801336985511",
+        price: "5500.00",
         oldPrice: "",
         rating: 5,
         reviews: 10
@@ -129,7 +129,7 @@ export function initServices() {
                 ${Array(service.rating).fill().map(() => `<i class="fas fa-star filled text-yellow-400"></i>`).join('')}
                 <span class="text-sm text-gray-500 ml-1">(${service.reviews})</span>
               </div>
-              <h6 class="font-bold">$${service.price}${service.oldPrice ? `<span class="text-sm text-gray-500 line-through ml-1">$${service.oldPrice}</span>` : ''}</h6>
+              <h6 class="font-bold">৳ ${service.price}${service.oldPrice ? `<span class="text-sm text-gray-500 line-through ml-1">৳${service.oldPrice}</span>` : ''}</h6>
             </div>
           </div>
         </div>

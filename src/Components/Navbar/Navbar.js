@@ -12,12 +12,12 @@ const links = [
         link: '#services',
     },
     {
-        name: 'Pricing',
-        link: '#about',
+        name: 'Testimonials',
+        link: '#testimonials',
     },
     {
-        name: 'Blogs',
-        link: '#about',
+        name: 'Categories',
+        link: '#featuredCategories',
     },
     // {
     //     name: "Services",
@@ -128,9 +128,9 @@ export default function Navbar() {
     <nav class="bg-white flex items-center justify-center navbar fixed z-40 w-full">
       <div class="container">
         <div class="flex items-center font-medium justify-around md:justify-between">
-          <div class="z-50 p-5 md:w-auto w-full flex justify-between">
+          <div class="z-50 h-full md:w-auto w-full flex justify-between">
             <a href="/" class="flex items-center">
-                <img src="${logo}" alt="Sol Logo" class="md:cursor-pointer h-10" id="logo">
+                <img src="${logo}" alt="Sol Logo" class="md:cursor-pointer h-20" id="logo">
             </a>
             <div class="text-3xl md:hidden" id="mobile-menu-button">
               <ion-icon name="menu"></ion-icon>
@@ -143,7 +143,7 @@ export default function Navbar() {
             ${generateNavLinks()}
           </ul>
           <div class="md:block hidden">
-            <a href="tel:+8801336985511" class="flex items-center">
+            <a href="#contact" class="flex items-center">
             <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-blue-300">Contact Us</button>
             </a>
           </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
             </li>
             ${generateNavLinks(true)}
             <div class="py-5">
-                <a href="tel:+8801336985511" class="flex items-center">
+                <a href="#contact" class="flex items-center">
                         <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">Contact Us</button>
                 </a>
           

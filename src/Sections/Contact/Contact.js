@@ -12,8 +12,8 @@ export default function Contact() {
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Phone Number</h6>
-              <a href="tel:8888888888" class="block text-sm hover:text-solprimary">(888) 888-8888</a>
-              <a href="tel:1234567890" class="block text-sm hover:text-solprimary">(123) 456-7890</a>
+              <a href="tel:01336985511" class="block text-sm hover:text-solprimary">(+880) 1336985511</a>
+              <a href="tel:01336985511" class="block text-sm hover:text-solprimary">(+880) 1336985511</a>
             </div>
           </div>
         </div>
@@ -26,8 +26,8 @@ export default function Contact() {
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Email Address</h6>
-              <a href="mailto:truelysell@example.com" class="block text-sm hover:text-solprimary">truelysell@example.com</a>
-              <a href="mailto:johnsmith@example.com" class="block text-sm hover:text-solprimary">johnsmith@example.com</a>
+              <a href="mailto:info.solutionsspot@gmail.com" class="block text-sm hover:text-solprimary">info.solutionsspot@gmail.com</a>
+              <a href="mailto:info.solutionsspot@gmail.com" class="block text-sm hover:text-solprimary">info.solutionsspot@gmail.com</a>
             </div>
           </div>
         </div>
@@ -36,11 +36,11 @@ export default function Contact() {
         <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 transition-all duration-300 hover:shadow-md">
           <div class="flex items-center">
             <div class="w-16 h-16 rounded-full bg-solsecondary flex items-center justify-center mr-4">
-              <i class="fa-solid fa-location-dot text-primary text-2xl"></i>
+              <i class="fa-solid fa-location-dot text-primary text-2xl px-6"></i>
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Address</h6>
-              <p class="text-sm">367 Hillcrest Lane, Irvine, California, United States</p>
+              <p class="text-sm">3rd Floor, House-4, Badeshin Para (Opposite of RUET pocket gate), 6204 Rajshahi, Bangladesh</p>
             </div>
           </div>
         </div>
