@@ -9,15 +9,15 @@ export default function About() {
         <!-- Image Section -->
         <div class="w-full lg:w-1/2 hidden md:block">
           <div class="about-img relative">
-            <div class="about-exp bg-gray-800 rounded-lg max-w-[370px] h-full">
-              <span class="font-semibold text-2xl text-white">
-                12+ years of experiences
+            <div class="about-exp bg-gray-800 rounded-lg max-w-[390px] h-full">
+              <span class="font-semibold text-2xl text-gray-200">
+                Where Clean Meets Care
               </span>
             </div>
             <div class="abt-img relative z-10 py-8 pl-16">
               <img src="${provider23}" 
                    alt="About our company" 
-                   class="rounded-lg max-w-full max-h-[450px] w-full">
+                   class="rounded-lg max-w-full min-h-[370px] max-h-[450px] w-full shadow-xl hover:scale-105 duration-300">
             </div>
           </div>
         </div>
@@ -36,22 +36,22 @@ export default function About() {
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <ul class="space-y-3">
-                <li class="flex items-center text-gray-700 truncate pl-1">
-                  <i class="fas fa-circle-check text-gray-800 mr-2"></i>
+                <li class="flex items-center text-gray-700  pl-1">
+                  <i class="fas fa-circle-check text-solprimary mr-2"></i>
                   We prioritize quality and reliability
                 </li>
-                <li class="flex items-center text-gray-700 truncate pl-1">
-                   <i class="fas fa-circle-check text-gray-800 mr-2"></i>
+                <li class="flex items-center text-gray-700  pl-1">
+                   <i class="fas fa-circle-check text-solprimary mr-2"></i>
                   Skilled professionals you can trust
                 </li>
               </ul>
               <ul class="space-y-3">
-                <li class="flex items-center text-gray-700 truncate pl-1">
-                   <i class="fas fa-circle-check text-gray-800 mr-2"></i>
+                <li class="flex items-center text-gray-700  pl-1">
+                   <i class="fas fa-circle-check text-solprimary mr-2"></i>
                   Clear, detailed service listings & reviews
                 </li>
-                <li class="flex items-center text-gray-700 truncate pl-1">
-                   <i class="fas fa-circle-check text-gray-800 mr-2"></i>
+                <li class="flex items-center text-gray-700  pl-1">
+                   <i class="fas fa-circle-check text-solprimary mr-2"></i>
                   Hassle-free support and smooth experience
                 </li>
               </ul>

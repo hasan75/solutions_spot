@@ -6,6 +6,9 @@ import categories3 from '../../assets/images/categories-03.jpg'
 import categories4 from '../../assets/images/categories-04.jpg'
 import categories5 from '../../assets/images/categories-05.jpg'
 import categories6 from '../../assets/images/categories-06.jpg'
+import homecategory from '../../assets/images/ss_categories/home_appliance/homeappliance1.jpg'
+import beautycategory from '../../assets/images/ss_categories/beauty_care/beautycare3.jpg'
+import plumbercategory from '../../assets/images/ss_categories/Plumber/plumber2.jpg'
 
 import featureIcon9 from '../../assets/images/feature-icon-09.svg'
 import featureIcon10 from '../../assets/images/feature-icon-10.svg'
@@ -13,13 +16,16 @@ import featureIcon11 from '../../assets/images/feature-icon-11.svg'
 import featureIcon12 from '../../assets/images/feature-icon-12.svg'
 import featureIcon13 from '../../assets/images/feature-icon-13.svg'
 import featureIcon14 from '../../assets/images/feature-icon-14.svg'
+import homeappIcon from '../../assets/images/ss_categories/homeappicon.svg';
+import beautyIcon from '../../assets/images/ss_categories/skincare.svg';
+import plumberIcon from '../../assets/images/ss_categories/plumbing.svg';
 
 const categories = [
     {
         id: 1,
         image: categories1,
         icon: featureIcon9,
-        title: "Construction",
+        title: "AC Service",
         count: "10 Services"
     },
     {
@@ -33,7 +39,7 @@ const categories = [
         id: 3,
         image: categories3,
         icon: featureIcon11,
-        title: "Car Wash",
+        title: "Car Service",
         count: "15 Services"
     },
     {
@@ -55,6 +61,27 @@ const categories = [
         image: categories6,
         icon: featureIcon14,
         title: "Construction",
+        count: "13 Services"
+    },
+    {
+        id: 6,
+        image: beautycategory,
+        icon: beautyIcon,
+        title: "Beauty Care",
+        count: "13 Services"
+    },
+    {
+        id: 6,
+        image: plumbercategory,
+        icon: plumberIcon,
+        title: "Plumbing",
+        count: "13 Services"
+    },
+    {
+        id: 6,
+        image: homecategory,
+        icon: homeappIcon,
+        title: "Home Appliances",
         count: "13 Services"
     }
 ];

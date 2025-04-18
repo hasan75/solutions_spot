@@ -9,23 +9,23 @@ const testimonials = [
         quote: "“The best service”",
         text: "Versatile and user-friendly platform for freelancers and businesses alike. Its interface is clean and intuitive...",
         avatar: avatar1,
-        name: "Sophie Moore",
-        position: "Head of Design at Google"
+        name: "Hamidur Rangon",
+        position: "Head of Management at ACS"
     },
     {
         rating: 5,
         quote: "“Awesome Works”",
         text: "Excels in providing a quick and easy way to find help for everyday tasks and home repairs...",
         avatar: avatar2,
-        name: "Mike Hussy",
-        position: "Tech Lead"
+        name: "Ruposh Chowdhury",
+        position: "COO, RC Ltd"
     },
     {
         rating: 5,
         quote: "“Brilliant Work”",
         text: "Offers a comprehensive marketplace for finding local service professionals across a wide range of categories...",
         avatar: avatar3,
-        name: "Tom Beker",
+        name: "Shaikot Ali",
         position: "Ads Chairman"
     }
 ];

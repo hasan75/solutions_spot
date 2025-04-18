@@ -1,5 +1,42 @@
 import service76 from '../../assets/images/service-76.jpg';
 export default function Contact() {
+    setTimeout(()=> {
+        document.getElementById('contactForm')
+            .addEventListener('submit', (e) => {
+                e.preventDefault();
+                const serviceId = 'service_4lqnxy9';
+                const templateId = 'template_nm2scjd';
+
+                emailjs.sendForm(serviceId, templateId, '#contactForm')
+                    .then(() => {
+                        alert('Thank you for contacting us! We will get back to you!');
+                        // Reset the form after successful submission
+                        document.getElementById('contactForm').reset();
+                    }, (err) => {
+                        alert(JSON.stringify(err));
+                    })
+            })
+
+    },0)
+
+    // function sendEmail () {
+    //     let params = {
+    //         name: document.getElementById('contactName').value,
+    //         email: document.getElementById('contactEmail').value,
+    //         phone: document.getElementById('contactNumber').value,
+    //         service: document.getElementById('contactMessage').value,
+    //         message: document.getElementById('contactMessage').value,
+    //     }
+    //
+    //     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams).then(
+    //         (response) => {
+    //             console.log('SUCCESS!', response.status, response.text);
+    //         },
+    //         (error) => {
+    //             console.log('FAILED...', error);
+    //         },
+    //     );
+    // }
     return `
     <div class="container mx-auto px-4 py-16">
       <!-- Contact Details Cards -->
@@ -57,25 +94,30 @@ export default function Contact() {
         <div class="flex items-center">
           <div class="w-full">
             <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-            <form action="contact-us.html" class="space-y-4">
+            <form id="contactForm" class="space-y-4">
               <div>
-                <input type="text" placeholder="Your Name" 
+                <input id="contactName" type="text" placeholder="Your Name" 
+                required
+                        name="name"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       
+                >
+              </div>
+              <div>
+                <input id="contactEmail" type="email" placeholder="Your Email Address"  name="email"
+                required
                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
               </div>
               <div>
-                <input type="email" placeholder="Your Email Address" 
+                <input type="tel" id="contactNumber" placeholder="Your Phone Number" name="phone" required
                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
               </div>
               <div>
-                <input type="tel" placeholder="Your Phone Number" 
+                <input type="text" id="contactService" placeholder="Service Type" name="service type" required
                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
               </div>
               <div>
-                <input type="text" placeholder="Service Type" 
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-              </div>
-              <div>
-                <textarea placeholder="Type Message" 
+                <textarea id="contactMessage" placeholder="Type Message" name="message" required
                           class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"></textarea>
               </div>
               <button type="submit" class="bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full flex items-center transition duration-200">

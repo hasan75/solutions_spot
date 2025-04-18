@@ -16,7 +16,7 @@ export default function Hero() {
     }, 0);
 
     return `
-    <div class="hero-section-container flex items-center justify-center top-20 min-h-[50vh] md:min-h-[70vh]">
+    <div class="hero-section-container flex items-center justify-center top-12 md:top-20 min-h-[50vh] md:min-h-[70vh]">
       <div class="container">
         <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-6 md:py-0">
           <h1 class="text-4xl lg:text-5xl font-bold text-white mb-4 text-center">

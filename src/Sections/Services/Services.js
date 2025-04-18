@@ -1,6 +1,8 @@
 import category8 from '../../assets/images/categories-08.jpg';
 import category9 from '../../assets/images/categories-09.jpg';
 import category5 from '../../assets/images/categories-05.jpg';
+import categoryPaste from '../../assets/images/paste01.avif';
+import categoryBeauty from '../../assets/images/ss_categories/beauty_care/beautycare2.jpg';
 
 import avatar1 from '../../assets/images/avatar-01.jpg'
 import avatar2 from '../../assets/images/avatar-02.jpg'
@@ -16,12 +18,12 @@ export default function Services() {
             <div class="mb-6 md:mb-0" data-aos="fade-up">
               <div class="text-center md:text-left">
                 <h2 class="text-3xl font-bold tsolPrimaryBgext-gray-800">Featured Services</h2>
-                <p class="text-lg text-gray-600 mt-2">Explore the greatest our services. You won't be disappointed</p>
+                <p class="text-lg text-gray-600 mt-2">Explore the greatest of our services. You won't be disappointed</p>
               </div>
             </div>
             <div class="md:text-right" data-aos="fade-up">
-              <a href="categories.html" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
-                    View All
+              <a href="#contact" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
+                    Get a Service
               </a>
             </div>
           </div>
@@ -39,29 +41,13 @@ export default function Services() {
 const services = [
     {
         id: 1,
-        image: category8,
-        category: "Plumbing",
-        provider: {
-            name: "Jeny Doe",
-            avatar: avatar1,
-        },
-        title: "House Plumbing Services",
-        location: "Rajshahi, BD",
-        phone: "+8801336985511",
-        price: "2500.00",
-        oldPrice: "3500.00",
-        rating: 5,
-        reviews: 10
-    },
-    {
-        id: 2,
         image: category9,
         category: "Cleaning",
         provider: {
-            name: "Nick John",
-            avatar: avatar2,
+            name: "Solutions Spot",
+            avatar: avatar1,
         },
-        title: "Apartment, Property Cleaning Services",
+        title: "Property Cleaning Services",
         location: "Rajshahi, BD",
         phone: "+8801336985511",
         price: "4500.00",
@@ -70,21 +56,69 @@ const services = [
         reviews: 10
     },
     {
-        id: 3,
-        image: category5,
-        category: "Electrical",
+        id: 2,
+        image: categoryPaste,
+        category: "Pest Control",
         provider: {
-            name: "James",
-            avatar: avatar3,
+            name: "Solutions Spot",
+            avatar: avatar2,
         },
-        title: "Electric Panel Repairing Service",
+        title: "Pest Control Services",
         location: "Rajshahi, BD",
         phone: "+8801336985511",
-        price: "5500.00",
+        price: "4500.00",
         oldPrice: "",
         rating: 5,
-        reviews: 10
-    }
+        reviews: 13
+    },
+    {
+        id: 3,
+        image: categoryBeauty,
+        category: "Beauty Care",
+        provider: {
+            name: "Solutions Spot",
+            avatar: avatar3,
+        },
+        title: "Exclusive Beauty Care",
+        location: "Rajshahi, BD",
+        phone: "+8801336985511",
+        price: "2500.00",
+        oldPrice: "3500.00",
+        rating: 5,
+        reviews: 50
+    },
+    // {
+    //     id: 33,
+    //     image: category8,
+    //     category: "Plumbing",
+    //     provider: {
+    //         name: "Jeny Doe",
+    //         avatar: avatar1,
+    //     },
+    //     title: "House Plumbing Services",
+    //     location: "Rajshahi, BD",
+    //     phone: "+8801336985511",
+    //     price: "2500.00",
+    //     oldPrice: "3500.00",
+    //     rating: 5,
+    //     reviews: 10
+    // },
+    // {
+    //     id: 3,
+    //     image: category5,
+    //     category: "Electrical",
+    //     provider: {
+    //         name: "James",
+    //         avatar: avatar3,
+    //     },
+    //     title: "Electric Panel Repairing Service",
+    //     location: "Rajshahi, BD",
+    //     phone: "+8801336985511",
+    //     price: "5500.00",
+    //     oldPrice: "",
+    //     rating: 5,
+    //     reviews: 10
+    // }
 ];
 
 // Service data and rendering logic
