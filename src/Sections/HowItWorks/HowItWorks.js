@@ -24,7 +24,7 @@ export default function HowItWorks() {
                 </span>
               </div>
               <h5 class="text-xl font-semibold text-gray-800 mb-3">${step.title}</h5>
-              <p class="text-gray-600">${step.description}</p>
+              <p class="text-gray-600 p-4">${step.description}</p>
             </div>
           </div>
         `).join('')}
@@ -35,21 +35,21 @@ export default function HowItWorks() {
 
 const howItWorksSteps = [
     {
-        first: true,
-        icon: workIcon1,
-        title: "Search and Browse",
-        description: "Customers can browse or search for specific products or services using categories, filters, or search bars."
-    },
-    {
         last: true,
         icon: workIcon2,
         title: "Find What You Want",
-        description: "Customers can add items to their cart. For services, they may select a service and proceed to book."
+        description: "Find what you need—Cleaning, Pest Control, Beauty Care, or upcoming services like Plumbing and AC Repair."
+    },
+    {
+        first: true,
+        icon: workIcon1,
+        title: "Contact Us",
+        description: "Pick a service - Call, message, or visit us to discuss your needs."
     },
     {
         icon: workIcon3,
         title: "Order Fulfillment",
-        description: "The Customer fulfills the order by either providing the service to the customer & Get Leads from locals"
+        description: "Our team or trusted partners deliver the service at your convenience."
     }
 ];
 

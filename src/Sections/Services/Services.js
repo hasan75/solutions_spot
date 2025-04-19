@@ -1,6 +1,7 @@
 import category8 from '../../assets/images/categories-08.jpg';
 import category9 from '../../assets/images/categories-09.jpg';
 import category5 from '../../assets/images/categories-05.jpg';
+import category4 from '../../assets/images/categories-04.jpg';
 import categoryPaste from '../../assets/images/paste01.avif';
 import categoryBeauty from '../../assets/images/ss_categories/beauty_care/beautycare2.jpg';
 
@@ -41,7 +42,7 @@ export default function Services() {
 const services = [
     {
         id: 1,
-        image: category9,
+        image: category4,
         category: "Cleaning",
         provider: {
             name: "Solutions Spot",

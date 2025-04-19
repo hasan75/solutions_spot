@@ -11,7 +11,7 @@ export default function Footer() {
             <div class="">
               <div class="footer-widget mb-8">
                 <div class="mb-6">
-                  <a href="index.html">
+                  <a href="/">
                     <img src="${logoTransparent}" alt="logo" class="h-16">
                   </a>
                 </div>
@@ -38,11 +38,11 @@ export default function Footer() {
               <div class="footer-widget mb-8">
                 <h2 class="text-xl font-medium mb-4">Pages</h2>
                 <ul class="space-y-2">
-                  <li><a href="index-2.html" class="hover:text-solprimary">Home</a></li>
-                  <li><a href="#" class="hover:text-solprimary">For business</a></li>
-                  <li><a href="categories.html" class="hover:text-solprimary">All Categories</a></li>
-                  <li><a href="contact-us.html" class="hover:text-solprimary">Contact</a></li>
-                  <li><a href="blogs.html" class="hover:text-solprimary">Our Blog</a></li>
+                  <li><a href="/" class="hover:text-solprimary">Home</a></li>
+                  <li><a href="#about" class="hover:text-solprimary">For business</a></li>
+                  <li><a href="#featuredCategories" class="hover:text-solprimary">All Categories</a></li>
+                  <li><a href="#contact" class="hover:text-solprimary">Contact</a></li>
+                  <li><a href="/" class="hover:text-solprimary">Our Blog</a></li>
                 </ul>
               </div>
             </div>
@@ -52,11 +52,11 @@ export default function Footer() {
               <div class="footer-widget mb-8">
                 <h2 class="text-xl font-medium mb-4">About us</h2>
                 <ul class="space-y-2">
-                  <li><a href="about-us.html" class="hover:text-solprimary">About</a></li>
-                  <li><a href="search.html" class="hover:text-solprimary">Services</a></li>
-                  <li><a href="how-it-works.html" class="hover:text-solprimary">How we work</a></li>
-                  <li><a href="#" class="hover:text-solprimary">News</a></li>
-                  <li><a href="#" class="hover:text-solprimary">Help Guide</a></li>
+                  <li><a href="#about" class="hover:text-solprimary">About</a></li>
+                  <li><a href="#services" class="hover:text-solprimary">Services</a></li>
+                  <li><a href="#howItWorks" class="hover:text-solprimary">How we work</a></li>
+                  <li><a href="#services" class="hover:text-solprimary">News</a></li>
+                  <li><a href="#about" class="hover:text-solprimary">Help Guide</a></li>
                 </ul>
               </div>
             </div>
@@ -66,11 +66,11 @@ export default function Footer() {
               <div class="footer-widget mb-8">
                 <h2 class="text-xl font-medium mb-4">Services</h2>
                 <ul class="space-y-2">
-                  <li><a href="about-us.html" class="hover:text-solprimary">Service 1</a></li>
-                  <li><a href="search.html" class="hover:text-solprimary">Service 2</a></li>
-                  <li><a href="how-it-works.html" class="hover:text-solprimary">Work Details</a></li>
-                  <li><a href="#" class="hover:text-solprimary">Goals</a></li>
-                  <li><a href="#" class="hover:text-solprimary">Post Service Packages</a></li>
+                  <li><a href="#services" class="hover:text-solprimary">Service 1</a></li>
+                  <li><a href="#services" class="hover:text-solprimary">Service 2</a></li>
+                  <li><a href="#howItWorks" class="hover:text-solprimary">Work Details</a></li>
+                  <li><a href="#about" class="hover:text-solprimary">Goals</a></li>
+                  <li><a href="#services" class="hover:text-solprimary">Post Service Packages</a></li>
                 </ul>
               </div>
             </div>
