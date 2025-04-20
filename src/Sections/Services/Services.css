@@ -1,0 +1,37 @@
+/* Add these to your stylesheet */
+.subservices-overlay {
+    transform-origin: center center;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+}
+
+.main-content {
+    will-change: transform, opacity;
+}
+
+.subservices-overlay li {
+    transform-origin: left center;
+    will-change: transform;
+    opacity: 0;
+    transform: translateX(10px);
+}
+
+.group:hover .subservices-overlay li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes progress {
+    from { width: 0% }
+    to { width: 100% }
+}
+
+.group:hover .subservices-overlay [data-width] {
+    animation: progress 1.5s ease-out forwards;
+}
+
+.group:hover .subservices-overlay li:nth-child(1) { transition-delay: 100ms }
+.group:hover .subservices-overlay li:nth-child(2) { transition-delay: 150ms }
+.group:hover .subservices-overlay li:nth-child(3) { transition-delay: 200ms }
+/* Continue for as many items as you expect */
+
