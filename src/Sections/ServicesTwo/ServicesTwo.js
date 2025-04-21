@@ -275,16 +275,22 @@ const serviceCategories = [
     }
 ];
 
-// Combine all categories
+// Helper function to create URL-friendly IDs
+const createCategoryId = (name) => {
+    return name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+};
+// Combine all categories with URL-friendly IDs
 const allCategories = [
     ...beautyServices[0].subcategories.map(cat => ({
         ...cat,
+        id: createCategoryId(cat.name),
         imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
         imageMobile: categoryImageMobile,
         type: 'beauty'
     })),
     ...serviceCategories.map(cat => ({
         ...cat,
+        id: createCategoryId(cat.name),
         type: 'regular'
     }))
 ];
@@ -295,14 +301,13 @@ export default function ServiceTwo() {
       <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Our Complete Services</h1>
       
       <div class="flex flex-col lg:flex-row gap-8">
-        <!-- Mobile Category Dropdown - Now Sticky -->
+        <!-- Mobile Category Dropdown -->
         <div class="lg:hidden sticky top-12 z-50 bg-white py-3 border-b border-gray-200">
           <select id="mobile-category-select" 
-                  class="w-full p-3 pl-4 pr-10 border-2 border-gray-200 rounded-lg focus:ring-solprimary focus:border-solprimary 
-                         text-base appearance-none bg-white">
+                  class="w-full p-3 pl-4 pr-10 border-2 border-gray-200 rounded-lg focus:ring-solprimary focus:border-solprimary text-base">
             <option value="" disabled selected>Select a category...</option>
-            ${allCategories.map((category, index) => `
-              <option value="#category-${index}" class="py-2">${category.name}</option>
+            ${allCategories.map(category => `
+              <option value="#${category.id}" class="py-2">${category.name}</option>
             `).join('')}
           </select>
         </div>
@@ -314,7 +319,7 @@ export default function ServiceTwo() {
             <ul class="space-y-2" id="category-list">
               ${allCategories.map((category, index) => `
                 <li>
-                  <a href="#category-${index}" 
+                  <a href="#${category.id}" 
                      class="category-link block w-full text-left px-4 py-3 rounded-lg transition-all 
                      hover:bg-solprimary/10 hover:text-solprimary font-medium
                      flex items-center justify-between">
@@ -331,10 +336,10 @@ export default function ServiceTwo() {
         <!-- Details Column -->
         <div class="w-full lg:w-3/4">
           <div id="services-container" class="space-y-12">
-            ${allCategories.map((category, index) => `
-              <div id="category-${index}" class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
-                <!-- Mobile Category Header (Sticky) -->
-                <div class="lg:hidden sticky top-16 bg-white z-40 px-4 py-3 border-b border-gray-200">
+            ${allCategories.map(category => `
+              <div id="${category.id}" class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
+                <!-- Mobile Category Header -->
+                <div class=" bg-white z-40 px-4 py-3 border-b border-gray-200">
                   <h2 class="text-xl font-bold text-gray-800 flex items-center">
                     ${category.name}
                     <span class="ml-auto text-sm font-normal bg-solprimary/10 text-solprimary px-3 py-1 rounded-full">
@@ -469,28 +474,53 @@ function renderBeautyServices(category) {
 }
 
 // Update initServicesPage function
+// Update the ServiceTwo component's initialization
 export function initServicesPage() {
-    // Desktop category links
-    document.querySelectorAll('.category-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            scrollToCategory(targetId);
-        });
-    });
-
-    // Mobile category select
-    const mobileSelect = document.getElementById('mobile-category-select');
-    if (mobileSelect) {
-        mobileSelect.addEventListener('change', (e) => {
-            if (e.target.value) {
-                scrollToCategory(e.target.value);
-                // Reset select after selection
+    // Handle initial page load with hash
+    const handleInitialScroll = () => {
+        if (window.location.hash) {
+            const targetElement = document.querySelector(window.location.hash);
+            if (targetElement) {
                 setTimeout(() => {
-                    mobileSelect.value = '';
-                }, 500);
+                    scrollToCategory(window.location.hash);
+                }, 100);
             }
+        }
+    };
+
+    // Set up event listeners after slight delay to ensure DOM is ready
+    setTimeout(() => {
+        // Desktop category links
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                updateUrlAndScroll(targetId);
+            });
         });
+
+        // Mobile category select
+        const mobileSelect = document.getElementById('mobile-category-select');
+        if (mobileSelect) {
+            mobileSelect.addEventListener('change', (e) => {
+                if (e.target.value) {
+                    updateUrlAndScroll(e.target.value);
+                    setTimeout(() => {
+                        mobileSelect.value = '';
+                    }, 500);
+                }
+            });
+        }
+
+        handleInitialScroll();
+    }, 50);
+
+    function updateUrlAndScroll(targetId) {
+        // Update URL hash without page reload
+        if (window.location.hash !== targetId) {
+            window.history.pushState(null, null, targetId);
+        }
+        scrollToCategory(targetId);
     }
 
     function scrollToCategory(targetId) {
@@ -512,4 +542,11 @@ export function initServicesPage() {
             }, 2000);
         }
     }
+
+    // Handle back/forward navigation
+    window.addEventListener('popstate', () => {
+        if (window.location.hash) {
+            scrollToCategory(window.location.hash);
+        }
+    });
 }
