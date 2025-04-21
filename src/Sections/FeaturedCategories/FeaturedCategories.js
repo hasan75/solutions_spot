@@ -28,20 +28,20 @@ const categories = [
         title: "AC Service",
         count: "10 Services"
     },
-    {
-        id: 2,
-        image: categories2,
-        icon: featureIcon10,
-        title: "Interior",
-        count: "08 Services"
-    },
-    {
-        id: 3,
-        image: categories3,
-        icon: featureIcon11,
-        title: "Car Service",
-        count: "15 Services"
-    },
+    // {
+    //     id: 2,
+    //     image: categories2,
+    //     icon: featureIcon10,
+    //     title: "Interior",
+    //     count: "08 Services"
+    // },
+    // {
+    //     id: 3,
+    //     image: categories3,
+    //     icon: featureIcon11,
+    //     title: "Car Service",
+    //     count: "15 Services"
+    // },
     {
         id: 4,
         image: categories4,
@@ -56,13 +56,13 @@ const categories = [
         title: "Electrical",
         count: "17 Services"
     },
-    {
-        id: 6,
-        image: categories6,
-        icon: featureIcon14,
-        title: "Construction",
-        count: "13 Services"
-    },
+    // {
+    //     id: 6,
+    //     image: categories6,
+    //     icon: featureIcon14,
+    //     title: "Construction",
+    //     count: "13 Services"
+    // },
     {
         id: 6,
         image: beautycategory,

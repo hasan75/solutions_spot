@@ -29,6 +29,7 @@ import Offer from "../../Sections/Offer/Offer";
 import Partners from "../../Sections/Partners/Partners";
 import Footer from "../../Components/Footer/Footer";
 import Contact from "../../Sections/Contact/Contact";
+import ServiceTwo, {initServicesPage} from '../../Sections/ServicesTwo/ServicesTwo'
 // Render components
 document.getElementById('navbar').innerHTML = Navbar();
 document.getElementById('hero').innerHTML = Hero();
@@ -41,7 +42,9 @@ document.getElementById('offer').innerHTML = Offer();
 document.getElementById('partners').innerHTML = Partners();
 document.getElementById('footer').innerHTML = Footer();
 document.getElementById('contact').innerHTML = Contact();
+// document.getElementById('hero-services').innerHTML = ServiceTwo();
 
 
 initNavbar();
 initServices();
+// initServicesPage();

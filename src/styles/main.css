@@ -9,3 +9,85 @@ html {
 .btn-primary {
     @apply bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-all;
 }
+
+
+/* Services Page Specific Styles */
+.sticky-categories {
+    position: sticky;
+    top: 6rem; /* Adjusted for your header height */
+}
+
+.category-btn {
+    transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+    transform: translateX(4px);
+}
+
+.category-btn.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.service-table {
+    min-width: 100%;
+}
+
+.service-table th {
+    background-color: #f9fafb;
+}
+
+.service-table tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+    }
+
+    .categories-column {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        position: static !important;
+    }
+
+    .details-column {
+        width: 100%;
+    }
+
+    #category-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+}
+
+#mobile-category-select {
+    padding: 0.75rem 1rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#mobile-category-select option {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 4rem;
+    z-index: 50;
+}

@@ -9,6 +9,7 @@ import avatar1 from '../../assets/images/avatar-01.jpg'
 import avatar2 from '../../assets/images/avatar-02.jpg'
 import avatar3 from '../../assets/images/avatar-03.jpg'
 
+import './Services.css';
 
 const beautyServices = [
     {
@@ -55,7 +56,7 @@ const beautyServices = [
                             { name: "Cap stick (Short length Hair)", price: 4000 },
                             { name: "Cap stick (Medium length Hair)", price: 5000 },
                             { name: "Cap stick (Full length Hair)", price: 6000 },
-                            { name: "Baby stick full hair colour", price: 5000,  note: "Price depends on Hair length and Volume starts from" },
+                            { name: "Baby stick full hair colour", price: 5000,  note: "Price depends on Hair length and Volume." },
                             { name: "Single stick colour", price: 250, unit: "per stick" },
                             { name: "Full Hair Colour (Short length)", price: 4000 },
                             { name: "Full Hair Colour (Medium length)", price: 5000 },

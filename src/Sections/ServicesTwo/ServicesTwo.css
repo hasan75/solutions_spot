@@ -1,0 +1,44 @@
+/* Services Page Specific Styles */
+@media (max-width: 767px) {
+    #category-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    #category-list li {
+        margin-bottom: 0;
+    }
+
+    .category-btn {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    td, th {
+        padding: 0.5rem;
+    }
+}
+
+/* Smooth transitions */
+#category-details {
+    transition: opacity 0.3s ease;
+}
+
+.category-btn i {
+    transition: transform 0.2s ease;
+}
+
+.category-btn.active i {
+    transform: rotate(90deg);
+}
+
+/* Table row hover effect */
+tr {
+    transition: background-color 0.2s ease;
+}
+
