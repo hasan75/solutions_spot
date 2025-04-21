@@ -91,3 +91,16 @@ html {
     top: 4rem;
     z-index: 50;
 }
+
+/* Active category highlight */
+.category-link.active {
+    background-color: rgba(29, 78, 216, 0.1); /* bg-solprimary/10 */
+    color: #1d4ed8; /* text-solprimary */
+    font-weight: 500;
+}
+
+/* Mobile select option highlight */
+#mobile-category-select option:checked {
+    background-color: rgba(29, 78, 216, 0.1);
+    color: #1d4ed8;
+}

@@ -476,14 +476,43 @@ function renderBeautyServices(category) {
 // Update initServicesPage function
 // Update the ServiceTwo component's initialization
 export function initServicesPage() {
+    // Function to set active category
+    const setActiveCategory = (categoryId) => {
+        // Remove active class from all category links
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.classList.remove('active');
+        });
+
+        // Add active class to the clicked/current category link
+        if (categoryId) {
+            const activeLink = document.querySelector(`.category-link[href="${categoryId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            // Also update the mobile select
+            const mobileSelect = document.getElementById('mobile-category-select');
+            if (mobileSelect) {
+                mobileSelect.value = categoryId;
+            }
+        }
+    };
+
     // Handle initial page load with hash
     const handleInitialScroll = () => {
         if (window.location.hash) {
+            setActiveCategory(window.location.hash);
             const targetElement = document.querySelector(window.location.hash);
             if (targetElement) {
                 setTimeout(() => {
                     scrollToCategory(window.location.hash);
                 }, 100);
+            }
+        } else {
+            // Set first category as active by default if no hash
+            const firstCategory = allCategories[0];
+            if (firstCategory) {
+                setActiveCategory(`#${firstCategory.id}`);
             }
         }
     };
@@ -496,6 +525,7 @@ export function initServicesPage() {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
                 updateUrlAndScroll(targetId);
+                setActiveCategory(targetId);
             });
         });
 
@@ -505,8 +535,9 @@ export function initServicesPage() {
             mobileSelect.addEventListener('change', (e) => {
                 if (e.target.value) {
                     updateUrlAndScroll(e.target.value);
+                    setActiveCategory(e.target.value);
                     setTimeout(() => {
-                        mobileSelect.value = '';
+                        mobileSelect.value = e.target.value;
                     }, 500);
                 }
             });
@@ -546,7 +577,25 @@ export function initServicesPage() {
     // Handle back/forward navigation
     window.addEventListener('popstate', () => {
         if (window.location.hash) {
+            setActiveCategory(window.location.hash);
             scrollToCategory(window.location.hash);
+        }
+    });
+
+    // Handle scroll to update active category
+    window.addEventListener('scroll', () => {
+        const categorySections = document.querySelectorAll('.category-section');
+        let currentActive = null;
+
+        categorySections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top <= 150 && rect.bottom >= 150) { // 150px from top
+                currentActive = `#${section.id}`;
+            }
+        });
+
+        if (currentActive) {
+            setActiveCategory(currentActive);
         }
     });
 }
