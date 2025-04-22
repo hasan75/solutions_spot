@@ -96,7 +96,7 @@ const services = [
         price: "500.00",
         rating: 5,
         reviews: 50,
-        url: "services.html#hair-studio",
+        url: "services.html#on-demand-butcher",
         startsFrom: true,
         exclusive: true,
     }

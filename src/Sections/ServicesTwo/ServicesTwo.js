@@ -18,6 +18,41 @@ import categoryImage3 from '../../assets/images/categories-02.jpg';
 import categoryImageMobile from '../../assets/images/categories-08.jpg';
 import categoryPaste from "../../assets/images/paste01.avif";
 import categoryBeauty from "../../assets/images/ss_categories/beauty_care/beautycare3.jpg";
+import butcher1 from '../../assets/images/butcher.jpg';
+import butcher2 from '../../assets/images/butcher2.jpg';
+import butcher3 from '../../assets/images/butcher3.jpg';
+import piercing1 from '../../assets/images/ss_categories/piercing.jpeg';
+import piercing2 from '../../assets/images/ss_categories/piercing1.webp';
+import piercing3 from '../../assets/images/ss_categories/piercing3.jpg';
+import hair1 from '../../assets/images/ss_categories/hairstudio1.jpeg';
+import hair2 from '../../assets/images/ss_categories/hairstudo2.jpg';
+import hair3 from '../../assets/images/ss_categories/hairstudio3.jpeg';
+import makeover1 from '../../assets/images/ss_categories/makeover1.jpg'
+import makeover2 from '../../assets/images/ss_categories/makeover2.jpeg'
+import makeover3 from '../../assets/images/ss_categories/makeover3.jpg'
+import spa1 from '../../assets/images/ss_categories/spa1.jpeg';
+import spa2 from '../../assets/images/ss_categories/spa2.png';
+import spa3 from '../../assets/images/ss_categories/spa3.jpg';
+import mehedi1 from '../../assets/images/mehedi1.webp';
+import mehedi2 from '../../assets/images/ss_categories/mehedi2.jpg';
+import mehedi3 from '../../assets/images/ss_categories/mehedi3.jpeg';
+
+import electric1 from '../../assets/images/ss_categories/Electrician/electrician2.jpg';
+import electric2 from '../../assets/images/ss_categories/Electrician/electrician3.jpg';
+import electric3 from '../../assets/images/ss_categories/Electrician/electrician4.jpg';
+
+import plumbing1 from '../../assets/images/ss_categories/Plumber/plumber2.jpg';
+import plumbing2 from '../../assets/images/ss_categories/Plumber/plumber1.jpg';
+import plumbing3 from '../../assets/images/provider-23.jpg';
+
+import cleaning1 from '../../assets/images/ss_categories/cleaning/cleaning1.jpg';
+import cleaning2 from '../../assets/images/ss_categories/cleaning/cleaning2.jpg';
+import cleaning3 from '../../assets/images/ss_categories/cleaning/cleaning3.jpg';
+
+import pest1 from '../../assets/images/ss_categories/pest/pestcontrol1.jpg';
+import pest2 from '../../assets/images/ss_categories/pest/pestcontrol2.jpg';
+import pest3 from '../../assets/images/ss_categories/pest/pestcontrol3.jpg';
+
 
 // Normalized Services Data
 const servicesData = [
@@ -55,7 +90,14 @@ const servicesData = [
         note: "",
         rating: 5,
         reviews: 10
-    }
+    },
+    {
+        name: "Koshai - On Demand Butcher",
+        price: 500,
+        note: "starts with",
+        rating: 5,
+        reviews: 20
+    },
 ];
 
 const beautyServices = [
@@ -64,6 +106,8 @@ const beautyServices = [
         subcategories: [
             {
                 name: "Hair Studio",
+                imageDesktop: [hair1, hair2, hair3],
+                imageMobile: hair1,
                 subcategories: [
                     {
                         name: "Hair Treatment",
@@ -144,6 +188,8 @@ const beautyServices = [
             },
             {
                 name: "Makeover and Hair Style",
+                imageDesktop: [makeover1, makeover2, makeover3],
+                imageMobile: makeover1,
                 services: [
                     { name: "Casual makeup", price: 1200 },
                     { name: "Party makeup", price: 3500 },
@@ -158,6 +204,8 @@ const beautyServices = [
             },
             {
                 name: "Massage & Spa",
+                imageDesktop: [spa1, spa2, spa3],
+                imageMobile: spa2,
                 services: [
                     { name: "Foot massage", price: 800 },
                     { name: "Back massage", price: 1000 },
@@ -168,6 +216,8 @@ const beautyServices = [
             },
             {
                 name: "Facial and other services",
+                imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
+                imageMobile: categoryImageMobile,
                 subcategories: [
                     {
                         name: "Facial",
@@ -228,6 +278,8 @@ const beautyServices = [
             },
             {
                 name: "Mehendi Art",
+                imageDesktop: [mehedi1, mehedi2, mehedi3],
+                imageMobile: mehedi2,
                 services: [
                     { name: "Normal festival design (one side one hand)", price: 800 },
                     { name: "Normal festival design (two side of one hand)", price: 1600 },
@@ -237,6 +289,8 @@ const beautyServices = [
             },
             {
                 name: "Piercing",
+                imageDesktop: [piercing1, piercing2, piercing3],
+                imageMobile: piercing3,
                 services: [
                     { name: "Nose piercing", price: 800 },
                     { name: "Ear piercing", price: 1000 }
@@ -251,27 +305,33 @@ const beautyServices = [
 const serviceCategories = [
     {
         name: "Cleaning Services",
-        imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
+        imageDesktop: [cleaning1, cleaning2, cleaning3],
         imageMobile: categoryImageMobile,
         services: servicesData.filter(service => service.name.includes("Cleaning"))
     },
     {
         name: "Pest Control",
-        imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
+        imageDesktop: [pest1, pest2, pest3],
         imageMobile: categoryImageMobile,
         services: servicesData.filter(service => service.name.includes("Pest"))
     },
     {
         name: "Plumbing",
-        imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
-        imageMobile: categoryImageMobile,
+        imageDesktop: [plumbing1, plumbing2, plumbing3],
+        imageMobile: plumbing1,
         services: servicesData.filter(service => service.name.includes("Plumbing"))
     },
     {
         name: "Electrical",
-        imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
-        imageMobile: categoryImageMobile,
+        imageDesktop: [electric1, electric2, electric3],
+        imageMobile: electric1,
         services: servicesData.filter(service => service.name.includes("Electric"))
+    },
+    {
+        name: "On Demand Butcher",
+        imageDesktop: [butcher1, butcher3, butcher2],
+        imageMobile: butcher1,
+        services: servicesData.filter(service => service.name.includes("Butcher"))
     }
 ];
 
@@ -284,8 +344,6 @@ const allCategories = [
     ...beautyServices[0].subcategories.map(cat => ({
         ...cat,
         id: createCategoryId(cat.name),
-        imageDesktop: [categoryImage1, categoryImage2, categoryImage3],
-        imageMobile: categoryImageMobile,
         type: 'beauty'
     })),
     ...serviceCategories.map(cat => ({
