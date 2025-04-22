@@ -4,6 +4,7 @@ import category5 from '../../assets/images/categories-05.jpg';
 import category4 from '../../assets/images/categories-04.jpg';
 import categoryPaste from '../../assets/images/paste01.avif';
 import categoryBeauty from '../../assets/images/ss_categories/beauty_care/beautycare2.jpg';
+import koshai from '../../assets/images/butcher.jpg';
 
 import avatar1 from '../../assets/images/avatar-01.jpg'
 import avatar2 from '../../assets/images/avatar-02.jpg'
@@ -25,13 +26,13 @@ export default function Services() {
               </div>
             </div>
             <div class="md:text-right" data-aos="fade-up">
-              <a href="#contact" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
-                    Get a Service
+              <a href="/services.html" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
+                    View All Services
               </a>
             </div>
           </div>
           <!-- Combined Services Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-grid">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" id="services-grid">
             <!-- All service cards will be injected here -->
           </div>
         </div>
@@ -45,10 +46,6 @@ const services = [
         id: 1,
         image: category4,
         category: "Cleaning",
-        provider: {
-            name: "Solutions Spot",
-            avatar: avatar1,
-        },
         title: "Property Cleaning Services",
         location: "Rajshahi, BD",
         phone: "+8801336985511",
@@ -63,10 +60,6 @@ const services = [
         id: 2,
         image: categoryPaste,
         category: "Pest Control",
-        provider: {
-            name: "Solutions Spot",
-            avatar: avatar2,
-        },
         title: "Pest Control Services",
         location: "Rajshahi, BD",
         phone: "+8801336985511",
@@ -75,16 +68,13 @@ const services = [
         rating: 5,
         reviews: 13,
         url: "services.html#pest-control",
-        startsFrom: true
+        startsFrom: true,
+        exclusive: false,
     },
     {
         id: 3,
         image: categoryBeauty,
         category: "Beauty Care",
-        provider: {
-            name: "Solutions Spot",
-            avatar: avatar3,
-        },
         title: "Exclusive Beauty Care",
         location: "Rajshahi, BD",
         phone: "+8801336985511",
@@ -93,7 +83,22 @@ const services = [
         rating: 5,
         reviews: 50,
         url: "services.html#hair-studio",
-        startsFrom: true
+        startsFrom: true,
+        exclusive: false,
+    },
+    {
+        id: 3,
+        image: koshai,
+        category: "Butcher",
+        title: "Koshai - On Demand Butcher",
+        location: "Rajshahi, BD",
+        phone: "+8801336985511",
+        price: "500.00",
+        rating: 5,
+        reviews: 50,
+        url: "services.html#hair-studio",
+        startsFrom: true,
+        exclusive: true,
     }
 ];
 
@@ -118,6 +123,8 @@ export function initServices() {
 }
 
 function createServiceCard(service) {
+    const isExclusive = service.exclusive;
+
     return `
         <div class="service-card bg-white rounded-xl shadow-sm overflow-hidden relative h-full min-h-[400px] transition-all duration-300 hover:shadow-lg hover:-translate-y-1.5 cursor-pointer" data-url="${service.url}">
             <div class="main-content p-5 h-full">
@@ -125,8 +132,13 @@ function createServiceCard(service) {
                     <img class="w-full h-full object-cover transition-all duration-300" 
                          alt="Service Image" src="${service.image}">
                     <div class="absolute top-3 left-3 right-3 flex justify-between items-center">
-                        <span class="bg-white/90 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full shadow-sm text-solprimary">
+                        <span class="bg-white/90 backdrop-blur-sm text-xs font-bold px-3 py-1 rounded-full shadow-sm ${
+        isExclusive
+            ? 'text-white bg-gradient-to-r from-purple-500 to-pink-500 animate-pulse exclusive-badge'
+            : 'text-solprimary'
+    }">
                             ${service.category}
+                            ${isExclusive ? ' <span class="exclusive-icon">✨</span>' : ''}
                         </span>
                         <button class="fav-icon bg-white/90 backdrop-blur-sm py-2 px-3 rounded-full text-gray-400 hover:text-red-500 shadow-sm transition-all duration-200 hover:scale-110">
                             <i class="fas fa-heart text-sm"></i>

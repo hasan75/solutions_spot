@@ -35,3 +35,57 @@
 .group:hover .subservices-overlay li:nth-child(3) { transition-delay: 200ms }
 /* Continue for as many items as you expect */
 
+
+
+/* Add these styles to your Services.css */
+.exclusive-badge {
+    position: relative;
+    animation: pulse 2s infinite;
+}
+
+.exclusive-badge::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 9999px;
+    border: 1px solid rgba(236, 72, 153, 0.5);
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+.exclusive-icon {
+    display: inline-block;
+    animation: twinkle 1.5s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}

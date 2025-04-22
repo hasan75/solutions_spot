@@ -143,7 +143,7 @@ export default function Navbar() {
             ${generateNavLinks()}
           </ul>
           <div class="md:block hidden">
-            <a href="#contact" class="flex items-center">
+            <a href="https://wa.me/01336985511" target="_blank" class="flex items-center">
             <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-blue-300">Contact Us</button>
             </a>
           </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
             </li>
             ${generateNavLinks(true)}
             <div class="py-5">
-                <a href="#contact" class="flex items-center">
+                <a href="https://wa.me/01336985511" target="_blank" class="flex items-center">
                         <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">Contact Us</button>
                 </a>
           
