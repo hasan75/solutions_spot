@@ -5,11 +5,11 @@ import logo from '../../assets/images/logo.png';
 const links = [
     {
       name: 'About Us',
-      link: '#about',
+      link: '/about.html',
     },
     {
         name: 'Services',
-        link: '#services',
+        link: '/services.html',
     },
     {
         name: 'Testimonials',

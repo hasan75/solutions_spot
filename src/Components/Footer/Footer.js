@@ -105,7 +105,7 @@ export default function Footer() {
         <div class="container mx-auto px-4">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0">
-              <p class="text-sm">© 2025 AccTech Ai. All Rights Reserved.</p>
+              <p class="text-sm">© 2025 <a href="https://acctechai.com/" target="_blank" class="hover:text-solprimary">AccTech Ai</a>. All Rights Reserved.</p>
             </div>
             <div class="copyright-menu md:float-right">
               <ul class="policy-menu list-none m-0 p-0 md:text-right flex flex-wrap gap-5">

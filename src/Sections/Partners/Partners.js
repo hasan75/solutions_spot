@@ -3,18 +3,19 @@ import './Partners.css'
 import partner1 from '../../assets/images/partner1.svg';
 import partner2 from '../../assets/images/partner2.svg';
 import partner3 from '../../assets/images/partner3.svg';
+import accTech from '../../assets/images/accTechAi.jpeg';
 import partner4 from '../../assets/images/partner4.svg';
 import partner5 from '../../assets/images/partner5.svg';
 import partner6 from '../../assets/images/partner6.svg';
 
 export default function Partners() {
     const partners = [
-        { id: 1, logo: partner1, alt: "Partner 1" },
+        { id: 6, logo: partner6, alt: "Partner 6" },
         { id: 2, logo: partner2, alt: "Partner 2" },
         { id: 3, logo: partner3, alt: "Partner 3" },
+        { id: 3, logo: accTech, alt: "Partner 3" },
         { id: 4, logo: partner4, alt: "Partner 4" },
         { id: 5, logo: partner5, alt: "Partner 5" },
-        { id: 6, logo: partner6, alt: "Partner 6" }
     ];
 
     return `

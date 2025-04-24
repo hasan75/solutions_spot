@@ -120,7 +120,7 @@ export default function Hero() {
               </button>
               
               <!-- Services Dropdown -->
-              <div id="servicesDropdown" class="hidden absolute left-0 mt-2 w-64 md:w-80 bg-white rounded-xl shadow-lg z-50 py-2 max-h-[70vh] overflow-y-auto">
+              <div id="servicesDropdown" class="hidden absolute left-0 mt-2 w-64 md:w-80 bg-white rounded-xl shadow-lg z-50 py-2 px-2 max-h-[70vh] overflow-y-auto">
                 ${generateDropdownItems()}
               </div>
             </div>
