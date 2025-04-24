@@ -28,11 +28,14 @@ export default function About() {
             <h6 class="font-semibold text-solprimary mb-2">ABOUT OUR COMPANY</h6>
             <h2 class="text-3xl font-bold text-gray-800 mb-6">Your Trusted Local Partner for Home Solutions</h2>
             <p class="text-gray-600 mb-4">
-             Welcome to Solutions Spot, your go-to destination in Rajshahi for dependable plumbing, electrical, and cleaning services. We connect you with skilled professionals committed to delivering high-quality, on-time solutions for your everyday needs.
+             Solutions Spot is Bangladesh’s trusted name in multi-service solutions, offering a seamless blend of professionalism, reliability, and excellence — all in one place.
+            </p>
+            <p class="text-gray-600 mb-4">
+              We specialize in delivering a comprehensive range of services designed to simplify modern living. Whether it’s keeping your home spotless, ensuring your appliances run smoothly, or providing skilled technical and personal care, Solutions Spot is your go-to service partner.
             </p>
             <p class="text-gray-600 mb-6">
-              At Solutions Spot, we believe in making life easier for our customers by offering quick, reliable, and transparent service experiences. Our platform helps bridge the gap between local service experts and homeowners with just a few clicks.
-            </p>
+            From <span class="font-semibold">cleaning and pest control</span> to <span class="font-semibold">beauty care, electrical work, plumbing, AC servicing, car maintenance, and home appliance repair</span> — our mission is simple: <span class="font-semibold">to solve everyday problems with efficiency, expertise, and integrity.</span>
+</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <ul class="space-y-3">
