@@ -16,7 +16,8 @@ export default defineConfig({
                 main: resolve(__dirname, 'src/index.html'),
                 services: resolve(__dirname, 'src/services.html'),
                 privacy: resolve(__dirname, 'src/privacy-policy.html'),
-                terms: resolve(__dirname, 'src/terms-conditions.html')
+                terms: resolve(__dirname, 'src/terms-conditions.html'),
+                refund: resolve(__dirname, 'src/refund-policy.html'),
             }
         }
     },
