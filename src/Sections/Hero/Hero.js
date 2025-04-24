@@ -67,7 +67,7 @@ const servicesData = [
 // Function to generate dropdown items
 function generateDropdownItems() {
     return servicesData.map(service => `
-    <a href="services.html#${service.id}" class="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg transition-colors">
+    <a href="/src/services.html#${service.id}" class="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg transition-colors">
       <div class="bg-solprimary/10 p-2 rounded-lg mr-3">
         <svg class="w-5 h-5 text-solprimary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${service.icon}"></path>
