@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
                 <div class="space-y-16">
                     <!-- Section 1 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
                                 <span class="text-blue-600 font-semibold text-lg px-2">1</span>
                             </div>
@@ -68,12 +68,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 2 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">2</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">2</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">How We Use Your Information</h2>
+                                <h2 class="text-2xl font-semibold mb-4 mt-3">How We Use Your Information</h2>
                                 <p class="mb-4">We use the collected information for the following purposes:</p>
                                 
                                 <div class="grid md:grid-cols-2 gap-4">
@@ -144,12 +144,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 3 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">3</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">3</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Data Security</h2>
+                                <h2 class="text-2xl font-semibold mb-4 mt-3">Data Security</h2>
                                 <div class="flex items-start gap-4 bg-blue-50 p-4 rounded-lg border border-blue-100">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -163,12 +163,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 4 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">4</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">4</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Disclosure of Information</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Disclosure of Information</h2>
                                 <p class="mb-4">We may share your information in the following situations:</p>
                                 
                                 <div class="space-y-4">
@@ -206,12 +206,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 5 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">5</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">5</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Your Rights</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Your Rights</h2>
                                 <p class="mb-4">You have the right to:</p>
                                 
                                 <div class="grid md:grid-cols-2 gap-4">
@@ -253,12 +253,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 6 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">6</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">6</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Cookies and Tracking Technologies</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Cookies and Tracking Technologies</h2>
                                 <p>We use cookies and similar technologies to track website activity and improve user experience. You can manage cookie settings in your browser, but disabling cookies may limit some functionalities of our website.</p>
                             </div>
                         </div>
@@ -267,12 +267,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 7 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">7</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">7</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Third-Party Websites</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Third-Party Websites</h2>
                                 <p>Our website may contain links to external websites. We are not responsible for the privacy practices of these third-party sites. We encourage you to review their privacy policies before sharing any personal information.</p>
                             </div>
                         </div>
@@ -281,12 +281,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 8 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">8</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">8</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Children's Privacy</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Children's Privacy</h2>
                                 <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-100">
                                     <p class="flex items-start gap-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -302,12 +302,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 9 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">9</span>
+                                <span class="text-blue-600 font-semibold text-lg px-2">9</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Changes to This Privacy Policy</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Changes to This Privacy Policy</h2>
                                 <p>Solutions Spot reserves the right to update this Privacy Policy at any time. Any changes will be posted on this page, and the "Effective Date" will be updated accordingly. We encourage you to periodically review this Privacy Policy.</p>
                             </div>
                         </div>
@@ -316,12 +316,12 @@ export default function PrivacyPolicy() {
 
                     <!-- Section 10 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-blue-100 p-2 rounded-full mt-1">
-                                <span class="text-blue-600 font-semibold text-lg">10</span>
+                                <span class="text-blue-600 font-semibold text-lg px-1">10</span>
                             </div>
                             <div>
-                                <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+                                <h2 class="text-2xl font-semibold mb-4 pt-3">Contact Us</h2>
                                 <p class="mb-4">If you have any questions or concerns regarding this Privacy Policy or your personal information, please contact us at:</p>
                                 
                                 <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
