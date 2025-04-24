@@ -26,7 +26,7 @@ export default function Services() {
               </div>
             </div>
             <div class="md:text-right" data-aos="fade-up">
-              <a href="../../services.html" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
+              <a href='/services.html' class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
                     View All Services
               </a>
             </div>
