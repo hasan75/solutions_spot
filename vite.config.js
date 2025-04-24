@@ -18,6 +18,7 @@ export default defineConfig({
                 privacy: resolve(__dirname, 'src/privacy-policy.html'),
                 terms: resolve(__dirname, 'src/terms-conditions.html'),
                 refund: resolve(__dirname, 'src/refund-policy.html'),
+                about: resolve(__dirname, 'src/about-us.html'),
             }
         }
     },

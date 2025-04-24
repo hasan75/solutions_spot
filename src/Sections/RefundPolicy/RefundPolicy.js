@@ -19,9 +19,9 @@ export default function RefundPolicy() {
                 <div class="space-y-16">
                     <!-- Section 1 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">1</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">1</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Service Fees</h2>
@@ -43,9 +43,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 2 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">2</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">2</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Refund Conditions</h2>
@@ -54,7 +54,7 @@ export default function RefundPolicy() {
                                 <div class="space-y-6">
                                     <div class="flex items-start gap-4">
                                         <div class="bg-red-50 p-2 rounded-full mt-1 flex-shrink-0">
-                                            <span class="text-red-600 font-medium">a</span>
+                                            <span class="text-red-600 px-2 font-medium">a</span>
                                         </div>
                                         <div>
                                             <h3 class="font-medium mb-2">Canceled Services</h3>
@@ -64,7 +64,7 @@ export default function RefundPolicy() {
                                     
                                     <div class="flex items-start gap-4">
                                         <div class="bg-red-50 p-2 rounded-full mt-1 flex-shrink-0">
-                                            <span class="text-red-600 font-medium">b</span>
+                                            <span class="text-red-600 px-2 font-medium">b</span>
                                         </div>
                                         <div>
                                             <h3 class="font-medium mb-2">Services Not Delivered as Promised</h3>
@@ -74,7 +74,7 @@ export default function RefundPolicy() {
                                     
                                     <div class="flex items-start gap-4">
                                         <div class="bg-red-50 p-2 rounded-full mt-1 flex-shrink-0">
-                                            <span class="text-red-600 font-medium">c</span>
+                                            <span class="text-red-600 px-2 font-medium">c</span>
                                         </div>
                                         <div>
                                             <h3 class="font-medium mb-2">Disputes Within Warranty Period</h3>
@@ -84,7 +84,7 @@ export default function RefundPolicy() {
                                     
                                     <div class="flex items-start gap-4">
                                         <div class="bg-red-50 p-2 rounded-full mt-1 flex-shrink-0">
-                                            <span class="text-red-600 font-medium">d</span>
+                                            <span class="text-red-600 px-2 font-medium">d</span>
                                         </div>
                                         <div>
                                             <h3 class="font-medium mb-2">Overpayment or Underpayment</h3>
@@ -99,9 +99,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 3 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">3</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">3</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Return Conditions</h2>
@@ -120,9 +120,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 4 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">4</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">4</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Refund Process</h2>
@@ -140,9 +140,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 5 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">5</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">5</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Refund Timing</h2>
@@ -159,9 +159,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 6 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">6</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">6</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Non-Refundable Services</h2>
@@ -180,9 +180,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 7 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">7</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">7</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Dispute Resolution</h2>
@@ -201,9 +201,9 @@ export default function RefundPolicy() {
 
                     <!-- Section 8 -->
                     <section>
-                        <div class="flex items-start gap-4">
+                        <div class="flex flex-col lg:flex-row items-start gap-4">
                             <div class="bg-red-100 p-2 rounded-full mt-1">
-                                <span class="text-red-600 font-semibold text-lg">8</span>
+                                <span class="text-red-600 px-2 font-semibold text-lg">8</span>
                             </div>
                             <div>
                                 <h2 class="text-2xl font-semibold mb-4">Final Decision</h2>
@@ -212,7 +212,7 @@ export default function RefundPolicy() {
                                 </div>
                                 
                                 <div class="mt-8 bg-blue-50 p-6 rounded-lg border border-blue-100">
-                                    <h3 class="text-xl font-semibold mb-4 text-center">Need Help With a Refund?</h3>
+                                    <h3 class="text-xl font-semibold mb-4 lg:mb-6 text-center">Need Help With a Refund?</h3>
                                     <div class="grid md:grid-cols-2 gap-4">
                                         <div class="flex items-center justify-center gap-3">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">

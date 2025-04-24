@@ -9,7 +9,7 @@ const testimonials = [
         quote: "“The best service”",
         text: "Versatile and user-friendly platform for freelancers and businesses alike. Its interface is clean and intuitive...",
         avatar: avatar1,
-        name: "Hamidur Rangon",
+        name: "Hamidur Rahman Rangon",
         position: "Head of Management at ACS"
     },
     {
