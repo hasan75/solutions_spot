@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.png';
 const links = [
     {
       name: 'About Us',
-      link: '/about.html',
+      link: '/about-us.html',
     },
     {
         name: 'Services',
@@ -13,11 +13,11 @@ const links = [
     },
     {
         name: 'Testimonials',
-        link: '#testimonials',
+        link: '/#testimonials',
     },
     {
         name: 'Categories',
-        link: '#featuredCategories',
+        link: '/#featuredCategories',
     },
     // {
     //     name: "Services",

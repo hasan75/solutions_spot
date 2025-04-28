@@ -82,10 +82,10 @@ export default function AboutUs() {
                 </section>
 
                 <!-- Vision & Values -->
-                <section class="mb-16">
+                <section class="mb-24 pt-16">
                     <div class="grid md:grid-cols-2 gap-8">
                         <!-- Vision -->
-                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
+                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100 order-1 lg:order-2 hover:shadow-lg duration-300">
                             <div class="flex items-center gap-4 mb-6">
                                 <div class="bg-blue-100 p-3 rounded-full">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -98,10 +98,10 @@ export default function AboutUs() {
                         </div>
 
                         <!-- Values -->
-                        <div>
+                        <div class="order-2 lg:order-1">
                             <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Values</h3>
                             <div class="space-y-4">
-                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md duration-300">
                                     <div class="bg-blue-100 p-2 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
@@ -112,7 +112,7 @@ export default function AboutUs() {
                                         <p class="text-gray-600 text-sm">We deliver top-quality service with precision and professionalism.</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md duration-300">
                                     <div class="bg-blue-100 p-2 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
@@ -123,7 +123,7 @@ export default function AboutUs() {
                                         <p class="text-gray-600 text-sm">Your satisfaction and safety are our top priorities.</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md duration-300">
                                     <div class="bg-blue-100 p-2 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
@@ -134,7 +134,7 @@ export default function AboutUs() {
                                         <p class="text-gray-600 text-sm">One platform. Every service. Zero hassle.</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                                <div class="flex items-start gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md duration-300">
                                     <div class="bg-blue-100 p-2 rounded-full">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -151,7 +151,7 @@ export default function AboutUs() {
                 </section>
 
                 <!-- Why Choose Us -->
-                <section class="mb-16">
+                <section class="mb-24">
                     <div class="text-center mb-10">
                         <h2 class="text-3xl font-bold text-gray-800">Why Choose Solutions Spot?</h2>
                         <p class="text-gray-600 max-w-2xl mx-auto">We go beyond basic service to deliver exceptional experiences</p>
