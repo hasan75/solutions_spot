@@ -9,8 +9,8 @@ export default function AboutUs() {
                     <div class="flex flex-col items-center text-center py-12 px-4 max-w-4xl mx-auto">
                         <h1 class="text-4xl md:text-5xl font-bold text-solprimary mb-6">About Solutions Spot</h1>
                         <p class="text-xl text-gray-700 mb-8">Bangladesh's trusted name in multi-service solutions, offering a seamless blend of professionalism, reliability, and excellence — all in one place.</p>
-                        <div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg border border-white/30">
-                            <p class="text-gray-700">"We solve everyday problems with efficiency, expertise, and integrity."</p>
+                        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-white/70 hover:shadow-md duration-1000">
+                            <p class="text-gray-700 capitalize italic">"We solve everyday problems with efficiency, expertise, and integrity."</p>
                         </div>
                     </div>
                 </div>
