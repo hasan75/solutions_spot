@@ -36,41 +36,41 @@ export default function Footer() {
             <!-- Column 2 - Pages -->
             <div>
               <div class="footer-widget mb-8">
-                <h2 class="text-xl font-medium mb-4">Pages</h2>
+                <h2 class="text-xl font-medium mb-4">Company</h2>
                 <ul class="space-y-2">
-                  <li><a href="/" class="hover:text-solprimary">Home</a></li>
-                  <li><a href="#about" class="hover:text-solprimary">For business</a></li>
-                  <li><a href="#featuredCategories" class="hover:text-solprimary">All Categories</a></li>
-                  <li><a href="#contact" class="hover:text-solprimary">Contact</a></li>
-                  <li><a href="/" class="hover:text-solprimary">Our Blog</a></li>
+                  <li><a href="/about-us.html" class="hover:text-solprimary">About Us</a></li>
+                  <li><a href="/#featuredCategories" class="hover:text-solprimary">Categories</a></li>
+                  <li><a href="/services.html" class="hover:text-solprimary">All Services</a></li>
+                  <li><a href="/about-us.html" class="hover:text-solprimary">FAQ</a></li>
+                  <li><a href="/#partners" class="hover:text-solprimary">Our Clients</a></li>
                 </ul>
               </div>
             </div>
 
-            <!-- Column 3 - About Us -->
+            <!-- Column 3 - Quick Links -->
             <div>
               <div class="footer-widget mb-8">
-                <h2 class="text-xl font-medium mb-4">About us</h2>
+                <h2 class="text-xl font-medium mb-4">Quick Links</h2>
                 <ul class="space-y-2">
-                  <li><a href="#about" class="hover:text-solprimary">About</a></li>
-                  <li><a href="#services" class="hover:text-solprimary">Services</a></li>
-                  <li><a href="#howItWorks" class="hover:text-solprimary">How we work</a></li>
-                  <li><a href="#services" class="hover:text-solprimary">News</a></li>
-                  <li><a href="#about" class="hover:text-solprimary">Help Guide</a></li>
+                  <li><a href="/#contact" class="hover:text-solprimary">Contact Us</a></li>
+                  <li><a href="/services.html" class="hover:text-solprimary">All Services</a></li>
+                  <li><a href="/#howItWorks" class="hover:text-solprimary">How we work</a></li>
+                  <li><a href="/#testimonials" class="hover:text-solprimary">Testimonials</a></li>
+                  <li><a href="/#contact" class="hover:text-solprimary">Help Guide</a></li>
                 </ul>
               </div>
             </div>
             
-                        <!-- Column 4 - Services -->
+                        <!-- Column 4 - Supports -->
             <div>
               <div class="footer-widget mb-8">
-                <h2 class="text-xl font-medium mb-4">Services</h2>
+                <h2 class="text-xl font-medium mb-4">Supports</h2>
                 <ul class="space-y-2">
-                  <li><a href="#services" class="hover:text-solprimary">Service 1</a></li>
-                  <li><a href="#services" class="hover:text-solprimary">Service 2</a></li>
-                  <li><a href="#howItWorks" class="hover:text-solprimary">Work Details</a></li>
-                  <li><a href="#about" class="hover:text-solprimary">Goals</a></li>
-                  <li><a href="#services" class="hover:text-solprimary">Post Service Packages</a></li>
+                  <li><a href="/privacy-policy.html" class="hover:text-solprimary">Privacy Policy</a></li>
+                  <li><a href="/terms-conditions.html" class="hover:text-solprimary">Terms & Conditions</a></li>
+                  <li><a href="/#contact" class="hover:text-solprimary">Order Service</a></li>
+                  <li><a href="/refund-policy.html" class="hover:text-solprimary">Terms & Conditions</a></li>
+                  <li><a href="/#contact" class="hover:text-solprimary">Post Service Packages</a></li>
                 </ul>
               </div>
             </div>
@@ -89,10 +89,10 @@ export default function Footer() {
                 <h2 class="text-xl font-medium mb-4">Follow Us</h2>
                 <div class="social-icons">
                   <ul class="flex space-x-4 mb-8">
-                    <li><a href="#" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-linkedin"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -110,16 +110,16 @@ export default function Footer() {
             <div class="copyright-menu md:float-right">
               <ul class="policy-menu list-none m-0 p-0 md:text-right flex flex-wrap gap-5">
                 <li class="inline-block text-[#74788d]">
-                  <a href="privacy-policy.html" class="text-sm hover:text-solprimary">Home</a>
+                  <a href="/" class="text-sm hover:text-solprimary">Home</a>
                 </li>
                 <li class="inline-block text-[#74788d]">
-                  <a href="terms-condition.html" class="text-sm hover:text-solprimary">Site Map</a>
+                  <a href="/" class="text-sm hover:text-solprimary">Site Map</a>
                 </li>
                 <li class="inline-block text-[#74788d]">
-                  <a href="terms-condition.html" class="text-sm hover:text-solprimary">Privacy policy</a>
+                  <a href="/privacy-policy.html" class="text-sm hover:text-solprimary">Privacy policy</a>
                 </li>
                 <li class="inline-block text-[#74788d]">
-                  <a href="terms-condition.html" class="text-sm hover:text-solprimary">Cookie Policy</a>
+                  <a href="/privacy-policy.html" class="text-sm hover:text-solprimary">Cookie Policy</a>
                 </li>
               </ul>
             </div>
