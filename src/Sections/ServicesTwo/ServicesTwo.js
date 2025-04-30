@@ -50,42 +50,48 @@ const servicesData = [
         price: 4500,
         note: "",
         rating: 5,
-        reviews: 10
+        reviews: 10,
+        image: cleaning1,
     },
     {
         name: "Pest Control Services",
         price: 4500,
         note: "",
         rating: 5,
-        reviews: 13
+        reviews: 13,
+        image: pest1,
     },
     {
         name: "Exclusive Beauty Care",
         price: 2500,
         note: "Was ৳3500",
         rating: 5,
-        reviews: 50
+        reviews: 50,
+        image: categoryBeauty,
     },
     {
         name: "House Plumbing Services",
         price: 2500,
         note: "Was ৳3500",
         rating: 5,
-        reviews: 10
+        reviews: 10,
+        image: plumbing2,
     },
     {
         name: "Electric Panel Repairing Service",
         price: 5500,
         note: "",
         rating: 5,
-        reviews: 10
+        reviews: 10,
+        image: electric1
     },
     {
         name: "Koshai - On Demand Butcher",
         price: 500,
         note: "starts with",
         rating: 5,
-        reviews: 20
+        reviews: 20,
+        image: butcher1,
     },
 ];
 
@@ -137,76 +143,76 @@ const mainCategories = [
                     {
                         name: "Hair Treatment",
                         services: [
-                            { name: "L'Oréal Hair Spa", price: 1500, note: "Includes deep conditioning" },
-                            { name: "Herbal Hair Pack", price: 400, note: "Natural ingredients" },
-                            { name: "Henna Pack", price: 450, note: "Chemical free coloring" },
-                            { name: "Protein Treatment", price: 800, note: "For damaged hair" },
-                            { name: "Keratin Treatment", price: 1600, note: "Smoothing treatment" },
-                            { name: "Dandruff Treatment", price: 1100, note: "Anti-fungal treatment" }
+                            { name: "L'Oréal Hair Spa", price: 1500, note: "Includes deep conditioning" , image: hair1},
+                            { name: "Herbal Hair Pack", price: 400, note: "Natural ingredients", image: hair2 },
+                            { name: "Henna Pack", price: 450, note: "Chemical free coloring", image: hair3 },
+                            { name: "Protein Treatment", price: 800, note: "For damaged hair", image: hair3 },
+                            { name: "Keratin Treatment", price: 1600, note: "Smoothing treatment", image: hair2 },
+                            { name: "Dandruff Treatment", price: 1100, note: "Anti-fungal treatment", image: hair1 }
                         ]
                     },
                     {
                         name: "Hair Cut",
                         services: [
-                            { name: "Full Layer", price: 1000, note: "All around layering" },
-                            { name: "Front Layer", price: 500, note: "Front section only" },
-                            { name: "Volume Layer", price: 800, note: "Adds body and volume" },
-                            { name: "Layer Steps", price: 1000, note: "Graduated layers" },
-                            { name: "Three Steps", price: 700, note: "Three length layers" },
-                            { name: "V Cut", price: 500, note: "V-shaped ends" },
-                            { name: "U Cut", price: 500, note: "U-shaped ends" },
-                            { name: "Deep U Cut", price: 700, note: "More pronounced U-shape" },
-                            { name: "Deep V Cut", price: 700, note: "More pronounced V-shape" },
-                            { name: "Bangs Cut", price: 550, note: "Front bangs trimming" },
-                            { name: "Bald", price: 500, note: "Complete shave" },
-                            { name: "Baby cut (0-6)", price: 600, note: "For infants" },
-                            { name: "Straight Cut", price: 500, note: "Simple straight cut" }
+                            { name: "Full Layer", price: 1000, note: "All around layering", image: hair2 },
+                            { name: "Front Layer", price: 500, note: "Front section only", image: hair2 },
+                            { name: "Volume Layer", price: 800, note: "Adds body and volume", image: hair2 },
+                            { name: "Layer Steps", price: 1000, note: "Graduated layers", image: hair2 },
+                            { name: "Three Steps", price: 700, note: "Three length layers", image: hair2 },
+                            { name: "V Cut", price: 500, note: "V-shaped ends", image: hair2 },
+                            { name: "U Cut", price: 500, note: "U-shaped ends" , image: hair2 },
+                            { name: "Deep U Cut", price: 700, note: "More pronounced U-shape" , image: hair2 },
+                            { name: "Deep V Cut", price: 700, note: "More pronounced V-shape" , image: hair2 },
+                            { name: "Bangs Cut", price: 550, note: "Front bangs trimming", image: hair2  },
+                            { name: "Bald", price: 500, note: "Complete shave" , image: hair2 },
+                            { name: "Baby cut (0-6)", price: 600, note: "For infants", image: hair2  },
+                            { name: "Straight Cut", price: 500, note: "Simple straight cut", image: hair2  }
                         ]
                     },
                     {
                         name: "Hair Colour",
                         services: [
-                            { name: "Base colour", price: 1000, note: "starts from" },
-                            { name: "Root colour", price: 1000, note: "Root touch up" },
-                            { name: "Cap stick colour", note: "Price depends on length. Starts with", price: 4000 },
-                            { name: "Cap stick (Short length Hair)", price: 4000, note: "Above shoulders" },
-                            { name: "Cap stick (Medium length Hair)", price: 5000, note: "Shoulder length" },
-                            { name: "Cap stick (Full length Hair)", price: 6000, note: "Below shoulders" },
-                            { name: "Baby stick full hair colour", price: 5000,  note: "Price depends on Hair length and Volume." },
-                            { name: "Single stick colour", price: 250, unit: "per stick", note: "Streak coloring" },
-                            { name: "Full Hair Colour (Short length)", price: 4000, note: "Complete coloring" },
-                            { name: "Full Hair Colour (Medium length)", price: 5000, note: "Complete coloring" },
-                            { name: "Full Hair Colour (Long length)", price: 6000, note: "Complete coloring" }
+                            { name: "Base colour", price: 1000, note: "starts from" , image: hair3},
+                            { name: "Root colour", price: 1000, note: "Root touch up", image: hair3 },
+                            { name: "Cap stick colour", note: "Price depends on length. Starts with", price: 4000, image: hair3 },
+                            { name: "Cap stick (Short length Hair)", price: 4000, note: "Above shoulders" , image: hair3},
+                            { name: "Cap stick (Medium length Hair)", price: 5000, note: "Shoulder length", image: hair3 },
+                            { name: "Cap stick (Full length Hair)", price: 6000, note: "Below shoulders" , image: hair3},
+                            { name: "Baby stick full hair colour", price: 5000,  note: "Price depends on Hair length and Volume." , image: hair3},
+                            { name: "Single stick colour", price: 250, unit: "per stick", note: "Streak coloring", image: hair3 },
+                            { name: "Full Hair Colour (Short length)", price: 4000, note: "Complete coloring", image: hair3 },
+                            { name: "Full Hair Colour (Medium length)", price: 5000, note: "Complete coloring", image: hair3 },
+                            { name: "Full Hair Colour (Long length)", price: 6000, note: "Complete coloring", image: hair3 }
                         ]
                     },
                     {
                         name: "Hair Rebonding",
                         services: [
-                            { name: "Shine Rebonding (Short length)", price: 6000, note: "starts from" },
-                            { name: "Shine Rebonding (Medium length)", price: 8000, note: "starts from" },
-                            { name: "Shine Rebonding (Long length)", price: 10000, note: "starts from" },
-                            { name: "Milk Rebonding (Short length)", price: 5500, note: "starts from" },
-                            { name: "Milk Rebonding (Medium length)", price: 6200, note: "starts from" },
-                            { name: "Milk Rebonding (Long length)", price: 8000, note: "starts from" },
-                            { name: "Volume Rebonding (Short length)", price: 5800, note: "starts from" },
-                            { name: "Volume Rebonding (Medium length)", price: 6500, note: "starts from" },
-                            { name: "Volume Rebonding (Long length)", price: 9000, note: "starts from" }
+                            { name: "Shine Rebonding (Short length)", price: 6000, note: "starts from", image: hair3 },
+                            { name: "Shine Rebonding (Medium length)", price: 8000, note: "starts from", image: hair3 },
+                            { name: "Shine Rebonding (Long length)", price: 10000, note: "starts from", image: hair3 },
+                            { name: "Milk Rebonding (Short length)", price: 5500, note: "starts from" , image: hair3},
+                            { name: "Milk Rebonding (Medium length)", price: 6200, note: "starts from", image: hair3 },
+                            { name: "Milk Rebonding (Long length)", price: 8000, note: "starts from", image: hair3 },
+                            { name: "Volume Rebonding (Short length)", price: 5800, note: "starts from", image: hair3 },
+                            { name: "Volume Rebonding (Medium length)", price: 6500, note: "starts from" , image: hair3},
+                            { name: "Volume Rebonding (Long length)", price: 9000, note: "starts from" , image: hair3}
                         ]
                     },
                     {
                         name: "Hair Keratin",
                         services: [
-                            { name: "Hair keratin (Short length)", price: 6500, note: "starts from" },
-                            { name: "Hair keratin (Medium length)", price: 8500, note: "starts from" },
-                            { name: "Hair keratin (Long length)", price: 10000, note: "starts from" }
+                            { name: "Hair keratin (Short length)", price: 6500, note: "starts from", image: hair3 },
+                            { name: "Hair keratin (Medium length)", price: 8500, note: "starts from" , image: hair3},
+                            { name: "Hair keratin (Long length)", price: 10000, note: "starts from" , image: hair3}
                         ]
                     },
                     {
                         name: "Hair Botox",
                         services: [
-                            { name: "Hair Botox (Short length)", price: 6500, note: "starts from" },
-                            { name: "Hair Botox (Medium length)", price: 8500, note: "starts from" },
-                            { name: "Hair Botox (Full length)", price: 10000, note: "starts from" }
+                            { name: "Hair Botox (Short length)", price: 6500, note: "starts from", image: hair3 },
+                            { name: "Hair Botox (Medium length)", price: 8500, note: "starts from" , image: hair3},
+                            { name: "Hair Botox (Full length)", price: 10000, note: "starts from", image: hair3 }
                         ]
                     }
                 ]
@@ -216,15 +222,15 @@ const mainCategories = [
                 imageDesktop: [makeover1, makeover2, makeover3],
                 imageMobile: makeover1,
                 services: [
-                    { name: "Casual makeup", price: 1200, note: "Everyday look" },
-                    { name: "Party makeup", price: 3500, note: "Evening/event makeup" },
-                    { name: "Eye makeup", price: 800, note: "Eye focus only" },
-                    { name: "Any party hair style", price: 600, note: "Styling only" },
-                    { name: "Saree draping", price: 400, note: "Traditional drape" },
-                    { name: "Hijab setting", price: 400, note: "Elegant styling" },
-                    { name: "Saree and Hijab setting", price: 700, note: "Complete styling" },
-                    { name: "Jewellery setting", price: 300, note: "Accessory arrangement" },
-                    { name: "Hair flower setting", price: 350, note: "Floral decoration" }
+                    { name: "Casual makeup", price: 1200, note: "Everyday look", image: makeover1 },
+                    { name: "Party makeup", price: 3500, note: "Evening/event makeup", image: makeover1 },
+                    { name: "Eye makeup", price: 800, note: "Eye focus only", image: makeover1 },
+                    { name: "Any party hair style", price: 600, note: "Styling only", image: makeover1 },
+                    { name: "Saree draping", price: 400, note: "Traditional drape", image: makeover1 },
+                    { name: "Hijab setting", price: 400, note: "Elegant styling", image: makeover1 },
+                    { name: "Saree and Hijab setting", price: 700, note: "Complete styling" , image: makeover1},
+                    { name: "Jewellery setting", price: 300, note: "Accessory arrangement" , image: makeover1},
+                    { name: "Hair flower setting", price: 350, note: "Floral decoration", image: makeover1 }
                 ]
             },
             {
@@ -232,11 +238,11 @@ const mainCategories = [
                 imageDesktop: [spa1, spa2, spa3],
                 imageMobile: spa2,
                 services: [
-                    { name: "Foot massage", price: 800, note: "30 minute session" },
-                    { name: "Back massage", price: 1000, note: "Focus on back muscles" },
-                    { name: "Hot oil hair massage", price: 500, note: "Scalp treatment" },
-                    { name: "Head Neck and shoulder massage", price: 700, note: "Upper body focus" },
-                    { name: "Full body massage with hot oil", price: 2500, note: "60 minute session" }
+                    { name: "Foot massage", price: 800, note: "30 minute session" , image: makeover1},
+                    { name: "Back massage", price: 1000, note: "Focus on back muscles", image: makeover1 },
+                    { name: "Hot oil hair massage", price: 500, note: "Scalp treatment", image: makeover1 },
+                    { name: "Head Neck and shoulder massage", price: 700, note: "Upper body focus", image: makeover1 },
+                    { name: "Full body massage with hot oil", price: 2500, note: "60 minute session", image: makeover1 }
                 ]
             },
             {
@@ -247,56 +253,56 @@ const mainCategories = [
                     {
                         name: "Facial",
                         services: [
-                            { name: "Gold facial", price: 1500, note: "Luxury treatment" },
-                            { name: "Collagen facial", price: 1600, note: "Anti-aging" },
-                            { name: "Herbal facial", price: 600, note: "Natural ingredients" },
-                            { name: "Fruit facial", price: 1200, note: "Vitamin enriched" },
-                            { name: "Deep cleansing facial", price: 1000, note: "For oily skin" },
-                            { name: "Anti-Aging facial", price: 1550, note: "Wrinkle reduction" },
-                            { name: "Pearl facial", price: 1200, note: "Brightening effect" },
-                            { name: "Skin-tightening facial", price: 1400, note: "Firming treatment" },
-                            { name: "Glow facial", price: 1450, note: "Instant radiance" },
-                            { name: "Deep moisturising honey facial", price: 1500, note: "For dry skin" },
-                            { name: "Skin Whitening Facial", price: 1200, note: "Even skin tone" }
+                            { name: "Gold facial", price: 1500, note: "Luxury treatment", image: makeover1 },
+                            { name: "Collagen facial", price: 1600, note: "Anti-aging" , image: makeover1},
+                            { name: "Herbal facial", price: 600, note: "Natural ingredients" , image: makeover1},
+                            { name: "Fruit facial", price: 1200, note: "Vitamin enriched", image: makeover1 },
+                            { name: "Deep cleansing facial", price: 1000, note: "For oily skin", image: makeover1 },
+                            { name: "Anti-Aging facial", price: 1550, note: "Wrinkle reduction", image: makeover1 },
+                            { name: "Pearl facial", price: 1200, note: "Brightening effect" , image: makeover1},
+                            { name: "Skin-tightening facial", price: 1400, note: "Firming treatment", image: makeover1 },
+                            { name: "Glow facial", price: 1450, note: "Instant radiance" , image: makeover1},
+                            { name: "Deep moisturising honey facial", price: 1500, note: "For dry skin", image: makeover1 },
+                            { name: "Skin Whitening Facial", price: 1200, note: "Even skin tone", image: makeover1 }
                         ]
                     },
                     {
                         name: "Other Services",
                         services: [
-                            { name: "Eye brow threading", price: 100, note: "Precision shaping" },
-                            { name: "Upper lip threading", price: 100, note: "Hair removal" },
-                            { name: "Lower lips threading", price: 100, note: "Hair removal" },
-                            { name: "Eye brow and upper lip threading", price: 180, note: "Combined service" },
-                            { name: "Pedicure", price: 650, note: "Foot care" },
-                            { name: "Manicure", price: 500, note: "Hand care" },
-                            { name: "Pedicure and manicure", price: 1000, note: "Combined service" },
-                            { name: "Nail polish apply Hand", price: 150, note: "Basic application" },
-                            { name: "Nail Polish apply foot", price: 150, note: "Basic application" },
-                            { name: "Nail polish apply hand and foot", price: 220, note: "Combined service" }
+                            { name: "Eye brow threading", price: 100, note: "Precision shaping", image: makeover1 },
+                            { name: "Upper lip threading", price: 100, note: "Hair removal", image: makeover1 },
+                            { name: "Lower lips threading", price: 100, note: "Hair removal" , image: makeover1},
+                            { name: "Eye brow and upper lip threading", price: 180, note: "Combined service", image: makeover1 },
+                            { name: "Pedicure", price: 650, note: "Foot care", image: makeover1 },
+                            { name: "Manicure", price: 500, note: "Hand care", image: makeover1 },
+                            { name: "Pedicure and manicure", price: 1000, note: "Combined service" , image: makeover1},
+                            { name: "Nail polish apply Hand", price: 150, note: "Basic application", image: makeover1 },
+                            { name: "Nail Polish apply foot", price: 150, note: "Basic application", image: makeover1 },
+                            { name: "Nail polish apply hand and foot", price: 220, note: "Combined service", image: makeover1 }
                         ]
                     },
                     {
                         name: "Brightening Polish",
                         services: [
-                            { name: "Face", price: 700, note: "Skin brightening" },
-                            { name: "Face+ Neck", price: 900, note: "Extended area" },
-                            { name: "Full hand", price: 500, note: "Arm brightening" },
-                            { name: "Full leg", price: 1200, note: "Leg brightening" },
-                            { name: "Half leg", price: 800, note: "Lower leg only" },
-                            { name: "Under arm", price: 500, note: "Dark spot treatment" },
-                            { name: "Full leg + Hand", price: 1800, note: "Combined service" }
+                            { name: "Face", price: 700, note: "Skin brightening"  , image: makeover1},
+                            { name: "Face+ Neck", price: 900, note: "Extended area" , image: makeover1 },
+                            { name: "Full hand", price: 500, note: "Arm brightening" , image: makeover1 },
+                            { name: "Full leg", price: 1200, note: "Leg brightening"  , image: makeover1},
+                            { name: "Half leg", price: 800, note: "Lower leg only" , image: makeover1 },
+                            { name: "Under arm", price: 500, note: "Dark spot treatment" , image: makeover1 },
+                            { name: "Full leg + Hand", price: 1800, note: "Combined service" , image: makeover1 }
                         ]
                     },
                     {
                         name: "Waxing",
                         services: [
-                            { name: "Full Hand wax", price: 800, note: "Complete arms" },
-                            { name: "Full leg wax", price: 1000, note: "Complete legs" },
-                            { name: "Half hand wax", price: 600, note: "Lower arms only" },
-                            { name: "Half leg wax", price: 750, note: "Lower legs only" },
-                            { name: "Under arm wax", price: 500, note: "Underarm area" },
-                            { name: "Belly wax", price: 500, note: "Stomach area" },
-                            { name: "Half hand + Half leg wax", price: 1200, note: "Combined service" }
+                            { name: "Full Hand wax", price: 800, note: "Complete arms" , image: makeover1 },
+                            { name: "Full leg wax", price: 1000, note: "Complete legs"  , image: makeover1},
+                            { name: "Half hand wax", price: 600, note: "Lower arms only" , image: makeover1 },
+                            { name: "Half leg wax", price: 750, note: "Lower legs only"  , image: makeover1},
+                            { name: "Under arm wax", price: 500, note: "Underarm area"  , image: makeover1},
+                            { name: "Belly wax", price: 500, note: "Stomach area"  , image: makeover1},
+                            { name: "Half hand + Half leg wax", price: 1200, note: "Combined service" , image: makeover1}
                         ]
                     }
                 ]
@@ -306,10 +312,10 @@ const mainCategories = [
                 imageDesktop: [mehedi1, mehedi2, mehedi3],
                 imageMobile: mehedi2,
                 services: [
-                    { name: "Normal festival design (one side one hand)", price: 800, note: "Simple patterns" },
-                    { name: "Normal festival design (two side of one hand)", price: 1600, note: "Both sides" },
-                    { name: "Gorgeous design (one side of one hand)", price: 1200, note: "Intricate patterns" },
-                    { name: "Gorgeous design (two side of one hand)", price: 2400, note: "Both sides intricate" }
+                    { name: "Normal festival design (one side one hand)", price: 800, note: "Simple patterns" , image: mehedi3},
+                    { name: "Normal festival design (two side of one hand)", price: 1600, note: "Both sides", image: mehedi1 },
+                    { name: "Gorgeous design (one side of one hand)", price: 1200, note: "Intricate patterns" , image: mehedi1},
+                    { name: "Gorgeous design (two side of one hand)", price: 2400, note: "Both sides intricate", image: mehedi2 }
                 ]
             },
             {
@@ -317,8 +323,8 @@ const mainCategories = [
                 imageDesktop: [piercing1, piercing2, piercing3],
                 imageMobile: piercing3,
                 services: [
-                    { name: "Nose piercing", price: 800, note: "Nostril piercing" },
-                    { name: "Ear piercing", price: 1000, note: "Lobe piercing" }
+                    { name: "Nose piercing", price: 800, note: "Nostril piercing", image: piercing1 },
+                    { name: "Ear piercing", price: 1000, note: "Lobe piercing", image: piercing3 }
                 ]
             }
         ]
@@ -574,7 +580,7 @@ function renderServicesCards(services) {
                         <td class="px-4 py-3">
                             <div class="flex items-center">
                                 <div class="flex-shrink-0 h-12 w-12 rounded-lg overflow-hidden mr-3">
-                                    <img src="${placeholderImage}" alt="${service.name}" class="h-full w-full object-cover">
+                                    <img src="${service.image}" alt="${service.name}" class="h-full w-full object-cover">
                                 </div>
                                 <div>
                                     <div class="font-medium text-gray-800">${service.name}</div>
@@ -606,13 +612,12 @@ function renderServicesCards(services) {
     }
 
     // For multiple services, use card format
-
     return `
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
       ${services.map(service => `
         <div class="service-card bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow duration-200">
           <div class="h-40 overflow-hidden">
-            <img src="${placeholderImage}" alt="${service.name}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+            <img src="${service.image}" alt="${service.name}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
           </div>
           <div class="p-4">
             <h3 class="font-medium text-gray-800 mb-1 ">${service.name}</h3>
@@ -655,7 +660,7 @@ function renderServicesTable(services) {
                 <div class="flex items-center">
                   <div class="flex-shrink-0 h-12 w-12 rounded-lg overflow-hidden mr-3">
 <!--                    placeholder service image is putted here -->
-                    <img src="${placeholderImage}" alt="${service.name}" class="h-full w-full object-cover">
+                    <img src="${service.image}" alt="${service.name}" class="h-full w-full object-cover">
                   </div>
                   <div>
                     <div class="font-medium text-gray-800">${service.name}</div>
