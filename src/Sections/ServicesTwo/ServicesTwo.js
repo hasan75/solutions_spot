@@ -516,12 +516,12 @@ export default function ServiceTwo() {
                                 <h4 class="bg-gray-50 px-4 py-2 font-medium text-gray-700">
                                   ${subSubCat.name}
                                 </h4>
-                                ${renderServicesTable(subSubCat.services)}
+                                ${renderServicesCards(subSubCat.services)}
                               </div>
                             `;
                         }).join('')}
                         </div>
-                      ` : renderServicesTable(subCat.services)}
+                      ` : renderServicesCards(subCat.services)}
                     </div>
                   `;
                     }).join('')}
@@ -558,11 +558,93 @@ function countServices(category) {
     return 0;
 }
 
-function renderServicesTable(services) {
+function renderServicesCards(services) {
     if (!services || services.length === 0) {
         return '<p class="p-4 text-gray-500">No services available</p>';
     }
 
+    // For single service, use table format
+    if (services.length === 1) {
+        const service = services[0];
+        return `
+        <div class="overflow-x-auto">
+            <table class="w-full">
+                <tbody>
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-3">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 h-12 w-12 rounded-lg overflow-hidden mr-3">
+                                    <img src="${placeholderImage}" alt="${service.name}" class="h-full w-full object-cover">
+                                </div>
+                                <div>
+                                    <div class="font-medium text-gray-800">${service.name}</div>
+                                    ${service.note ? `<div class="text-xs text-gray-500 mt-1">${service.note}</div>` : ''}
+                                    <div class="flex items-center mt-1 text-yellow-600">
+                                        ${'★'.repeat(service.rating ?? 5)}
+                                        <span class="text-xs text-gray-400 ml-1">(${service.reviews ?? 10})</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3 text-right">
+                            <div class="price-container relative">
+                                <button class="see-price-btn text-xs font-medium text-solprimary hover:text-solprimary/80 transition-colors duration-200"
+                                        data-service-id="${service.name.replace(/\s+/g, '-').toLowerCase()}">
+                                    See price
+                                </button>
+                                <div class="price-display hidden font-semibold text-solprimary whitespace-nowrap transition-all duration-300 ease-in-out opacity-0 transform translate-y-1">
+                                    ${service.price ? `৳${service.price}` : 'Contact for price'}
+                                    ${service.unit ? `<span class="text-xs text-gray-500">/${service.unit}</span>` : ''}
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        `;
+    }
+
+    // For multiple services, use card format
+
+    return `
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-2">
+      ${services.map(service => `
+        <div class="service-card bg-white rounded-lg shadow-sm overflow-hidden border border-gray-100 hover:shadow-md transition-shadow duration-200">
+          <div class="h-40 overflow-hidden">
+            <img src="${placeholderImage}" alt="${service.name}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
+          </div>
+          <div class="p-4">
+            <h3 class="font-medium text-gray-800 mb-1 ">${service.name}</h3>
+            ${service.note ? `<p class="text-xs text-gray-500 mb-2 line-clamp-1" title="${service.note}">${service.note}</p>` : ''}
+            <div class="flex items-center mb-3">
+              <div class="text-yellow-600">
+                ${'★'.repeat(service.rating ?? 5)}
+              </div>
+              <span class="text-xs text-gray-400 ml-1">(${service.reviews ?? 10})</span>
+            </div>
+            
+            <div class="price-container relative mt-2">
+              <button class="see-price-btn w-full py-2 px-3 bg-solprimary/10 text-solprimary hover:bg-solprimary/20 rounded-md text-sm font-medium transition-all duration-200"
+                      data-service-id="${service.name.replace(/\s+/g, '-').toLowerCase()}">
+                See Price
+              </button>
+              <div class="price-display hidden text-center font-semibold text-solprimary py-2 transition-all duration-300 ease-in-out opacity-0 transform translate-y-1">
+                ${service.price ? `৳${service.price}` : 'Contact for price'}
+                ${service.unit ? `<span class="text-xs text-gray-500">/${service.unit}</span>` : ''}
+              </div>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderServicesTable(services) {
+    if (!services || services.length === 0) {
+        return '<p class="p-4 text-gray-500">No services available</p>';
+    }
     return `
     <div class="overflow-x-auto">
       <table class="w-full">
@@ -783,6 +865,25 @@ export function initServicesPage() {
     });
 
     // Handle price reveal clicks
+    // document.addEventListener('click', (e) => {
+    //     if (e.target.classList.contains('see-price-btn')) {
+    //         const priceContainer = e.target.closest('.price-container');
+    //         const priceDisplay = priceContainer.querySelector('.price-display');
+    //         const seePriceBtn = e.target;
+    //
+    //         // Hide the button
+    //         seePriceBtn.classList.add('hidden');
+    //
+    //         // Show the price with animation
+    //         priceDisplay.classList.remove('hidden');
+    //         setTimeout(() => {
+    //             priceDisplay.classList.remove('opacity-0', 'translate-y-1');
+    //             priceDisplay.classList.add('opacity-100', 'translate-y-0');
+    //         }, 10);
+    //     }
+    // });
+
+    // Handle price reveal clicks
     document.addEventListener('click', (e) => {
         if (e.target.classList.contains('see-price-btn')) {
             const priceContainer = e.target.closest('.price-container');
@@ -798,6 +899,9 @@ export function initServicesPage() {
                 priceDisplay.classList.remove('opacity-0', 'translate-y-1');
                 priceDisplay.classList.add('opacity-100', 'translate-y-0');
             }, 10);
+
+            // Prevent multiple clicks
+            seePriceBtn.style.pointerEvents = 'none';
         }
     });
 }

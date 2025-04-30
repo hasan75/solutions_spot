@@ -74,3 +74,40 @@ tr {
     animation: none;
     opacity: 1;
 }
+
+
+/* Services Cards */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-2px);
+}
+
+.line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Price reveal animation */
+.price-display {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Pulse animation for price button */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.see-price-btn {
+    animation: pulse 2s infinite;
+}
+
+.see-price-btn:hover {
+    animation: none;
+}
