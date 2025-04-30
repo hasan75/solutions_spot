@@ -6,61 +6,61 @@ const servicesData = [
         id: 'cleaning',
         name: 'Property Cleaning',
         description: 'Professional cleaning services',
-        icon: 'M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z'
+        icon: 'M3 3h18v2H3V3zm1 4h16v13a1 1 0 01-1 1H5a1 1 0 01-1-1V7zm3 3v2h8v-2H7z' // trash bin style
     },
     {
         id: 'pest-control',
         name: 'Pest Control',
         description: 'Effective pest elimination',
-        icon: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4'
+        icon: 'M12 2a9.99 9.99 0 018.485 4.929l-1.414 1.414A8 8 0 104.93 4.93L3.515 3.515A10 10 0 0112 2z'
     },
     {
         id: 'hair-studio',
         name: 'Hair Studio',
         description: 'Professional hair services',
-        icon: 'M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9'
+        icon: 'M15.232 5.232a2.5 2.5 0 10-3.535 3.535L15 12.07l2.303-2.303a2.5 2.5 0 10-3.536-3.535z'
     },
     {
         id: 'makeover',
         name: 'Makeover',
         description: 'Complete beauty transformation',
-        icon: 'M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+        icon: 'M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zm0 2c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z'
     },
     {
         id: 'hair-style',
         name: 'Hair Styling',
         description: 'Trendy hairstyles',
-        icon: 'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z'
+        icon: 'M19 14v-4a7 7 0 10-14 0v4H3v6h18v-6h-2z' // head with hair
     },
     {
         id: 'message-spa',
         name: 'Message & Spa',
         description: 'Trendy Spa',
-        icon: 'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z'
+        icon: 'M12 3C7.589 3 4 6.589 4 11c0 5 8 10 8 10s8-5 8-10c0-4.411-3.589-8-8-8z' // spa lotus style
     },
     {
         id: 'mehendi',
         name: 'Mehendi Art',
         description: 'Trendy Mehendi Design',
-        icon: 'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z'
+        icon: 'M12 2a2 2 0 012 2v8h2a2 2 0 110 4h-2v6a2 2 0 11-4 0v-6H8a2 2 0 110-4h2V4a2 2 0 012-2z' // abstract hand design
     },
     {
         id: 'piercing',
         name: 'Piercing',
         description: 'Trendy Piercing Design',
-        icon: 'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z'
+        icon: 'M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm0 5a1.5 1.5 0 11-1.5 1.5A1.501 1.501 0 0112 7zm0 6a5 5 0 015 5h-2a3 3 0 00-6 0H7a5 5 0 015-5z'
     },
     {
         id: 'Electrical',
         name: 'Electrical',
         description: 'Electrical',
-        icon: 'M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z'
+        icon: 'M13 2L3 14h7v8l10-12h-7z' // lightning bolt / power
     },
     {
         id: 'butcher',
         name: 'On-Demand Butcher',
         description: 'Fresh meat preparation',
-        icon: 'M12 6v6m0 0v6m0-6h6m-6 0H6'
+        icon: 'M9 2h6a2 2 0 012 2v2H7V4a2 2 0 012-2zm3 7a3 3 0 013 3v4H9v-4a3 3 0 013-3z' // knife/meat style
     }
 ];
 
