@@ -5,7 +5,7 @@ import avatar1 from "../../assets/images/avatar-01.jpg";
 import './ServicesTwo.css'
 
 // Import all your images here (keep your existing imports)
-import category4 from "../../assets/images/categories-04.jpg";
+import placeholderImage from "../../assets/images/categories-04.jpg";
 import categoryImage1 from '../../assets/images/categories-08.jpg';
 import categoryImage2 from '../../assets/images/categories-01.jpg';
 import categoryImage3 from '../../assets/images/categories-02.jpg';
@@ -326,7 +326,7 @@ const mainCategories = [
     {
         name: "Specialty Services",
         id: "specialty-services",
-        imageDesktop: [butcher1, mehedi1, piercing1],
+        imageDesktop: [butcher1, butcher3, butcher2],
         imageMobile: butcher1,
         subcategories: [
             {
@@ -568,18 +568,34 @@ function renderServicesTable(services) {
       <table class="w-full">
         <tbody class="divide-y divide-gray-200">
           ${services.map(service => `
-            <tr class="hover:bg-gray-50">
+            <tr class="hover:bg-gray-50 group">
               <td class="px-4 py-3">
-                <div class="font-medium text-gray-800">${service.name}</div>
-                ${service.note ? `<div class="text-xs text-gray-500 mt-1">${service.note}</div>` : ''}
-                <div class="flex items-center mt-1 text-yellow-600">
-                  ${'★'.repeat(service.rating ?? 5)}
-                  <span class="text-xs text-gray-400 ml-1">(${service.reviews ?? 10})</span>
+                <div class="flex items-center">
+                  <div class="flex-shrink-0 h-12 w-12 rounded-lg overflow-hidden mr-3">
+<!--                    placeholder service image is putted here -->
+                    <img src="${placeholderImage}" alt="${service.name}" class="h-full w-full object-cover">
+                  </div>
+                  <div>
+                    <div class="font-medium text-gray-800">${service.name}</div>
+                    ${service.note ? `<div class="text-xs text-gray-500 mt-1">${service.note}</div>` : ''}
+                    <div class="flex items-center mt-1 text-yellow-600">
+                      ${'★'.repeat(service.rating ?? 5)}
+                      <span class="text-xs text-gray-400 ml-1">(${service.reviews ?? 10})</span>
+                    </div>
+                  </div>
                 </div>
               </td>
-              <td class="px-4 py-3 text-right font-semibold text-solprimary whitespace-nowrap">
-                ${service.price ? `৳${service.price}` : 'Contact for price'}
-                ${service.unit ? `<span class="text-xs text-gray-500">/${service.unit}</span>` : ''}
+              <td class="px-4 py-3 text-right">
+                <div class="price-container relative">
+                  <button class="see-price-btn text-xs font-medium text-solprimary hover:text-solprimary/80 transition-colors duration-200"
+                          data-service-id="${service.name.replace(/\s+/g, '-').toLowerCase()}">
+                    See price
+                  </button>
+                  <div class="price-display hidden font-semibold text-solprimary whitespace-nowrap transition-all duration-300 ease-in-out opacity-0 transform translate-y-1">
+                    ${service.price ? `৳${service.price}` : 'Contact for price'}
+                    ${service.unit ? `<span class="text-xs text-gray-500">/${service.unit}</span>` : ''}
+                  </div>
+                </div>
               </td>
             </tr>
           `).join('')}
@@ -763,6 +779,25 @@ export function initServicesPage() {
 
         if (currentActive) {
             setActiveCategory(currentActive);
+        }
+    });
+
+    // Handle price reveal clicks
+    document.addEventListener('click', (e) => {
+        if (e.target.classList.contains('see-price-btn')) {
+            const priceContainer = e.target.closest('.price-container');
+            const priceDisplay = priceContainer.querySelector('.price-display');
+            const seePriceBtn = e.target;
+
+            // Hide the button
+            seePriceBtn.classList.add('hidden');
+
+            // Show the price with animation
+            priceDisplay.classList.remove('hidden');
+            setTimeout(() => {
+                priceDisplay.classList.remove('opacity-0', 'translate-y-1');
+                priceDisplay.classList.add('opacity-100', 'translate-y-0');
+            }, 10);
         }
     });
 }

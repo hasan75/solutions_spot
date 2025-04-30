@@ -42,3 +42,35 @@ tr {
     transition: background-color 0.2s ease;
 }
 
+
+
+/* Add these styles to your ServicesTwo.css file */
+
+.price-display {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Animation for the placeholder image */
+.service-image {
+    transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+    transform: scale(1.05);
+}
+
+/* Pulse animation for the "See price" button */
+@keyframes pulse {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.8; }
+}
+
+.see-price-btn {
+    animation: pulse 2s infinite;
+}
+
+.see-price-btn:hover {
+    animation: none;
+    opacity: 1;
+}
