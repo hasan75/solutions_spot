@@ -475,65 +475,7 @@ export default function ServiceTwo() {
         <!-- Details Column -->
         <div class="w-full lg:w-3/4">
           <div id="services-container" class="space-y-12">
-            ${mainCategories.map(mainCat => `
-              <!-- Main Category Section -->
-              <div id="${mainCat.id}" class="category-section main-category-section bg-white rounded-lg shadow-sm overflow-hidden">
-                <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
-                  <h2 class="text-2xl font-bold text-gray-800 flex items-center">
-                    ${mainCat.name}
-                    <span class="ml-auto text-sm font-normal bg-solprimary/10 text-solprimary px-3 py-1 rounded-full text-center">
-                      ${countMainCategoryServices(mainCat)} services
-                    </span>
-                  </h2>
-                </div>
-                
-                <div class="p-6">
-                  <div class="mb-6">
-                    <div class="hidden md:grid grid-cols-3 gap-4 mb-4">
-                      ${mainCat.imageDesktop.map(img => `
-                        <img src="${img}" class="w-full h-48 object-cover rounded-lg">
-                      `).join('')}
-                    </div>
-                    <div class="md:hidden">
-                      <img src="${mainCat.imageMobile}" class="w-full h-48 object-cover rounded-lg">
-                    </div>
-                  </div>
-                  
-                  <p class="text-gray-600 mb-6">Explore our comprehensive ${mainCat.name.toLowerCase()} offerings below.</p>
-                  
-                  
-                ${mainCat.subcategories.map(subCat => {
-                        const subCategoryId = `${mainCat.id}-${createCategoryId(subCat.name)}`;
-                        return `
-                    <div id="${subCategoryId}" class="subcategory-section mb-8 ${subCat.subcategories ? 'rounded-lg p-2' : 'border border-gray-200 rounded-lg p-4'}">
-                      <h3 class="text-xl font-semibold mb-4 text-gray-700 ${subCat.subcategories ? 'border-b pb-2' : ''} flex items-center">
-                        ${subCat.name}
-                        <span class="ml-auto text-xs font-normal ${subCat.subcategories ? 'bg-gray-100' : 'bg-solprimary/10 text-solprimary'} text-gray-600 px-2 py-1 rounded-full">
-                          ${countServices(subCat)} services
-                        </span>
-                      </h3>
-                      
-                      ${subCat.subcategories ? `
-                        <div class="space-y-4">
-                          ${subCat.subcategories.map(subSubCat => {
-                            const subSubCategoryId = `${subCategoryId}-${createCategoryId(subSubCat.name)}`;
-                            return `
-                              <div id="${subSubCategoryId}" class="sub-subcategory-section border border-gray-200 rounded-lg overflow-hidden">
-                                <h4 class="bg-gray-50 px-4 py-2 font-medium text-gray-700">
-                                  ${subSubCat.name}
-                                </h4>
-                                ${renderServicesCards(subSubCat.services)}
-                              </div>
-                            `;
-                        }).join('')}
-                        </div>
-                      ` : renderServicesCards(subCat.services)}
-                    </div>
-                  `;
-                    }).join('')}
-                </div>
-              </div>
-            `).join('')}
+            <!-- Services will be loaded here dynamically -->
           </div>
         </div>
       </div>
@@ -693,6 +635,90 @@ function renderServicesTable(services) {
 }
 
 export function initServicesPage() {
+    // Function to load services for a specific category
+    const loadServicesForCategory = (categoryId, isInitialLoad = false) => {
+        const servicesContainer = document.getElementById('services-container');
+        if (!servicesContainer) return;
+
+        const id = categoryId.replace('#', '');
+        let category = null;
+
+        // Find the category in our data structure
+        for (const mainCat of mainCategories) {
+            if (mainCat.id === id) {
+                category = mainCat;
+                break;
+            }
+
+            for (const subCat of mainCat.subcategories) {
+                const subCategoryId = `${mainCat.id}-${createCategoryId(subCat.name)}`;
+                if (subCategoryId === id) {
+                    category = subCat;
+                    break;
+                }
+
+                if (subCat.subcategories) {
+                    for (const subSubCat of subCat.subcategories) {
+                        const subSubCategoryId = `${subCategoryId}-${createCategoryId(subSubCat.name)}`;
+                        if (subSubCategoryId === id) {
+                            category = subSubCat;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!category) {
+            category = mainCategories[0];
+        }
+
+        // For main categories on initial load, show all subcategories with their services
+        if (category.services) {
+            servicesContainer.innerHTML = `
+            <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-800">${category.name}</h2>
+                </div>
+                <div class="p-6">
+                    ${renderServicesCards(category.services)}
+                </div>
+            </div>
+        `;
+        } else if (category.subcategories) {
+            servicesContainer.innerHTML = `
+            <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
+                    <h2 class="text-2xl font-bold text-gray-800">${category.name}</h2>
+                </div>
+                <div class="p-6 space-y-8">
+                    ${category.subcategories.map(subCat => {
+                const subCategoryId = `${id}-${createCategoryId(subCat.name)}`;
+                return `
+                            <div id="${subCategoryId}" class="subcategory-section">
+                                <h3 class="text-xl font-semibold mb-4 text-gray-700">${subCat.name}</h3>
+                                ${subCat.services ? renderServicesCards(subCat.services) :
+                    (subCat.subcategories ?
+                        subCat.subcategories.map(subSubCat => {
+                            const subSubCategoryId = `${subCategoryId}-${createCategoryId(subSubCat.name)}`;
+                            return `
+                                                <div id="${subSubCategoryId}" class="sub-subcategory-section mb-6">
+                                                    <h4 class="text-lg font-medium mb-3 text-gray-600">${subSubCat.name}</h4>
+                                                    ${renderServicesCards(subSubCat.services)}
+                                                </div>
+                                            `;
+                        }).join('') :
+                        '<p>No services available</p>')
+                }
+                            </div>
+                        `;
+            }).join('')}
+                </div>
+            </div>
+        `;
+        }
+    };
+
     // Function to set active category
     const setActiveCategory = (categoryId) => {
         // Remove active class from all category links
@@ -740,6 +766,9 @@ export function initServicesPage() {
         if (mobileSelect) {
             mobileSelect.value = categoryId;
         }
+
+        // Load services for this category
+        loadServicesForCategory(categoryId);
     };
 
     // Function to toggle collapse state
@@ -777,6 +806,34 @@ export function initServicesPage() {
         }
     };
 
+    function updateUrlAndScroll(targetId) {
+        // Update URL hash without page reload
+        if (window.location.hash !== targetId) {
+            window.history.pushState(null, null, targetId);
+        }
+        scrollToCategory(targetId);
+    }
+
+    function scrollToCategory(targetId) {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            // Calculate offset considering mobile header height
+            const offset = window.innerWidth < 1024 ? 80 : 100;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+
+            // Highlight the category temporarily
+            targetElement.classList.add('ring-2', 'ring-solprimary');
+            setTimeout(() => {
+                targetElement.classList.remove('ring-2', 'ring-solprimary');
+            }, 2000);
+        }
+    }
+
     // Set up event listeners after slight delay to ensure DOM is ready
     setTimeout(() => {
         // Desktop category links
@@ -813,100 +870,66 @@ export function initServicesPage() {
             });
         }
 
-        handleInitialScroll();
-    }, 50);
+        // Handle price reveal clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('see-price-btn')) {
+                const priceContainer = e.target.closest('.price-container');
+                const priceDisplay = priceContainer.querySelector('.price-display');
+                const seePriceBtn = e.target;
 
-    function updateUrlAndScroll(targetId) {
-        // Update URL hash without page reload
-        if (window.location.hash !== targetId) {
-            window.history.pushState(null, null, targetId);
-        }
-        scrollToCategory(targetId);
-    }
+                // Hide the button
+                seePriceBtn.classList.add('hidden');
 
-    function scrollToCategory(targetId) {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            // Calculate offset considering mobile header height
-            const offset = window.innerWidth < 1024 ? 80 : 100;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                // Show the price with animation
+                priceDisplay.classList.remove('hidden');
+                setTimeout(() => {
+                    priceDisplay.classList.remove('opacity-0', 'translate-y-1');
+                    priceDisplay.classList.add('opacity-100', 'translate-y-0');
+                }, 10);
 
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-
-            // Highlight the category temporarily
-            targetElement.classList.add('ring-2', 'ring-solprimary');
-            setTimeout(() => {
-                targetElement.classList.remove('ring-2', 'ring-solprimary');
-            }, 2000);
-        }
-    }
-
-    // Handle back/forward navigation
-    window.addEventListener('popstate', () => {
-        if (window.location.hash) {
-            setActiveCategory(window.location.hash);
-            scrollToCategory(window.location.hash);
-        }
-    });
-
-    // Handle scroll to update active category
-    window.addEventListener('scroll', () => {
-        const categorySections = document.querySelectorAll('.category-section, .subcategory-section, .sub-subcategory-section');
-        let currentActive = null;
-
-        categorySections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-                currentActive = `#${section.id}`;
+                // Prevent multiple clicks
+                seePriceBtn.style.pointerEvents = 'none';
             }
         });
 
-        if (currentActive) {
-            setActiveCategory(currentActive);
+        // Load initial services
+        handleInitialScroll();
+        if (!window.location.hash && mainCategories.length > 0) {
+            // Load the first main category with all its content
+            loadServicesForCategory(`#${mainCategories[0].id}`, true);
+            window.history.replaceState(null, null, `#${mainCategories[0].id}`);
         }
-    });
 
-    // Handle price reveal clicks
-    // document.addEventListener('click', (e) => {
-    //     if (e.target.classList.contains('see-price-btn')) {
-    //         const priceContainer = e.target.closest('.price-container');
-    //         const priceDisplay = priceContainer.querySelector('.price-display');
-    //         const seePriceBtn = e.target;
-    //
-    //         // Hide the button
-    //         seePriceBtn.classList.add('hidden');
-    //
-    //         // Show the price with animation
-    //         priceDisplay.classList.remove('hidden');
-    //         setTimeout(() => {
-    //             priceDisplay.classList.remove('opacity-0', 'translate-y-1');
-    //             priceDisplay.classList.add('opacity-100', 'translate-y-0');
-    //         }, 10);
-    //     }
-    // });
+        // Handle back/forward navigation
+        window.addEventListener('popstate', () => {
+            if (window.location.hash) {
+                setActiveCategory(window.location.hash);
+                scrollToCategory(window.location.hash);
+            }
+        });
 
-    // Handle price reveal clicks
-    document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('see-price-btn')) {
-            const priceContainer = e.target.closest('.price-container');
-            const priceDisplay = priceContainer.querySelector('.price-display');
-            const seePriceBtn = e.target;
+        // Handle scroll to update active category
+// Handle scroll to update active category
+        window.addEventListener('scroll', () => {
+            const currentHash = window.location.hash;
+            const isViewingMainCategory = mainCategories.some(mc => `#${mc.id}` === currentHash);
 
-            // Hide the button
-            seePriceBtn.classList.add('hidden');
+            // Don't change active category if we're viewing a main category
+            if (isViewingMainCategory) return;
 
-            // Show the price with animation
-            priceDisplay.classList.remove('hidden');
-            setTimeout(() => {
-                priceDisplay.classList.remove('opacity-0', 'translate-y-1');
-                priceDisplay.classList.add('opacity-100', 'translate-y-0');
-            }, 10);
+            const categorySections = document.querySelectorAll('.category-section, .subcategory-section, .sub-subcategory-section');
+            let currentActive = null;
 
-            // Prevent multiple clicks
-            seePriceBtn.style.pointerEvents = 'none';
-        }
-    });
+            categorySections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 150 && rect.bottom >= 150) {
+                    currentActive = `#${section.id}`;
+                }
+            });
+
+            if (currentActive) {
+                setActiveCategory(currentActive);
+            }
+        });
+    }, 50);
 }
