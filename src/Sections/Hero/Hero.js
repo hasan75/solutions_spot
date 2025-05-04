@@ -3,61 +3,61 @@ import './Hero.css';
 // Service data array - all as main categories now
 const servicesData = [
     {
-        id: 'cleaning',
+        id: 'home-services-cleaning-services',
         name: 'Property Cleaning',
         description: 'Professional cleaning services',
         icon: 'M3 3h18v2H3V3zm1 4h16v13a1 1 0 01-1 1H5a1 1 0 01-1-1V7zm3 3v2h8v-2H7z' // trash bin style
     },
     {
-        id: 'pest-control',
+        id: 'home-services-pest-control',
         name: 'Pest Control',
         description: 'Effective pest elimination',
         icon: 'M12 2a9.99 9.99 0 018.485 4.929l-1.414 1.414A8 8 0 104.93 4.93L3.515 3.515A10 10 0 0112 2z'
     },
     {
-        id: 'hair-studio',
+        id: 'beauty-care-hair-studio',
         name: 'Hair Studio',
         description: 'Professional hair services',
         icon: 'M15.232 5.232a2.5 2.5 0 10-3.535 3.535L15 12.07l2.303-2.303a2.5 2.5 0 10-3.536-3.535z'
     },
     {
-        id: 'makeover',
+        id: 'beauty-care-makeover-and-hair-style',
         name: 'Makeover',
         description: 'Complete beauty transformation',
         icon: 'M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5 9 6.343 9 8s1.343 3 3 3zm0 2c-2.21 0-4 1.79-4 4v1h8v-1c0-2.21-1.79-4-4-4z'
     },
     {
-        id: 'hair-style',
+        id: 'beauty-care-makeover-and-hair-style',
         name: 'Hair Styling',
         description: 'Trendy hairstyles',
         icon: 'M19 14v-4a7 7 0 10-14 0v4H3v6h18v-6h-2z' // head with hair
     },
     {
-        id: 'message-spa',
+        id: 'beauty-care-massage--spa',
         name: 'Message & Spa',
         description: 'Trendy Spa',
         icon: 'M12 3C7.589 3 4 6.589 4 11c0 5 8 10 8 10s8-5 8-10c0-4.411-3.589-8-8-8z' // spa lotus style
     },
     {
-        id: 'mehendi',
+        id: 'beauty-care-mehendi-art',
         name: 'Mehendi Art',
         description: 'Trendy Mehendi Design',
         icon: 'M12 2a2 2 0 012 2v8h2a2 2 0 110 4h-2v6a2 2 0 11-4 0v-6H8a2 2 0 110-4h2V4a2 2 0 012-2z' // abstract hand design
     },
     {
-        id: 'piercing',
+        id: 'beauty-care-mehendi-piercing',
         name: 'Piercing',
         description: 'Trendy Piercing Design',
         icon: 'M12 2a10 10 0 1010 10A10.011 10.011 0 0012 2zm0 5a1.5 1.5 0 11-1.5 1.5A1.501 1.501 0 0112 7zm0 6a5 5 0 015 5h-2a3 3 0 00-6 0H7a5 5 0 015-5z'
     },
     {
-        id: 'Electrical',
+        id: 'home-services-electrical',
         name: 'Electrical',
         description: 'Electrical',
         icon: 'M13 2L3 14h7v8l10-12h-7z' // lightning bolt / power
     },
     {
-        id: 'butcher',
+        id: 'specialty-services-on-demand-butcher',
         name: 'On-Demand Butcher',
         description: 'Fresh meat preparation',
         icon: 'M9 2h6a2 2 0 012 2v2H7V4a2 2 0 012-2zm3 7a3 3 0 013 3v4H9v-4a3 3 0 013-3z' // knife/meat style

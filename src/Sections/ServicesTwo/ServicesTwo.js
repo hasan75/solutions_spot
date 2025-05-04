@@ -42,6 +42,9 @@ import cleaning3 from '../../assets/images/ss_categories/cleaning/cleaning3.jpg'
 import pest1 from '../../assets/images/ss_categories/pest/pestcontrol1.jpg';
 import pest2 from '../../assets/images/ss_categories/pest/pestcontrol2.jpg';
 import pest3 from '../../assets/images/ss_categories/pest/pestcontrol3.jpg';
+import digital1 from '../../assets/images/ss_categories/digital_web_development.jpg';
+import digital2 from '../../assets/images/ss_categories/digital-seo.png';
+import digital3 from '../../assets/images/ss_categories/digital-video-ads.jpeg';
 
 // Normalized Services Data
 const servicesData = [
@@ -325,6 +328,107 @@ const mainCategories = [
                 services: [
                     { name: "Nose piercing", price: 800, note: "Nostril piercing", image: piercing1 },
                     { name: "Ear piercing", price: 1000, note: "Lobe piercing", image: piercing3 }
+                ]
+            }
+        ]
+    },
+    {
+        name: "Digital Services - Acctech AI",
+        id: "digital-services",
+        imageDesktop: [digital1, digital2, digital3],
+        imageMobile: digital1,
+        subcategories: [
+            {
+                name: "Web Development by Acctech AI",
+                imageDesktop: [digital1, digital2, digital3],
+                imageMobile: digital1,
+                services: [
+                    {
+                        name: "Website Design & Development",
+                        price: null,
+                        note: "Custom quote based on requirements",
+                        rating: 5,
+                        reviews: 8,
+                        image: digital1
+                    },
+                    {
+                        name: "E-commerce Website",
+                        price: null,
+                        note: "Online store development",
+                        rating: 5,
+                        reviews: 5,
+                        image: digital1
+                    },
+                    {
+                        name: "Website Maintenance",
+                        price: null,
+                        note: "Ongoing support",
+                        rating: 5,
+                        reviews: 3,
+                        image: digital1
+                    }
+                ]
+            },
+            {
+                name: "Digital Marketing by Acctech AI",
+                imageDesktop: [digital2, digital1, digital3],
+                imageMobile: digital2,
+                services: [
+                    {
+                        name: "Social Media Marketing",
+                        price: null,
+                        note: "Facebook, Instagram, etc.",
+                        rating: 5,
+                        reviews: 12,
+                        image: digital2
+                    },
+                    {
+                        name: "SEO Services",
+                        price: null,
+                        note: "Search engine optimization",
+                        rating: 5,
+                        reviews: 7,
+                        image: digital2
+                    },
+                    {
+                        name: "Google Ads Management",
+                        price: null,
+                        note: "PPC campaign management",
+                        rating: 5,
+                        reviews: 4,
+                        image: digital2
+                    }
+                ]
+            },
+            {
+                name: "Content Production by Acctech AI",
+                imageDesktop: [digital3, digital1, digital2],
+                imageMobile: digital3,
+                services: [
+                    {
+                        name: "Video Ads Production",
+                        price: null,
+                        note: "Commercial videos",
+                        rating: 5,
+                        reviews: 5,
+                        image: digital3
+                    },
+                    {
+                        name: "Product Photography",
+                        price: null,
+                        note: "E-commerce ready images",
+                        rating: 5,
+                        reviews: 3,
+                        image: digital3
+                    },
+                    {
+                        name: "Graphic Design",
+                        price: null,
+                        note: "Logos, banners, etc.",
+                        rating: 5,
+                        reviews: 6,
+                        image: digital3
+                    }
                 ]
             }
         ]
