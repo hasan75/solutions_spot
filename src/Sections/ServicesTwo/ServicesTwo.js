@@ -485,12 +485,12 @@ export default function ServiceTwo() {
 
 function countMainCategoryServices(mainCategory) {
     let count = 0;
-    mainCategory.subcategories.forEach(subCat => {
+    mainCategory?.subcategories?.forEach(subCat => {
         if (subCat.services) {
             count += subCat.services.length;
         }
         if (subCat.subcategories) {
-            subCat.subcategories.forEach(subSubCat => {
+            subCat.subcategories?.forEach(subSubCat => {
                 count += subSubCat.services.length;
             });
         }
@@ -499,9 +499,9 @@ function countMainCategoryServices(mainCategory) {
 }
 
 function countServices(category) {
-    if (category.services) return category.services.length;
+    if (category.services) return category.services?.length;
     if (category.subcategories) {
-        return category.subcategories.reduce((total, sub) => total + (sub.services?.length || 0), 0);
+        return category.subcategories?.reduce((total, sub) => total + (sub.services?.length || 0), 0);
     }
     return 0;
 }
@@ -634,6 +634,25 @@ function renderServicesTable(services) {
   `;
 }
 
+function getLowestPrice(category) {
+    console.log(category);
+    if (category.services) {
+        return Math.min(...category.services.map(service => service.price));
+    }
+    if (category.subcategories) {
+        return Math.min(...category.subcategories.map(subCat => getLowestPrice(subCat)));
+    }
+    return Infinity;
+}
+
+function renderPriceBadge(price) {
+    return `
+        <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full ml-2">
+            Starts with ৳${price}
+        </span>
+    `;
+}
+
 export function initServicesPage() {
     // Function to load services for a specific category
     const loadServicesForCategory = (categoryId) => {
@@ -673,6 +692,10 @@ export function initServicesPage() {
             category = mainCategories[0];
         }
 
+        // Calculate total services and lowest price
+        const totalServices = countMainCategoryServices(category);
+        const lowestPrice = getLowestPrice(category);
+
         // Render the services for this category
         if (category.services) {
             servicesContainer.innerHTML = `
@@ -688,8 +711,14 @@ export function initServicesPage() {
         } else if (category.subcategories) {
             servicesContainer.innerHTML = `
                 <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
-                    <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
-                        <h2 class="text-2xl font-bold text-gray-800">${category.name}</h2>
+                    <div class="bg-white z-40 px-6 py-4 border-b border-gray-200 flex justify-between">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-800 pb-1">${category.name}</h2>
+                            <span class="bg-sky-200 text-gray-700 px-3 py-1 rounded-full">Starts at ৳${lowestPrice}</span>
+                        </div>
+                        <div>
+                            <p class="flex items-center justify-center px-4 py-2 bg-sky-200 max-w-max rounded-full text-gray-800">${countMainCategoryServices(category)} Services </p>
+                        </div>
                     </div>
                     <div class="p-6 space-y-8">
                         ${category.subcategories.map(subCat => {
