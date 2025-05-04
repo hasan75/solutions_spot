@@ -475,65 +475,7 @@ export default function ServiceTwo() {
         <!-- Details Column -->
         <div class="w-full lg:w-3/4">
           <div id="services-container" class="space-y-12">
-            ${mainCategories.map(mainCat => `
-              <!-- Main Category Section -->
-              <div id="${mainCat.id}" class="category-section main-category-section bg-white rounded-lg shadow-sm overflow-hidden">
-                <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
-                  <h2 class="text-2xl font-bold text-gray-800 flex items-center">
-                    ${mainCat.name}
-                    <span class="ml-auto text-sm font-normal bg-solprimary/10 text-solprimary px-3 py-1 rounded-full text-center">
-                      ${countMainCategoryServices(mainCat)} services
-                    </span>
-                  </h2>
-                </div>
-                
-                <div class="p-6">
-                  <div class="mb-6">
-                    <div class="hidden md:grid grid-cols-3 gap-4 mb-4">
-                      ${mainCat.imageDesktop.map(img => `
-                        <img src="${img}" class="w-full h-48 object-cover rounded-lg">
-                      `).join('')}
-                    </div>
-                    <div class="md:hidden">
-                      <img src="${mainCat.imageMobile}" class="w-full h-48 object-cover rounded-lg">
-                    </div>
-                  </div>
-                  
-                  <p class="text-gray-600 mb-6">Explore our comprehensive ${mainCat.name.toLowerCase()} offerings below.</p>
-                  
-                  
-                ${mainCat.subcategories.map(subCat => {
-                        const subCategoryId = `${mainCat.id}-${createCategoryId(subCat.name)}`;
-                        return `
-                    <div id="${subCategoryId}" class="subcategory-section mb-8 ${subCat.subcategories ? 'rounded-lg p-2' : 'border border-gray-200 rounded-lg p-4'}">
-                      <h3 class="text-xl font-semibold mb-4 text-gray-700 ${subCat.subcategories ? 'border-b pb-2' : ''} flex items-center">
-                        ${subCat.name}
-                        <span class="ml-auto text-xs font-normal ${subCat.subcategories ? 'bg-gray-100' : 'bg-solprimary/10 text-solprimary'} text-gray-600 px-2 py-1 rounded-full">
-                          ${countServices(subCat)} services
-                        </span>
-                      </h3>
-                      
-                      ${subCat.subcategories ? `
-                        <div class="space-y-4">
-                          ${subCat.subcategories.map(subSubCat => {
-                            const subSubCategoryId = `${subCategoryId}-${createCategoryId(subSubCat.name)}`;
-                            return `
-                              <div id="${subSubCategoryId}" class="sub-subcategory-section border border-gray-200 rounded-lg overflow-hidden">
-                                <h4 class="bg-gray-50 px-4 py-2 font-medium text-gray-700">
-                                  ${subSubCat.name}
-                                </h4>
-                                ${renderServicesCards(subSubCat.services)}
-                              </div>
-                            `;
-                        }).join('')}
-                        </div>
-                      ` : renderServicesCards(subCat.services)}
-                    </div>
-                  `;
-                    }).join('')}
-                </div>
-              </div>
-            `).join('')}
+            <!-- Services will be loaded here dynamically -->
           </div>
         </div>
       </div>
@@ -543,12 +485,12 @@ export default function ServiceTwo() {
 
 function countMainCategoryServices(mainCategory) {
     let count = 0;
-    mainCategory.subcategories.forEach(subCat => {
+    mainCategory?.subcategories?.forEach(subCat => {
         if (subCat.services) {
             count += subCat.services.length;
         }
         if (subCat.subcategories) {
-            subCat.subcategories.forEach(subSubCat => {
+            subCat.subcategories?.forEach(subSubCat => {
                 count += subSubCat.services.length;
             });
         }
@@ -557,9 +499,9 @@ function countMainCategoryServices(mainCategory) {
 }
 
 function countServices(category) {
-    if (category.services) return category.services.length;
+    if (category.services) return category.services?.length;
     if (category.subcategories) {
-        return category.subcategories.reduce((total, sub) => total + (sub.services?.length || 0), 0);
+        return category.subcategories?.reduce((total, sub) => total + (sub.services?.length || 0), 0);
     }
     return 0;
 }
@@ -692,8 +634,121 @@ function renderServicesTable(services) {
   `;
 }
 
+function getLowestPrice(category) {
+    console.log(category);
+    if (category.services) {
+        return Math.min(...category.services.map(service => service.price));
+    }
+    if (category.subcategories) {
+        return Math.min(...category.subcategories.map(subCat => getLowestPrice(subCat)));
+    }
+    return Infinity;
+}
+
+function renderPriceBadge(price) {
+    return `
+        <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full ml-2">
+            Starts with ৳${price}
+        </span>
+    `;
+}
+
 export function initServicesPage() {
-    // Function to set active category
+    // Function to load services for a specific category
+    const loadServicesForCategory = (categoryId) => {
+        const servicesContainer = document.getElementById('services-container');
+        if (!servicesContainer) return;
+
+        const id = categoryId.replace('#', '');
+        let category = null;
+
+        // Find the category in our data structure
+        for (const mainCat of mainCategories) {
+            if (mainCat.id === id) {
+                category = mainCat;
+                break;
+            }
+
+            for (const subCat of mainCat.subcategories) {
+                const subCategoryId = `${mainCat.id}-${createCategoryId(subCat.name)}`;
+                if (subCategoryId === id) {
+                    category = subCat;
+                    break;
+                }
+
+                if (subCat.subcategories) {
+                    for (const subSubCat of subCat.subcategories) {
+                        const subSubCategoryId = `${subCategoryId}-${createCategoryId(subSubCat.name)}`;
+                        if (subSubCategoryId === id) {
+                            category = subSubCat;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        if (!category) {
+            category = mainCategories[0];
+        }
+
+        // Calculate total services and lowest price
+        const totalServices = countMainCategoryServices(category);
+        const lowestPrice = getLowestPrice(category);
+
+        // Render the services for this category
+        if (category.services) {
+            servicesContainer.innerHTML = `
+                <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
+                        <h2 class="text-2xl font-bold text-gray-800">${category.name}</h2>
+                    </div>
+                    <div class="p-6">
+                        ${renderServicesCards(category.services)}
+                    </div>
+                </div>
+            `;
+        } else if (category.subcategories) {
+            servicesContainer.innerHTML = `
+                <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
+                    <div class="bg-white z-40 px-6 py-4 border-b border-gray-200 flex justify-between">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-800 pb-1">${category.name}</h2>
+                            <span class="bg-sky-200 text-gray-700 px-3 py-1 rounded-full">Starts at ৳${lowestPrice}</span>
+                        </div>
+                        <div>
+                            <p class="flex items-center justify-center px-4 py-2 bg-sky-200 max-w-max rounded-full text-gray-800">${countMainCategoryServices(category)} Services </p>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-8">
+                        ${category.subcategories.map(subCat => {
+                const subCategoryId = `${id}-${createCategoryId(subCat.name)}`;
+                return `
+                                <div id="${subCategoryId}" class="subcategory-section">
+                                    <h3 class="text-xl font-semibold mb-4 text-gray-700">${subCat.name}</h3>
+                                    ${subCat.services ? renderServicesCards(subCat.services) :
+                    (subCat.subcategories ?
+                        subCat.subcategories.map(subSubCat => {
+                            const subSubCategoryId = `${subCategoryId}-${createCategoryId(subSubCat.name)}`;
+                            return `
+                                                    <div id="${subSubCategoryId}" class="sub-subcategory-section mb-6">
+                                                        <h4 class="text-lg font-medium mb-3 text-gray-600">${subSubCat.name}</h4>
+                                                        ${renderServicesCards(subSubCat.services)}
+                                                    </div>
+                                                `;
+                        }).join('') :
+                        '<p>No services available</p>')
+                }
+                                </div>
+                            `;
+            }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+    };
+
+    // Function to set active category and expand parents
     const setActiveCategory = (categoryId) => {
         // Remove active class from all category links
         document.querySelectorAll('.category-link').forEach(link => {
@@ -703,39 +758,31 @@ export function initServicesPage() {
 
         if (!categoryId) return;
 
-        const activeLink = document.querySelector(`.category-link[href="${categoryId}"]`);
-        if (!activeLink) return;
+        // Get the clicked category link
+        const clickedLink = document.querySelector(`.category-link[href="${categoryId}"]`);
+        if (!clickedLink) return;
 
-        // Function to check if a category is expanded
-        const isCategoryExpanded = (id) => {
-            const content = document.getElementById(`${id}-content`);
-            return content && content.style.display !== 'none';
-        };
+        // Add active class to clicked link
+        clickedLink.classList.add('bg-solprimary/20', 'text-solprimary');
+        clickedLink.classList.remove('text-gray-700');
 
-        // Get all parent categories in hierarchy
+        // Expand all parent categories
         const categoryParts = categoryId.replace('#', '').split('-');
-        let deepestVisibleId = categoryId;
+        for (let i = 1; i < categoryParts.length; i++) {
+            const parentId = categoryParts.slice(0, i).join('-');
+            const parentContent = document.getElementById(`${parentId}-content`);
+            const parentToggle = document.querySelector(`.toggle-collapse[data-target="${parentId}"] i`);
 
-        // Find the deepest visible category
-        for (let i = categoryParts.length - 1; i >= 0; i--) {
-            const currentId = i === 0 ? `#${categoryParts[0]}` :
-                `#${categoryParts.slice(0, i + 1).join('-')}`;
-
-            const parentId = currentId.replace('#', '');
-            if (!isCategoryExpanded(parentId)) {
-                deepestVisibleId = currentId;
-                break;
+            if (parentContent && parentContent.style.display === 'none') {
+                parentContent.style.display = 'block';
+                if (parentToggle) {
+                    parentToggle.classList.remove('fa-chevron-down');
+                    parentToggle.classList.add('fa-chevron-up');
+                }
             }
         }
 
-        // Highlight only the deepest visible category
-        const visibleLink = document.querySelector(`.category-link[href="${deepestVisibleId}"]`);
-        if (visibleLink) {
-            visibleLink.classList.add('bg-solprimary/20', 'text-solprimary');
-            visibleLink.classList.remove('text-gray-700');
-        }
-
-        // Update mobile select to show actual selected category
+        // Update mobile select
         const mobileSelect = document.getElementById('mobile-category-select');
         if (mobileSelect) {
             mobileSelect.value = categoryId;
@@ -758,38 +805,35 @@ export function initServicesPage() {
         }
     };
 
-    // Handle initial page load with hash
-    const handleInitialScroll = () => {
-        if (window.location.hash) {
-            setActiveCategory(window.location.hash);
-            const targetElement = document.querySelector(window.location.hash);
-            if (targetElement) {
-                setTimeout(() => {
-                    scrollToCategory(window.location.hash);
-                }, 100);
-            }
-        } else {
-            // Set first category as active by default if no hash
-            const firstCategory = allCategories[0];
-            if (firstCategory) {
-                setActiveCategory(`#${firstCategory.id}`);
-            }
+    // Function to handle category clicks
+    const handleCategoryClick = (e, targetId) => {
+        e.preventDefault();
+        setActiveCategory(targetId);
+        loadServicesForCategory(targetId);
+        window.history.pushState(null, null, targetId);
+
+        // Scroll to the category
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const offset = window.innerWidth < 1024 ? 80 : 100;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         }
     };
 
-    // Set up event listeners after slight delay to ensure DOM is ready
+    // Initialize
     setTimeout(() => {
-        // Desktop category links
+        // Set up category links
         document.querySelectorAll('.category-link').forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                updateUrlAndScroll(targetId);
-                setActiveCategory(targetId);
+                handleCategoryClick(e, link.getAttribute('href'));
             });
         });
 
-        // Collapse toggle buttons
+        // Set up collapse toggles
         document.querySelectorAll('.toggle-collapse').forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -799,114 +843,44 @@ export function initServicesPage() {
             });
         });
 
-        // Mobile category select
+        // Set up mobile select
         const mobileSelect = document.getElementById('mobile-category-select');
         if (mobileSelect) {
             mobileSelect.addEventListener('change', (e) => {
                 if (e.target.value) {
-                    updateUrlAndScroll(e.target.value);
-                    setActiveCategory(e.target.value);
-                    setTimeout(() => {
-                        mobileSelect.value = e.target.value;
-                    }, 500);
+                    handleCategoryClick(e, e.target.value);
                 }
             });
         }
 
-        handleInitialScroll();
-    }, 50);
+        // Handle price reveals
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('see-price-btn')) {
+                const priceContainer = e.target.closest('.price-container');
+                const priceDisplay = priceContainer.querySelector('.price-display');
+                const seePriceBtn = e.target;
 
-    function updateUrlAndScroll(targetId) {
-        // Update URL hash without page reload
-        if (window.location.hash !== targetId) {
-            window.history.pushState(null, null, targetId);
-        }
-        scrollToCategory(targetId);
-    }
-
-    function scrollToCategory(targetId) {
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            // Calculate offset considering mobile header height
-            const offset = window.innerWidth < 1024 ? 80 : 100;
-            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-
-            // Highlight the category temporarily
-            targetElement.classList.add('ring-2', 'ring-solprimary');
-            setTimeout(() => {
-                targetElement.classList.remove('ring-2', 'ring-solprimary');
-            }, 2000);
-        }
-    }
-
-    // Handle back/forward navigation
-    window.addEventListener('popstate', () => {
-        if (window.location.hash) {
-            setActiveCategory(window.location.hash);
-            scrollToCategory(window.location.hash);
-        }
-    });
-
-    // Handle scroll to update active category
-    window.addEventListener('scroll', () => {
-        const categorySections = document.querySelectorAll('.category-section, .subcategory-section, .sub-subcategory-section');
-        let currentActive = null;
-
-        categorySections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 150 && rect.bottom >= 150) {
-                currentActive = `#${section.id}`;
+                seePriceBtn.classList.add('hidden');
+                priceDisplay.classList.remove('hidden');
+                setTimeout(() => {
+                    priceDisplay.classList.remove('opacity-0', 'translate-y-1');
+                    priceDisplay.classList.add('opacity-100', 'translate-y-0');
+                }, 10);
+                seePriceBtn.style.pointerEvents = 'none';
             }
         });
 
-        if (currentActive) {
-            setActiveCategory(currentActive);
-        }
-    });
+        // Load initial category
+        const initialCategory = window.location.hash || `#${mainCategories[0].id}`;
+        setActiveCategory(initialCategory);
+        loadServicesForCategory(initialCategory);
 
-    // Handle price reveal clicks
-    // document.addEventListener('click', (e) => {
-    //     if (e.target.classList.contains('see-price-btn')) {
-    //         const priceContainer = e.target.closest('.price-container');
-    //         const priceDisplay = priceContainer.querySelector('.price-display');
-    //         const seePriceBtn = e.target;
-    //
-    //         // Hide the button
-    //         seePriceBtn.classList.add('hidden');
-    //
-    //         // Show the price with animation
-    //         priceDisplay.classList.remove('hidden');
-    //         setTimeout(() => {
-    //             priceDisplay.classList.remove('opacity-0', 'translate-y-1');
-    //             priceDisplay.classList.add('opacity-100', 'translate-y-0');
-    //         }, 10);
-    //     }
-    // });
-
-    // Handle price reveal clicks
-    document.addEventListener('click', (e) => {
-        if (e.target.classList.contains('see-price-btn')) {
-            const priceContainer = e.target.closest('.price-container');
-            const priceDisplay = priceContainer.querySelector('.price-display');
-            const seePriceBtn = e.target;
-
-            // Hide the button
-            seePriceBtn.classList.add('hidden');
-
-            // Show the price with animation
-            priceDisplay.classList.remove('hidden');
-            setTimeout(() => {
-                priceDisplay.classList.remove('opacity-0', 'translate-y-1');
-                priceDisplay.classList.add('opacity-100', 'translate-y-0');
-            }, 10);
-
-            // Prevent multiple clicks
-            seePriceBtn.style.pointerEvents = 'none';
-        }
-    });
+        // Handle browser navigation
+        window.addEventListener('popstate', () => {
+            if (window.location.hash) {
+                setActiveCategory(window.location.hash);
+                loadServicesForCategory(window.location.hash);
+            }
+        });
+    }, 50);
 }
