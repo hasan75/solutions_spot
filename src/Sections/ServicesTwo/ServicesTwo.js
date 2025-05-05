@@ -45,6 +45,7 @@ import pest3 from '../../assets/images/ss_categories/pest/pestcontrol3.jpg';
 import digital1 from '../../assets/images/ss_categories/digital_web_development.jpg';
 import digital2 from '../../assets/images/ss_categories/digital-seo.png';
 import digital3 from '../../assets/images/ss_categories/digital-video-ads.jpeg';
+import digitalMobile from '../../assets/images/ss_categories/digital_mobile_app.webp';
 
 // Normalized Services Data
 const servicesData = [
@@ -339,7 +340,7 @@ const mainCategories = [
         imageMobile: digital1,
         subcategories: [
             {
-                name: "Web Development by Acctech AI",
+                name: "Application Development by Acctech AI",
                 imageDesktop: [digital1, digital2, digital3],
                 imageMobile: digital1,
                 services: [
@@ -360,12 +361,12 @@ const mainCategories = [
                         image: digital1
                     },
                     {
-                        name: "Website Maintenance",
+                        name: "Mobile Application Development",
                         price: null,
-                        note: "Ongoing support",
+                        note: "Custom quote based on requirements",
                         rating: 5,
                         reviews: 3,
-                        image: digital1
+                        image: digitalMobile
                     }
                 ]
             },
