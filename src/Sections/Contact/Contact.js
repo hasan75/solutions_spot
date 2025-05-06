@@ -1,4 +1,11 @@
 import service76 from '../../assets/images/service-76.jpg';
+
+const contactInfo = {
+    "phone_number" : ["(+880) 1336985511","(+880) 1336985511"],
+    "email" : ["info.solutionsspot@gmail.com","info.solutionsspot@gmail.com"],
+    "address": ["Dhaka Office: 11/22/2 Uttor Nandipara, Basabo - 1214",  "Rajshahi Office: 3rd Floor, House-4, Devising para, (Opposite of RUET pocket gate), Rajshahi, Bangladesh"]
+}
+
 export default function Contact() {
     setTimeout(()=> {
         document.getElementById('contactForm')
@@ -49,8 +56,8 @@ export default function Contact() {
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Phone Number</h6>
-              <a href="tel:01336985511" class="block text-sm hover:text-solprimary">(+880) 1336985511</a>
-              <a href="tel:01336985511" class="block text-sm hover:text-solprimary">(+880) 1336985511</a>
+              <a href="tel:${contactInfo["phone_number"][0]}" class="block text-sm hover:text-solprimary">${contactInfo["phone_number"][0]}</a>
+              <a href="tel:${contactInfo["phone_number"][1]}" class="block text-sm hover:text-solprimary">${contactInfo["phone_number"][1]}</a>
             </div>
           </div>
         </div>
@@ -63,8 +70,8 @@ export default function Contact() {
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Email Address</h6>
-              <a href="mailto:info.solutionsspot@gmail.com" class="block text-sm hover:text-solprimary">info.solutionsspot@gmail.com</a>
-              <a href="mailto:info.solutionsspot@gmail.com" class="block text-sm hover:text-solprimary">info.solutionsspot@gmail.com</a>
+              <a href="mailto:${contactInfo["email"][0]}" class="block text-sm hover:text-solprimary">${contactInfo["email"][0]}</a>
+              <a href="mailto:${contactInfo["email"][1]}" class="block text-sm hover:text-solprimary">${contactInfo["email"][1]}</a>
             </div>
           </div>
         </div>
@@ -77,7 +84,8 @@ export default function Contact() {
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Address</h6>
-              <p class="text-sm">3rd Floor, House-4, Badeshin Para (Opposite of RUET pocket gate), 6204 Rajshahi, Bangladesh</p>
+              <p class="text-sm pb-2 text-gray-800">${contactInfo["address"][0]}</p>
+              <p class="text-sm text-gray-800">${contactInfo["address"][1]}</p>
             </div>
           </div>
         </div>
