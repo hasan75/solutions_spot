@@ -1,4 +1,5 @@
 import logoTransparent from '../../assets/images/logo_transparent.png';
+import newLogo from '../../assets/images/ss_new_logo.png';
 
 export default function Footer() {
     return `
@@ -10,9 +11,9 @@ export default function Footer() {
             <!-- Column 1 - Logo/Contact -->
             <div class="">
               <div class="footer-widget mb-8">
-                <div class="mb-6">
+                <div class="mb-2 flex items-center justify-start">
                   <a href="/">
-                    <img src="${logoTransparent}" alt="logo" class="h-16">
+                    <img src="${newLogo}" alt="logo" class="h-24 w-32">
                   </a>
                 </div>
                 <div class="footer-content max-w-[304px] mb-6">

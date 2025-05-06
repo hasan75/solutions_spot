@@ -1,6 +1,7 @@
 import './Navbar.css';
 
 import logo from '../../assets/images/logo.png';
+import newLogo from '../../assets/images/ss_new_logo.png';
 // NavLinks data
 const links = [
     {
@@ -130,7 +131,7 @@ export default function Navbar() {
         <div class="flex items-center font-medium justify-around md:justify-between">
           <div class="z-50 h-full md:w-auto w-full px-4 md:px-0 flex justify-between">
             <a href="/" class="flex items-center">
-                <img src="${logo}" alt="Sol Logo" class="md:cursor-pointer h-12 md:h-20" id="logo">
+                <img src="${newLogo}" alt="Sol Logo" class="md:cursor-pointer h-12 md:h-20" id="logo">
             </a>
             <div class="text-3xl md:hidden flex items-center" id="mobile-menu-button">
               <ion-icon name="menu"></ion-icon>
