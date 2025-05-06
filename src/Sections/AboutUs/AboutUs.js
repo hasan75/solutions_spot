@@ -1,4 +1,5 @@
 import aboutImg from '../../assets/images/logo.png'
+import newAboutImg from '../../assets/images/ss_new_logo.png'
 
 export default function AboutUs() {
     return `
@@ -22,7 +23,7 @@ export default function AboutUs() {
                 <section class="mb-16">
                     <div class="flex flex-col md:flex-row gap-8 items-center">
                         <div class="md:w-1/2">
-                            <img src="${aboutImg}" alt="Solutions Spot team" class="rounded-lg shadow-lg w-full h-full">
+                            <img src="${newAboutImg}" alt="Solutions Spot team" class="rounded-lg shadow-lg w-full h-full">
                         </div>
                         <div class="md:w-1/2">
                             <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Comprehensive Services</h2>
