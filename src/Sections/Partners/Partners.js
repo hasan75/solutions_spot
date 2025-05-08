@@ -24,7 +24,7 @@ export default function Partners() {
       <div class="flex flex-col items-center">
         <!-- Header Section -->
         <div class="text-center mb-12 max-w-2xl" data-aos="fade-up">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3">Our Clients</h2>
+          <h2 class="text-3xl font-bold text-solprimary mb-3">Our Clients</h2>
           <p class="text-lg text-gray-600">Discover our strength and proffessionalism by our works.</p>
         </div>
 

@@ -26,7 +26,7 @@ export default function Services() {
               </div>
             </div>
             <div class="md:text-right" data-aos="fade-up">
-              <a href="/services.html" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
+              <a href="/services.html" class="inline-block bg-solprimary hover:bg-lime-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
                     View All Services
               </a>
             </div>
@@ -146,7 +146,7 @@ function createServiceCard(service) {
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-lg font-bold mb-2 text-gray-800 line-clamp-2">${service.title}</h3>
+                    <h3 class="text-lg font-bold mb-2 text-solprimary line-clamp-2">${service.title}</h3>
                     <div class="flex items-center text-sm text-gray-500 mb-3">
                         <i class="fas fa-map-marker-alt mr-1.5"></i>
                         <span>${service.location}</span>

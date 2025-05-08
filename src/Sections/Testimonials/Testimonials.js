@@ -36,7 +36,7 @@ export default function Testimonials() {
     <div class="container mx-auto py-14 md:py-28"">
       <!-- Header -->
       <div class="text-center mb-12" data-aos="fade-up">
-        <h2 class="text-3xl font-bold text-gray-800">Testimonials</h2>
+        <h2 class="text-3xl font-bold text-solprimary">Testimonials</h2>
         <p class="text-lg text-gray-600 mt-2">
           Description highlights the value of client feedback, showcases real testimonials
         </p>
@@ -46,7 +46,7 @@ export default function Testimonials() {
       <div class="flex flex-col md:flex-row flex-wrap justify-center gap-6">
         ${testimonials.map(testimonial => `
           <div class="w-full md:w-[calc(33.33%-20px)] lg:w-[calc(33.33%-24px)]" data-aos="fade-up">
-            <div class="client-box bg-white rounded-lg shadow-md p-8 h-full flex flex-col">
+            <div class="client-box bg-lime-50/30 rounded-lg shadow-md p-8 h-full flex flex-col">
               <div class="client-content mb-6 flex-grow">
                 <div class="rating flex mb-4 text-yellow-400">
                   ${Array(testimonial.rating).fill().map(() => `
@@ -62,7 +62,7 @@ export default function Testimonials() {
                        class="w-12 h-12 rounded-full object-cover">
                 </a>
                 <div class="client-name ml-4">
-                  <h5 class="font-semibold text-gray-800">${testimonial.name}</h5>
+                  <h5 class="font-semibold text-solprimary">${testimonial.name}</h5>
                   <h6 class="text-sm text-gray-500">${testimonial.position}</h6>
                 </div>
               </div>

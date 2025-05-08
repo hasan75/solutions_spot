@@ -9,7 +9,7 @@ export default function HowItWorks() {
     <div class="container mx-auto py-14">
       <div class="text-center mb-12 relative">
         <div class="section-heading how-it-works-sec-header" data-aos="fade-up">
-          <h2 class="text-3xl font-bold text-gray-800 mb-3">How It Works</h2>
+          <h2 class="text-3xl font-bold text-solprimary mb-3">How It Works</h2>
           <p class="text-lg text-gray-600">Straightforward process designed to make your experience seamless and hassle-free.</p>
         </div>
       </div>
@@ -17,13 +17,13 @@ export default function HowItWorks() {
       <div class="flex flex-col md:flex-row justify-center gap-8">
         ${howItWorksSteps.map(step => `
           <div class="w-full md:w-1/3 lg:w-1/3 work-box-container flex justify-center items-center" data-aos="fade-up">
-            <div class="work-wrap-box ${step.first ? 'work-first' : ''} ${step.last ? 'work-last' : ''} relative  bg-solsecondary rounded-full text-center shadow-md h-full">
+            <div class="work-wrap-box ${step.first ? 'work-first' : ''} ${step.last ? 'work-last' : ''} relative  bg-lime-100 rounded-full text-center shadow-md h-full">
               <div class="work-icon mb-6 flex justify-center">
                 <span class="inline-block p-4 bg-solprimary rounded-full">
                   <img src="${step.icon}" alt="${step.title}" class="w-12 h-12">
                 </span>
               </div>
-              <h5 class="text-xl font-semibold text-gray-800 mb-3">${step.title}</h5>
+              <h5 class="text-xl font-semibold text-solprimary mb-3">${step.title}</h5>
               <p class="text-gray-600 p-4">${step.description}</p>
             </div>
           </div>
