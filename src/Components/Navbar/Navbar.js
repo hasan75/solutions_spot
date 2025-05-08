@@ -1,6 +1,7 @@
 import './Navbar.css';
 
 import logo from '../../assets/images/logo.png';
+import newLogo from '../../assets/images/ss_new_logo.png';
 // NavLinks data
 const links = [
     {
@@ -111,7 +112,7 @@ function generateSubmenu(link, isMobile) {
               <ul>
                 ${sublink.sublink.map(item => `
                   <li class="text-sm text-gray-600 my-2.5">
-                    <a href="${item.link}" class="hover:text-blue-600">${item.name}</a>
+                    <a href="${item.link}" class="hover:text-lime-600">${item.name}</a>
                   </li>
                 `).join('')}
               </ul>
@@ -130,7 +131,7 @@ export default function Navbar() {
         <div class="flex items-center font-medium justify-around md:justify-between">
           <div class="z-50 h-full md:w-auto w-full px-4 md:px-0 flex justify-between">
             <a href="/" class="flex items-center">
-                <img src="${logo}" alt="Sol Logo" class="md:cursor-pointer h-12 md:h-20" id="logo">
+                <img src="${newLogo}" alt="Sol Logo" class="md:cursor-pointer h-12 md:h-20" id="logo">
             </a>
             <div class="text-3xl md:hidden flex items-center" id="mobile-menu-button">
               <ion-icon name="menu"></ion-icon>
@@ -144,7 +145,7 @@ export default function Navbar() {
           </ul>
           <div class="md:block hidden">
             <a href="https://wa.me/01336985511" target="_blank" class="flex items-center">
-            <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-blue-300">Contact Us</button>
+            <button class="bg-white text-solprimary px-6 py-2 rounded-lg focus:ring-2 focus:ring-lime-300">Contact Us</button>
             </a>
           </div>
           
@@ -156,7 +157,7 @@ export default function Navbar() {
             ${generateNavLinks(true)}
             <div class="py-5">
                 <a href="https://wa.me/01336985511" target="_blank" class="flex items-center">
-                        <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-blue-300">Contact Us</button>
+                        <button class="bg-solprimary text-white px-6 py-2 rounded-lg focus:ring-4 focus:ring-lime-300">Contact Us</button>
                 </a>
           
             </div>

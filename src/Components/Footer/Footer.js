@@ -1,4 +1,5 @@
 import logoTransparent from '../../assets/images/logo_transparent.png';
+import newLogo from '../../assets/images/ss_new_logo.png';
 
 export default function Footer() {
     return `
@@ -10,9 +11,9 @@ export default function Footer() {
             <!-- Column 1 - Logo/Contact -->
             <div class="">
               <div class="footer-widget mb-8">
-                <div class="mb-6">
+                <div class="mb-2 flex items-center justify-start">
                   <a href="/">
-                    <img src="${logoTransparent}" alt="logo" class="h-16">
+                    <img src="${newLogo}" alt="logo" class="h-24 w-32">
                   </a>
                 </div>
                 <div class="footer-content max-w-[304px] mb-6">
@@ -89,10 +90,10 @@ export default function Footer() {
                 <h2 class="text-xl font-medium mb-4">Follow Us</h2>
                 <div class="social-icons">
                   <ul class="flex space-x-4 mb-8">
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fa-brands fa-linkedin"></i></a></li>
                   </ul>
                 </div>
               </div>

@@ -26,7 +26,7 @@ export default function About() {
         <div class="w-full lg:w-1/2 lg:pl-12">
           <div class="about-content">
             <h6 class="font-semibold text-solprimary mb-2">ABOUT OUR COMPANY</h6>
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">Your Trusted Local Partner for Home Solutions</h2>
+            <h2 class="text-3xl font-bold text-solprimary mb-6">Your Trusted Local Partner for Home Solutions</h2>
             <p class="text-gray-600 mb-4">
              Solutions Spot is Bangladesh’s trusted name in multi-service solutions, offering a seamless blend of professionalism, reliability, and excellence — all in one place.
             </p>

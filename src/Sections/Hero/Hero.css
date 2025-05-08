@@ -2,12 +2,11 @@
 .hero-section-container {
     position: relative;
     background:
-        /* Your custom blue overlay */
+        /* lime overlay */
             linear-gradient(
-                    rgba(32, 48, 102, 0.58),
-                    rgba(32, 48, 102, 0.58)
+                    rgba(26, 64, 44, 0.58),
+                    rgba(26, 64, 44, 0.58)
             ),
-                /* Original image */
             url("../../assets/images/banner.jpg") center/cover no-repeat;
 }
 
@@ -27,7 +26,6 @@
 /* Dropdown item hover effect */
 #servicesDropdown a:hover {
     transform: translateX(3px);
-    background-color: rgba(59, 130, 246, 0.05);
 }
 
 /* Hero buttons hover effect */
