@@ -84,8 +84,8 @@ export default function Contact() {
             </div>
             <div>
               <h6 class="text-lg font-medium mb-1">Address</h6>
-              <p class="text-sm pb-2 text-gray-800">${contactInfo["address"][0]}</p>
-              <p class="text-sm text-gray-800">${contactInfo["address"][1]}</p>
+              <p class="text-sm pb-2 text-solprimary">${contactInfo["address"][0]}</p>
+              <p class="text-sm text-solprimary">${contactInfo["address"][1]}</p>
             </div>
           </div>
         </div>
@@ -101,34 +101,34 @@ export default function Contact() {
         <!-- Form Column -->
         <div class="flex items-center">
           <div class="w-full">
-            <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+            <h2 class="text-3xl font-bold mb-6 text-solprimary">Get In Touch</h2>
             <form id="contactForm" class="space-y-4">
               <div>
                 <input id="contactName" type="text" placeholder="Your Name" 
                 required
                         name="name"
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500"
                        
                 >
               </div>
               <div>
                 <input id="contactEmail" type="email" placeholder="Your Email Address"  name="email"
                 required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
               </div>
               <div>
                 <input type="tel" id="contactNumber" placeholder="Your Phone Number" name="phone" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
               </div>
               <div>
                 <input type="text" id="contactService" placeholder="Service Type" name="service type" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500">
               </div>
               <div>
                 <textarea id="contactMessage" placeholder="Type Message" name="message" required
-                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 min-h-[120px]"></textarea>
+                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500 min-h-[120px]"></textarea>
               </div>
-              <button type="submit" class="bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full flex items-center transition duration-200">
+              <button type="submit" class="bg-solprimary hover:bg-lime-800 text-white font-medium py-3 px-6 rounded-full flex items-center transition duration-200">
                 Send Message
                 <i class="fa-regular fa-circle-right ml-2"></i>
               </button>

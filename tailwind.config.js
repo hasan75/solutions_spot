@@ -7,11 +7,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                brand: '#3a86ff', // Custom color
-                solprimary: '#0e74b5',
-                solnavsecond: '#2cc1b5',
-                solsecondary: '#e6f6f9',
-                solPrimaryBg: '#F4F5F5'
+                brand: '#1A402C', // Custom color
+                solprimary: '#1A402C',
+                solnavsecond: '#B6D435',
+                solsecondary: '#B6D435',
+                solPrimaryBg: '#F8F9F7'
             }
         },
     },

@@ -92,11 +92,11 @@ export default function FeaturedCategories() {
       <!-- Header Section -->
       <div class="flex flex-col md:flex-row items-center justify-between mb-10">
         <div class="mb-6 md:mb-0" data-aos="fade-up">
-          <h2 class="text-3xl font-bold text-gray-800">Featured Categories</h2>
+          <h2 class="text-3xl font-bold text-solprimary">Featured Categories</h2>
           <p class="text-lg text-gray-600 mt-2">What do you need to find?</p>
         </div>
         <div class="md:text-right" data-aos="fade-up">
-          <a href="categories.html" class="inline-block bg-solprimary hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-full transition duration-200">
+          <a href="categories.html" class="inline-block bg-solprimary hover:bg-lime-800 text-lime-100 font-medium py-3 px-6 rounded-full transition duration-200">
             View All
           </a>
         </div>
@@ -112,12 +112,12 @@ export default function FeaturedCategories() {
               </a>
               <div class="feature-icon  px-8 py-4 absolute bottom-1 w-full rounded-md overflow-hidden">
                 <div class="flex items-center w-full rounded-md overflow-hidden bg-solprimary">
-                <span class="bg-sky-950 p-3  shadow-md z-10 rounded-l-md">
+                <span class="bg-lime-950 p-3  shadow-md z-10 rounded-l-md">
                 <img src="${category.icon}" alt="${category.title} icon" class="w-10 h-10">
               </span>
               <div class="feature-title mx-4 flex justify-between items-center w-full h-full">
-                <h5 class="text-lg font-semibold text-white">${category.title}</h5>
-                <p class="text-gray-200">${category.count}</p>
+                <h5 class="text-lg font-semibold text-lime-100">${category.title}</h5>
+                <p class="text-lime-50">${category.count}</p>
               </div>
                 </div>
             </div>

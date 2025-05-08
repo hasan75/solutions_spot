@@ -496,7 +496,7 @@ mainCategories.forEach(mainCat => {
 export default function ServiceTwo() {
     return `
     <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Our Complete Services</h1>
+      <h1 class="text-3xl font-bold text-center mb-8 text-solprimary">Our Complete Services</h1>
       
       <div class="flex flex-col lg:flex-row gap-8">
         <!-- Mobile Category Dropdown -->
@@ -630,7 +630,7 @@ function renderServicesCards(services) {
                                     <img src="${service.image}" alt="${service.name}" class="h-full w-full object-cover">
                                 </div>
                                 <div>
-                                    <div class="font-medium text-gray-800">${service.name}</div>
+                                    <div class="font-medium text-solprimary">${service.name}</div>
                                     ${service.note ? `<div class="text-xs text-gray-500 mt-1">${service.note}</div>` : ''}
                                     <div class="flex items-center mt-1 text-yellow-600">
                                         ${'★'.repeat(service.rating ?? 5)}
@@ -667,7 +667,7 @@ function renderServicesCards(services) {
             <img src="${service.image}" alt="${service.name}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
           </div>
           <div class="p-4">
-            <h3 class="font-medium text-gray-800 mb-1 ">${service.name}</h3>
+            <h3 class="font-medium text-solprimary mb-1 ">${service.name}</h3>
             ${service.note ? `<p class="text-xs text-gray-500 mb-2 line-clamp-1" title="${service.note}">${service.note}</p>` : ''}
             <div class="flex items-center mb-3">
               <div class="text-yellow-600">
@@ -710,7 +710,7 @@ function renderServicesTable(services) {
                     <img src="${service.image}" alt="${service.name}" class="h-full w-full object-cover">
                   </div>
                   <div>
-                    <div class="font-medium text-gray-800">${service.name}</div>
+                    <div class="font-medium text-solprimary">${service.name}</div>
                     ${service.note ? `<div class="text-xs text-gray-500 mt-1">${service.note}</div>` : ''}
                     <div class="flex items-center mt-1 text-yellow-600">
                       ${'★'.repeat(service.rating ?? 5)}
@@ -752,7 +752,7 @@ function getLowestPrice(category) {
 
 function renderPriceBadge(price) {
     return `
-        <span class="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full ml-2">
+        <span class="text-xs font-medium bg-lime-100 text-lime-800 px-2 py-1 rounded-full ml-2">
             Starts with ৳${price}
         </span>
     `;
@@ -806,7 +806,7 @@ export function initServicesPage() {
             servicesContainer.innerHTML = `
                 <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
                     <div class="bg-white z-40 px-6 py-4 border-b border-gray-200">
-                        <h2 class="text-2xl font-bold text-gray-800">${category.name}</h2>
+                        <h2 class="text-2xl font-bold text-solprimary">${category.name}</h2>
                     </div>
                     <div class="p-6">
                         ${renderServicesCards(category.services)}
@@ -818,11 +818,11 @@ export function initServicesPage() {
                 <div class="category-section bg-white rounded-lg shadow-sm overflow-hidden">
                     <div class="bg-white z-40 px-6 py-4 border-b border-gray-200 flex justify-between">
                         <div>
-                            <h2 class="text-2xl font-bold text-gray-800 pb-1">${category.name}</h2>
-                            <span class="bg-sky-200 text-gray-700 px-3 py-1 rounded-full">Starts at ৳${lowestPrice}</span>
+                            <h2 class="text-2xl font-bold text-solprimary pb-1">${category.name}</h2>
+                            <span class="bg-lime-200 text-gray-700 px-3 py-1 rounded-full">Starts at ৳${lowestPrice}</span>
                         </div>
                         <div>
-                            <p class="flex items-center justify-center px-4 py-2 bg-sky-200 max-w-max rounded-full text-gray-800">${countMainCategoryServices(category)} Services </p>
+                            <p class="flex items-center justify-center px-4 py-2 bg-lime-200 max-w-max rounded-full text-solprimary">${countMainCategoryServices(category)} Services </p>
                         </div>
                     </div>
                     <div class="p-6 space-y-8">

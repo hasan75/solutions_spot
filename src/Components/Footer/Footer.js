@@ -90,10 +90,10 @@ export default function Footer() {
                 <h2 class="text-xl font-medium mb-4">Follow Us</h2>
                 <div class="social-icons">
                   <ul class="flex space-x-4 mb-8">
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-blue-100"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61575012245080" target="_blank" class="w-8 h-8 bg-white rounded-full flex items-center justify-center hover:bg-lime-100"><i class="fa-brands fa-linkedin"></i></a></li>
                   </ul>
                 </div>
               </div>

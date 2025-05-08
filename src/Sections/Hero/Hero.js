@@ -67,14 +67,14 @@ const servicesData = [
 // Function to generate dropdown items
 function generateDropdownItems() {
     return servicesData.map(service => `
-    <a href="/services.html#${service.id}" class="flex items-center px-4 py-3 hover:bg-gray-50 rounded-lg transition-colors">
+    <a href="/services.html#${service.id}" class="flex items-center px-4 py-3 hover:bg-lime-50 rounded-lg transition-colors">
       <div class="bg-solprimary/10 p-2 rounded-lg mr-3">
         <svg class="w-5 h-5 text-solprimary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${service.icon}"></path>
         </svg>
       </div>
       <div>
-        <h4 class="font-medium text-gray-800">${service.name}</h4>
+        <h4 class="font-medium text-solprimary">${service.name}</h4>
         <p class="text-xs text-gray-500">${service.description}</p>
       </div>
     </a>
@@ -126,7 +126,7 @@ export default function Hero() {
             </div>
             
             <!-- See All Services Button -->
-            <a href="services.html" class="bg-solprimary hover:bg-sky-900 text-white font-bold rounded-full px-8 py-4 transition-colors duration-200 flex items-center justify-center">
+            <a href="services.html" class="bg-solprimary hover:bg-lime-900 text-white font-bold rounded-full px-8 py-4 transition-colors duration-200 flex items-center justify-center">
               See All Services
             </a>
           </div>

@@ -4,7 +4,7 @@ export default function TermsConditions() {
             <div class="bg-solPrimaryBg">
                 <div class="container mx-auto px-4 py-8">
                     <div class="flex items-center content-center flex-col py-12 px-2">
-                        <h1 class="text-3xl font-semibold mb-4 text-gray-800 text-center">Terms & Conditions of Solutions Spot</h1>
+                        <h1 class="text-3xl font-semibold mb-4 text-solprimary text-center">Terms & Conditions of Solutions Spot</h1>
                         <p class="mb-2 text-gray-700 text-center">Welcome to Solutions Spot! By accessing and using our platform, you agree to comply with the following terms and conditions. Please read them carefully. If you do not agree to these terms, you should not use our services.</p>
                     </div>         
                 </div>
