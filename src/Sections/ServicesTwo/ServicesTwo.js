@@ -641,7 +641,7 @@ function renderServicesCards(services) {
                         </td>
                         <td class="px-4 py-3 text-right">
                             <div class="price-container relative">
-                                <button class="see-price-btn text-xs font-medium text-solprimary hover:text-solprimary/80 transition-colors duration-200"
+                                <button class="see-price-btn text-xs font-medium text-solprimary hover:text-solprimary/80 transition-colors duration-200 pr-1"
                                         data-service-id="${service.name.replace(/\s+/g, '-').toLowerCase()}">
                                     See price
                                 </button>
@@ -650,6 +650,11 @@ function renderServicesCards(services) {
                                     ${service.unit ? `<span class="text-xs text-gray-500">/${service.unit}</span>` : ''}
                                 </div>
                             </div>
+                            <button class="p-1 text-xs font-medium text-solprimary hover:text-solprimary/80 bg-lime-100 rounded-full">
+                                <a href="https://wa.me/01336985511" target="_blank" class="flex items-center">
+                                     Order Service
+                                </a>
+                            </button>
                         </td>
                     </tr>
                 </tbody>
@@ -685,6 +690,11 @@ function renderServicesCards(services) {
                 ${service.price ? `৳${service.price}` : 'Contact for price'}
                 ${service.unit ? `<span class="text-xs text-gray-500">/${service.unit}</span>` : ''}
               </div>
+              <button class="p-2 w-full text-center text-sm font-medium text-solprimary hover:text-solprimary/80 bg-lime-100 rounded-md mt-2">
+                     <a href="https://wa.me/01336985511" target="_blank" class="block items-center text-center">
+                         Order Service
+                     </a>
+              </button>
             </div>
           </div>
         </div>
