@@ -46,6 +46,7 @@ import digital1 from '../../assets/images/ss_categories/digital_web_development.
 import digital2 from '../../assets/images/ss_categories/digital-seo.png';
 import digital3 from '../../assets/images/ss_categories/digital-video-ads.jpeg';
 import digitalMobile from '../../assets/images/ss_categories/digital_mobile_app.webp';
+import mangoService from '../../assets/images/ss_categories/mangoservice.png';
 
 // Normalized Services Data
 const servicesData = [
@@ -445,6 +446,21 @@ const mainCategories = [
                 imageDesktop: [butcher1, butcher3, butcher2],
                 imageMobile: butcher1,
                 services: servicesData.filter(service => service.name.includes("Butcher"))
+            },
+            {
+                name: "Mango Delivery",
+                imageDesktop: [butcher1, butcher3, butcher2],
+                imageMobile: butcher1,
+                services: [
+                    {
+                        name: "Rajshahi's Mango",
+                        price: null,
+                        note: "Get all sorts of mangoes from Rajshahi",
+                        rating: 5,
+                        reviews: 6,
+                        image: mangoService
+                    }
+                ]
             }
         ]
     }
