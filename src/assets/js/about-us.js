@@ -2,6 +2,7 @@ import Navbar from '../../Components/Navbar/Navbar.js';
 import Footer from "../../Components/Footer/Footer";
 import { initNavbar } from '../../Components/Navbar/Navbar';
 import AboutUs from "../../Sections/AboutUs/AboutUs";
+import {initPopup} from "../../Components/PopUp/PopUp";
 
 // Render header and footer
 document.getElementById('navbar').innerHTML = Navbar();
@@ -12,3 +13,4 @@ document.getElementById('about-us').innerHTML = AboutUs();
 
 // Initialize navbar functionality
 initNavbar();
+initPopup();

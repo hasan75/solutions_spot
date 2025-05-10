@@ -3,6 +3,7 @@ import Footer from "../../Components/Footer/Footer";
 import PrivacyPolicy from '../../Sections/PrivacyPolicy/PrivacyPolicy';
 import TermsConditions from '../../Sections/TermsConditions/TermsConditions';
 import { initNavbar } from '../../Components/Navbar/Navbar';
+import { initPopup } from '../../Components/PopUp/PopUp';
 
 // Render header and footer
 document.getElementById('navbar').innerHTML = Navbar();
@@ -13,3 +14,4 @@ document.getElementById('terms-content').innerHTML = TermsConditions();
 
 // Initialize navbar functionality
 initNavbar();
+initPopup();

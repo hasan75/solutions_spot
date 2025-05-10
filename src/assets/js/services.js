@@ -2,6 +2,7 @@
 import Navbar from '../../Components/Navbar/Navbar.js';
 import Footer from "../../Components/Footer/Footer";
 import ServicesPage , { initServicesPage } from '../../Sections/ServicesTwo/ServicesTwo';
+import { initPopup } from '../../Components/PopUp/PopUp';
 
 // Render header and footer
 document.getElementById('navbar').innerHTML = Navbar();
@@ -13,4 +14,5 @@ document.getElementById('services-content').innerHTML = ServicesPage();
 // Initialize the page
 document.addEventListener('DOMContentLoaded', () => {
     initServicesPage();
+    initPopup();
 });
