@@ -29,6 +29,7 @@ import Offer from "../../Sections/Offer/Offer";
 import Partners from "../../Sections/Partners/Partners";
 import Footer from "../../Components/Footer/Footer";
 import Contact from "../../Sections/Contact/Contact";
+import { initPopup } from '../../Components/PopUp/PopUp'; // Add this import
 import ServiceTwo, {initServicesPage} from '../../Sections/ServicesTwo/ServicesTwo'
 // Render components
 document.getElementById('navbar').innerHTML = Navbar();
@@ -48,3 +49,4 @@ document.getElementById('contact').innerHTML = Contact();
 initNavbar();
 initServices();
 // initServicesPage();
+initPopup();
