@@ -1,7 +1,7 @@
 import service76 from '../../assets/images/service-76.jpg';
 
 const contactInfo = {
-    "phone_number" : ["(+880) 1336985511","(+880) 1336985511"],
+    "phone_number" : ["(+880) 9611747777","(+880) 1336985511"],
     "email" : ["info.solutionsspot@gmail.com","info.solutionsspot@gmail.com"],
     "address": ["Dhaka Office: 11/22/2 Uttor Nandipara, Basabo - 1214",  "Rajshahi Office: 3rd Floor, House-4, Devising para, (Opposite of RUET pocket gate), Rajshahi, Bangladesh"]
 }

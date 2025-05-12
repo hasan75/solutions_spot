@@ -130,6 +130,7 @@ export default function TermsConditions() {
                         <p>If you have any questions or concerns about these Terms & Conditions, please contact us at:</p>
                         <ul class="list-disc pl-6 space-y-2 mt-3">
                             <li>📧 Email: info.solutionsspot@gmail.com</li>
+                            <li>📱 Hotline: +8809611747777</li>
                             <li>📱 Phone: +8801336985511</li>
                             <li>🌐 Website: solutionsspots.com</li>
                             <li>📘 Facebook: Click Here</li>

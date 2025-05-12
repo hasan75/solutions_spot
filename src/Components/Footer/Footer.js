@@ -9,8 +9,8 @@ export default function Footer() {
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
             <!-- Column 1 - Logo/Contact -->
-            <div class="">
-              <div class="footer-widget mb-8">
+            <div class="lg:relative">
+              <div class="footer-widget mb-8 lg:absolute lg:top-[-32px]">
                 <div class="mb-2 flex items-center justify-start">
                   <a href="/">
                     <img src="${newLogo}" alt="logo" class="h-24 w-32">
@@ -18,6 +18,12 @@ export default function Footer() {
                 </div>
                 <div class="footer-content max-w-[304px] mb-6">
                     <h6 class="mb-3 font-medium">Our Experts Are available 24/7</h6>
+                    <div class="mb-2">
+                      <a href="tel:09611747777" class="flex items-center hover:text-solprimary">
+                        <span class="fa-solid fa-blender-phone mr-2"></span>
+                        <span>09611747777</span>
+                      </a>
+                    </div>
                     <div class="mb-2">
                       <a href="tel:+8801336985511" class="flex items-center hover:text-solprimary">
                         <span class="fa-solid fa-mobile mr-2"></span>
@@ -121,6 +127,9 @@ export default function Footer() {
                 </li>
                 <li class="inline-block text-[#74788d]">
                   <a href="/privacy-policy.html" class="text-sm hover:text-solprimary">Cookie Policy</a>
+                </li>
+                <li class="inline-block text-[#74788d]">
+                  <a href="tel:09611747777"  class="text-sm text-red-400 hover:text-solprimary">Hot Line</a>
                 </li>
               </ul>
             </div>
