@@ -48,6 +48,14 @@ import digital3 from '../../assets/images/ss_categories/digital-video-ads.jpeg';
 import digitalMobile from '../../assets/images/ss_categories/digital_mobile_app.webp';
 import mangoService from '../../assets/images/ss_categories/mangoservice.png';
 
+import lengraMango from '../../assets/images/ss_categories/lengraa.jpg';
+import hariMango from '../../assets/images/ss_categories/harivangga_mango.jpg';
+import amrupali from '../../assets/images/ss_categories/amrupali_mango.jpg';
+import himshagor from '../../assets/images/ss_categories/himshagor.jpg';
+import gourimoti from '../../assets/images/ss_categories/gourimoti.jpg';
+import gopalvog from '../../assets/images/ss_categories/gopalvog.jpg';
+
+
 // Normalized Services Data
 const servicesData = [
     {
@@ -453,13 +461,53 @@ const mainCategories = [
                 imageMobile: butcher1,
                 services: [
                     {
-                        name: "Rajshahi's Mango",
-                        price: null,
-                        note: "Get all sorts of mangoes from Rajshahi",
+                        name: "Rajshahi's HimShagor (হিমসাগর)",
+                        price: 120,
+                        note: "Price may vary based on availability",
                         rating: 5,
                         reviews: 6,
-                        image: mangoService
-                    }
+                        image: himshagor
+                    },
+                    {
+                        name: "Rajshahi's Gourimoti (গৌড়মতি)",
+                        price: 120,
+                        note: "Price may vary based on availability",
+                        rating: 5,
+                        reviews: 6,
+                        image: gourimoti
+                    },
+                    {
+                        name: "Rajshahi's Gopalvog (গোপালভোগ)",
+                        price: 120,
+                        note: "Price may vary based on availability",
+                        rating: 5,
+                        reviews: 6,
+                        image: gopalvog
+                    },
+                    {
+                        name: "Rajshahi's Harivangga (হাড়িভাঙ্গা)",
+                        price: 120,
+                        note: "Price may vary based on availability",
+                        rating: 5,
+                        reviews: 6,
+                        image: hariMango
+                    },
+                    {
+                        name: "Rajshahi's Ammrupali (আমরুপালী)",
+                        price: 120,
+                        note: "Price may vary based on availability",
+                        rating: 5,
+                        reviews: 6,
+                        image: amrupali
+                    },
+                    {
+                        name: "Rajshahi's Lengraa (ল্যাংড়া)",
+                        price: 120,
+                        note: "Price may vary based on availability",
+                        rating: 5,
+                        reviews: 6,
+                        image: lengraMango
+                    },
                 ]
             }
         ]
