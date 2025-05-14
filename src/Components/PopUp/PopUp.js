@@ -3,7 +3,7 @@ import mangoService from '../../assets/images/ss_categories/mangoservice.png'
 export default function Popup() {
     return `
     <div id="popup-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-      <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 relative">
+      <div class="bg-white rounded-lg shadow-xl max-w-md w-full mx-4 relative cursor-pointer" id="mangoServicePopUp">
         <button id="close-popup" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">
           <ion-icon name="close" class="text-2xl"></ion-icon>
         </button>
@@ -28,9 +28,9 @@ export default function Popup() {
             </div>
             
             <div class="price-container relative mt-2">
-              <a href="https://wa.me/01336985511" target="_blank" class="block text-center w-full py-2 px-3 bg-solprimary/10 text-solprimary hover:bg-solprimary/20 rounded-md text-sm font-medium transition-all duration-200">
+              <button id="mangoServiceContactBtn" target="_blank" class="block text-center w-full py-2 px-3 bg-solprimary/10 text-solprimary hover:bg-solprimary/20 rounded-md text-sm font-medium transition-all duration-200">
                 Contact to Order
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -47,42 +47,32 @@ export function initPopup() {
     // Get elements
     const popupOverlay = document.getElementById('popup-overlay');
     const closeBtn = document.getElementById('close-popup');
-    const popupForm = document.getElementById('popup-form');
+    const mangoServicePopUp = document.getElementById('mangoServicePopUp');
+    const mangoServiceContactBtn = document.getElementById('mangoServiceContactBtn');
 
     // Check if popup was already shown in this session
     const popupShown = sessionStorage.getItem('popupShown');
 
     // Show popup if not shown before (after 1 second delay)
     if (!popupShown) {
-        setTimeout(() => {
+        setTimeout(() => {mangoServicePopUp
             popupOverlay.classList.remove('hidden');
             sessionStorage.setItem('popupShown', 'true');
         }, 1000);
     }
 
     // Close button event
-    closeBtn.addEventListener('click', () => {
+    closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         popupOverlay.classList.add('hidden');
     });
 
     // Overlay click event (close when clicking outside content)
     popupOverlay.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (e.target === popupOverlay) {
             popupOverlay.classList.add('hidden');
         }
-    });
-
-    // Form submission
-    popupForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = document.getElementById('popup-email').value;
-
-        // Here you would typically send the email to your backend
-        console.log('Subscribed with email:', email);
-
-        // Show success message
-        alert('Thank you for subscribing!');
-        popupOverlay.classList.add('hidden');
     });
 
     // Close with Escape key
@@ -91,4 +81,16 @@ export function initPopup() {
             popupOverlay.classList.add('hidden');
         }
     });
+
+    mangoServicePopUp.addEventListener('click', (e) => {
+        window.location = 'services.html#specialty-services-mango-delivery'
+    })
+
+    mangoServiceContactBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        window.open('https://wa.me/01336985511', '_blank');
+
+    })
+
+
 }
